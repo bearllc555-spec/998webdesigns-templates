@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Portrait as PortraitSvg } from "../images";
 import { theme } from "../theme";
 import { content } from "../content";
 
@@ -10,10 +9,17 @@ export function AboutSnippet() {
         <div className="grid gap-12 md:grid-cols-12 md:gap-12">
           <aside className="md:col-span-5">
             <div
-              className="overflow-hidden"
-              style={{ borderRadius: `var(--tpl-radius)` }}
+              className="relative overflow-hidden"
+              style={{ borderRadius: `var(--tpl-radius)`, aspectRatio: "4 / 5" }}
             >
-              <PortraitSvg seed={1} theme={theme} className="h-auto w-full" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/templates/maple-street-bakery/baker-1.jpg"
+                alt="A baker shaping dough on the bench"
+                loading="lazy"
+                decoding="async"
+                className="block h-full w-full object-cover"
+              />
             </div>
           </aside>
           <div className="md:col-span-7">

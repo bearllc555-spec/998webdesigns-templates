@@ -192,45 +192,27 @@ function ProjectSlider({ title, note, seed }: { title: string; note: string; see
 
 function Before({ seed }: { seed: number }) {
   return (
-    <svg viewBox="0 0 1600 900" className="block h-full w-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <rect width="1600" height="900" fill="#2A2D32" />
-      <g fill="#1B1E22">
-        <polygon points="100,640 800,260 1500,640 1500,800 100,800" />
-      </g>
-      <g stroke="#15171A" strokeWidth="3" fill="none" opacity="0.7">
-        {Array.from({ length: 10 }).map((_, i) => (
-          <line key={i} x1={100 + i * 140} y1="640" x2={150 + i * 140} y2="800" />
-        ))}
-      </g>
-      <g fill="#3C2818" opacity="0.7">
-        <rect x="320" y="500" width="60" height="40" />
-        <rect x="640" y="400" width="80" height="40" />
-        <rect x="960" y="500" width="60" height="40" />
-        <rect x="1180" y="560" width="50" height="40" />
-      </g>
-      <text x="800" y="860" textAnchor="middle" fontFamily="sans-serif" fontWeight="700" fontSize="36" fill="#9CA0A6" style={{ letterSpacing: "0.18em", textTransform: "uppercase" }}>
-        Three-tab, end of life
-      </text>
-    </svg>
+    <div className="relative h-full w-full" aria-hidden="true">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/templates/ironclad-roofing/before.jpg"
+        alt=""
+        className="block h-full w-full object-cover"
+        style={{ filter: "saturate(0.55) brightness(0.85)" }}
+      />
+    </div>
   );
 }
 
 function After({ seed }: { seed: number }) {
   return (
-    <svg viewBox="0 0 1600 900" className="block h-full w-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <rect width="1600" height="900" fill="#15171A" />
-      <g fill="#F2F2EF">
-        <polygon points="100,640 800,260 1500,640 1500,800 100,800" />
-      </g>
-      <g stroke="#15171A" strokeWidth="2" fill="none">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <line key={i} x1={100} y1={640 + i * 8} x2={1500} y2={640 + i * 8} />
-        ))}
-      </g>
-      <line x1="100" y1="640" x2="1500" y2="640" stroke="#F25C05" strokeWidth="6" />
-      <text x="800" y="860" textAnchor="middle" fontFamily="sans-serif" fontWeight="700" fontSize="36" fill="#F25C05" style={{ letterSpacing: "0.18em", textTransform: "uppercase" }}>
-        New architectural shingle
-      </text>
-    </svg>
+    <div className="relative h-full w-full" aria-hidden="true">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/templates/ironclad-roofing/after.jpg"
+        alt=""
+        className="block h-full w-full object-cover"
+      />
+    </div>
   );
 }

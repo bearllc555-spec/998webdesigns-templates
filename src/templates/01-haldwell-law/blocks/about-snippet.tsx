@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Wide as WideSvg } from "../images";
 import { theme } from "../theme";
 import { content } from "../content";
 
@@ -105,8 +104,16 @@ export function AboutSnippet() {
                 </div>
               ))}
             </div>
-            <div className="mt-10">
-              <WideSvg seed={2} theme={theme} className="h-auto w-full" />
+            <div className="mt-10 overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/templates/haldwell-law/library.jpg"
+                alt="The Haldwell and Carr library"
+                loading="lazy"
+                decoding="async"
+                className="block h-auto w-full object-cover"
+                style={{ aspectRatio: "4 / 3" }}
+              />
             </div>
           </aside>
         </div>

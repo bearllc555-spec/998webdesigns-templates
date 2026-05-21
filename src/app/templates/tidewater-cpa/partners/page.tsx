@@ -1,7 +1,13 @@
-import { Portrait as PortraitSvg } from "@/templates/06-tidewater-cpa/images";
 import { CtaBanner } from "@/components/site/cta-banner";
 import { templateModule } from "@/templates/06-tidewater-cpa";
 import { partners } from "@/templates/06-tidewater-cpa/content";
+
+const PARTNER_PHOTOS = [
+  "/templates/tidewater-cpa/partner-3.jpg",
+  "/templates/tidewater-cpa/partner-1.jpg",
+  "/templates/tidewater-cpa/partner-2.jpg",
+  "/templates/tidewater-cpa/partner-4.jpg",
+];
 
 export const metadata = {
   title: "Partners | Tidewater Partners",
@@ -47,7 +53,16 @@ export default function PartnersPage() {
             {partners.map((p, i) => (
               <article key={p.name} className="grid grid-cols-[auto_1fr] gap-6 md:gap-10">
                 <div className="w-28 md:w-40">
-                  <PortraitSvg seed={i + 1} theme={theme} className="h-auto w-full" />
+                  <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={PARTNER_PHOTOS[i % PARTNER_PHOTOS.length]}
+                      alt={p.name}
+                      loading="lazy"
+                      decoding="async"
+                      className="block h-full w-full object-cover"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h2

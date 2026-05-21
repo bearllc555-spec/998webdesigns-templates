@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Hero as HeroSvg } from "../images";
 import { theme } from "../theme";
 import { content } from "../content";
 
@@ -82,7 +81,16 @@ export function HeroBlock() {
             </div>
           </div>
           <div className="md:col-span-5">
-            <HeroSvg seed={1} theme={theme} className="h-auto w-full" />
+            <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5", borderRadius: `var(--tpl-radius)` }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/templates/northwind-dental/hero.jpg"
+                alt="A calm, modern dental operatory at Northwind"
+                loading="eager"
+                decoding="async"
+                className="block h-full w-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>

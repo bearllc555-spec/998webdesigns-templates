@@ -1,4 +1,3 @@
-import { Portrait as PortraitSvg } from "../images";
 import { theme } from "../theme";
 
 const attorneys = [
@@ -6,28 +5,28 @@ const attorneys = [
     name: "Charles W. Haldwell",
     role: "Founding partner",
     bar: "NH, ME",
-    seed: 1,
+    photo: "/templates/haldwell-law/attorney-1.jpg",
     bio: "Estate planning, succession, and the kind of trust litigation that keeps a family at the same table.",
   },
   {
     name: "Helena M. Carr",
     role: "Managing partner",
     bar: "NH, MA",
-    seed: 2,
+    photo: "/templates/haldwell-law/attorney-2.jpg",
     bio: "Mergers and owner-led sales for closely held New England businesses since 2001.",
   },
   {
     name: "Margaret L. Eddy",
     role: "Partner",
     bar: "NH, ME, MA",
-    seed: 3,
+    photo: "/templates/haldwell-law/attorney-3.jpg",
     bio: "Real estate, conservation easements, and land use across northern New England.",
   },
   {
     name: "Andrew R. Lin",
     role: "Partner",
     bar: "NH",
-    seed: 4,
+    photo: "/templates/haldwell-law/attorney-4.jpg",
     bio: "Business counsel for founders, plus the routine governance that keeps a company answerable to itself.",
   },
 ];
@@ -71,7 +70,16 @@ export function SignatureBlock() {
               style={{ borderColor: "var(--tpl-line)" }}
             >
               <div className="w-28 md:w-40">
-                <PortraitSvg seed={a.seed} theme={theme} className="h-auto w-full" />
+                <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={a.photo}
+                    alt={a.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-full w-full object-cover"
+                  />
+                </div>
               </div>
               <div>
                 <h3

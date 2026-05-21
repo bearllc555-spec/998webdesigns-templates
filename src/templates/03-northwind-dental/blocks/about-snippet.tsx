@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Wide as WideSvg } from "../images";
 import { theme } from "../theme";
 import { content } from "../content";
 
@@ -90,8 +89,15 @@ export function AboutSnippet() {
                 </div>
               ))}
             </div>
-            <div className="mt-6">
-              <WideSvg seed={1} theme={theme} className="h-auto w-full" />
+            <div className="mt-6 relative overflow-hidden" style={{ borderRadius: `var(--tpl-radius)`, aspectRatio: "16 / 10" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/templates/northwind-dental/team.jpg"
+                alt="The Northwind clinic team"
+                loading="lazy"
+                decoding="async"
+                className="block h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>

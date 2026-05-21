@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { Placeholder } from "@/lib/svg-placeholder";
 import type { TemplateModule } from "@/templates/types";
 
 export function TemplateCard({
@@ -27,7 +26,33 @@ export function TemplateCard({
           background: theme.palette.bg,
         }}
       >
-        <Placeholder kind="thumb" theme={theme} className="block h-full w-full" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`/templates/${slug}/hero.jpg`}
+          alt={`${theme.meta.name} template preview`}
+          loading="lazy"
+          decoding="async"
+          className="block h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 h-24"
+          style={{
+            background: `linear-gradient(to top, ${theme.palette.bg}, transparent)`,
+          }}
+        />
+        <p
+          className="absolute left-5 bottom-4 text-2xl"
+          style={{
+            color: theme.palette.ink,
+            fontFamily: theme.type.display,
+            fontWeight: theme.type.displayWeight,
+            letterSpacing: theme.type.displayTracking,
+            textShadow: "0 1px 2px rgba(255,255,255,0.5)",
+          }}
+        >
+          {theme.meta.name}
+        </p>
         {isNewest && (
           <span
             className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider"
@@ -60,16 +85,6 @@ export function TemplateCard({
           style={{ letterSpacing: "0.18em" }}
         >
           {theme.meta.industry}
-        </p>
-        <p
-          className="text-2xl leading-tight text-neutral-900"
-          style={{
-            fontFamily: theme.type.display,
-            fontWeight: theme.type.displayWeight,
-            letterSpacing: theme.type.displayTracking,
-          }}
-        >
-          {theme.meta.name}
         </p>
         <p className="text-sm text-neutral-600">{theme.meta.tagline}</p>
         <span

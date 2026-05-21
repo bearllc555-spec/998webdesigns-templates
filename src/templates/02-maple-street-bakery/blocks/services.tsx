@@ -1,6 +1,14 @@
-import { Tile as TileSvg } from "../images";
 import { theme } from "../theme";
 import { content } from "../content";
+
+const SERVICE_PHOTOS = [
+  "/templates/maple-street-bakery/hero.jpg",
+  "/templates/maple-street-bakery/hero.jpg",
+  "/templates/maple-street-bakery/croissant.jpg",
+  "/templates/maple-street-bakery/croissant.jpg",
+  "/templates/maple-street-bakery/interior.jpg",
+  "/templates/maple-street-bakery/coffee.jpg",
+];
 
 export function ServicesBlock() {
   return (
@@ -48,10 +56,17 @@ export function ServicesBlock() {
           {content.services.items.map((it, i) => (
             <li key={it.name}>
               <div
-                className="overflow-hidden"
-                style={{ borderRadius: `var(--tpl-radius)` }}
+                className="relative overflow-hidden"
+                style={{ borderRadius: `var(--tpl-radius)`, aspectRatio: "4 / 3" }}
               >
-                <TileSvg seed={i + 1} theme={theme} className="h-auto w-full" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={SERVICE_PHOTOS[i % SERVICE_PHOTOS.length]}
+                  alt={it.name}
+                  loading="lazy"
+                  decoding="async"
+                  className="block h-full w-full object-cover"
+                />
               </div>
               <h3
                 className="mt-5 text-2xl leading-snug"

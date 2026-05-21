@@ -1,4 +1,3 @@
-import { Portrait as PortraitSvg } from "@/templates/02-maple-street-bakery/images";
 import { CtaBanner } from "@/components/site/cta-banner";
 import { templateModule } from "@/templates/02-maple-street-bakery";
 
@@ -6,19 +5,19 @@ const bakers = [
   {
     name: "Hannah Reilly",
     role: "Owner and head baker",
-    seed: 1,
+    photo: "/templates/maple-street-bakery/baker-1.jpg",
     bio: "Started Maple Street out of a borrowed kitchen in 2014. Mixes the levain by 9pm most nights and has not regretted it.",
   },
   {
     name: "Marcus Diaz",
     role: "Pastry baker",
-    seed: 2,
+    photo: "/templates/maple-street-bakery/baker-2.jpg",
     bio: "Came over from a bakery in Montreal in 2019. Responsible for the laminated dough most mornings, plus the morning bun cardamom level.",
   },
   {
     name: "Jess Sutton",
     role: "Counter and coffee",
-    seed: 3,
+    photo: "/templates/maple-street-bakery/baker-3.jpg",
     bio: "Pulls espresso, plates pastry, remembers your usual after the second visit. The chair by the window is unofficially hers.",
   },
 ];
@@ -78,10 +77,17 @@ export default function OurBakersPage() {
             {bakers.map((b) => (
               <article key={b.name}>
                 <div
-                  className="overflow-hidden"
-                  style={{ borderRadius: `var(--tpl-radius)` }}
+                  className="relative overflow-hidden"
+                  style={{ borderRadius: `var(--tpl-radius)`, aspectRatio: "4 / 5" }}
                 >
-                  <PortraitSvg seed={b.seed} theme={theme} className="h-auto w-full" />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={b.photo}
+                    alt={b.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-full w-full object-cover"
+                  />
                 </div>
                 <h2
                   className="mt-6 text-2xl leading-snug"

@@ -1,4 +1,3 @@
-import { Portrait as PortraitSvg } from "../images";
 import { theme } from "../theme";
 import { content } from "../content";
 
@@ -11,7 +10,16 @@ export function AboutSnippet() {
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <div className="grid gap-12 md:grid-cols-12">
           <aside className="md:col-span-5">
-            <PortraitSvg seed={1} theme={theme} className="h-auto w-full" />
+            <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/templates/ironclad-roofing/worker.jpg"
+                alt="An Ironclad crew member on site"
+                loading="lazy"
+                decoding="async"
+                className="block h-full w-full object-cover"
+              />
+            </div>
           </aside>
           <div className="md:col-span-7">
             <p

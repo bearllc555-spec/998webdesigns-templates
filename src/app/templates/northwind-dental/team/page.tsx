@@ -1,4 +1,3 @@
-import { Portrait as PortraitSvg } from "@/templates/03-northwind-dental/images";
 import { CtaBanner } from "@/components/site/cta-banner";
 import { templateModule } from "@/templates/03-northwind-dental";
 
@@ -7,25 +6,25 @@ const people = [
     name: "Dr Anna Park",
     role: "Dentist, co-founder",
     bio: "DDS, OHSU 2014. Comfort dentistry and pediatric care. Has the calmest voice in the operatory.",
-    seed: 1,
+    photo: "/templates/northwind-dental/dentist-1.jpg",
   },
   {
     name: "Dr Marcus Webb",
     role: "Dentist, co-founder",
     bio: "DMD, Tufts 2012. Same-day crowns, Invisalign, cosmetic restoration. Won the office coffee taste test in 2024.",
-    seed: 2,
+    photo: "/templates/northwind-dental/dentist-2.jpg",
   },
   {
     name: "Renee Calderon, RDH",
     role: "Hygienist",
     bio: "Six years at Northwind. Has cleaned more teeth than she can count and still gets thank-you notes every week.",
-    seed: 3,
+    photo: "/templates/northwind-dental/hygienist.jpg",
   },
   {
     name: "Sam Iwata",
     role: "Practice manager",
-    bio: "Runs the schedule. Answers the phone. Will probably remember your kids name before you remember his.",
-    seed: 4,
+    bio: "Runs the schedule. Answers the phone. Will probably remember your kid's name before you remember his.",
+    photo: "/templates/northwind-dental/smile.jpg",
   },
 ];
 
@@ -78,7 +77,16 @@ export default function TeamPage() {
                   borderRadius: `var(--tpl-radius)`,
                 }}
               >
-                <PortraitSvg seed={p.seed} theme={theme} className="h-auto w-full" />
+                <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.photo}
+                    alt={p.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-full w-full object-cover"
+                  />
+                </div>
                 <div className="p-6">
                   <h2
                     className="text-xl leading-snug"

@@ -1,4 +1,3 @@
-import { Portrait as PortraitSvg } from "@/templates/05-quietfield-yoga/images";
 import { SectionFrame } from "@/templates/05-quietfield-yoga/blocks/section-frame";
 import { CtaBanner } from "@/components/site/cta-banner";
 import { templateModule } from "@/templates/05-quietfield-yoga";
@@ -7,25 +6,25 @@ const teachers = [
   {
     name: "Maya Holberg",
     role: "Senior teacher, Hatha",
-    seed: 1,
+    photo: "/templates/quietfield-yoga/teacher-1.jpg",
     bio: "E-RYT 500. Teaches the standing series with the kind of patience that earns the room. Has not changed her opening sequence in eight years.",
   },
   {
     name: "Jonas Tate",
     role: "Senior teacher, slow Vinyasa",
-    seed: 2,
+    photo: "/templates/quietfield-yoga/teacher-2.jpg",
     bio: "E-RYT 500. Comes to the mat from a long career in ceramics. Treats the breath the way a potter treats a wheel: never rushed.",
   },
   {
     name: "Petra Yu",
     role: "Senior teacher, Yin",
-    seed: 3,
+    photo: "/templates/quietfield-yoga/teacher-3.jpg",
     bio: "RYT 500, certified Yin under Bernie Clark. Holds the room in silence for hours and somehow makes it feel short.",
   },
   {
     name: "Anne Sigerson",
     role: "Senior teacher, Restorative",
-    seed: 4,
+    photo: "/templates/quietfield-yoga/teacher-4.jpg",
     bio: "RYT 500. A former hospice nurse. Quietest voice in the room. Brings extra bolsters and refuses to apologize for it.",
   },
 ];
@@ -55,7 +54,16 @@ export default function TeachersPage() {
           {teachers.map((t) => (
             <article key={t.name} className="text-center md:text-left">
               <div className="mx-auto md:mx-0 md:max-w-xs">
-                <PortraitSvg seed={t.seed} theme={theme} className="h-auto w-full" />
+                <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={t.photo}
+                    alt={t.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="block h-full w-full object-cover"
+                  />
+                </div>
               </div>
               <h2
                 className="mt-7 text-2xl"

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Hero as HeroSvg } from "../images";
 import { theme } from "../theme";
 import { content } from "../content";
 
@@ -76,7 +75,16 @@ export function HeroBlock() {
           )}
         </div>
         <div className="mt-20">
-          <HeroSvg seed={1} theme={theme} className="h-auto w-full" />
+          <div className="relative overflow-hidden" style={{ aspectRatio: "16 / 10" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/templates/quietfield-yoga/hero.jpg"
+              alt="A still moment from a Quietfield class"
+              loading="lazy"
+              decoding="async"
+              className="block h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
