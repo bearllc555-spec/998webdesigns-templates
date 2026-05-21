@@ -45,10 +45,30 @@ async function main() {
     const url = `${BASE}/t/demo-${slug}.html`;
     const out = join(OUT_DIR, `${slug}.jpg`);
     try {
-      await page.goto(url, { waitUntil: "networkidle", timeout: 30000 });
-      // Some templates use lazy-load offsets and animation-on-scroll; nudge.
-      await page.evaluate(() => window.scrollTo(0, 0));
-      await page.waitForTimeout(500);
+      await page.goto(url, { waitUntil: "networkidle", timeout: 45000 });
+
+      // Force lazy-load <img>s to fetch by scrolling end-to-end before snap.
+      await page.evaluate(async () => {
+        const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+        const max = document.documentElement.scrollHeight;
+        for (let y = 0; y <= max; y += 800) {
+          window.scrollTo(0, y);
+          await sleep(120);
+        }
+        window.scrollTo(0, 0);
+      });
+
+      // Wait until every <img> with a src is complete (or timeout after 25s).
+      await page.waitForFunction(
+        () => {
+          const imgs = Array.from(document.images).filter((i) => i.getAttribute("src"));
+          if (imgs.length === 0) return true;
+          return imgs.every((i) => i.complete && i.naturalWidth > 0);
+        },
+        { timeout: 25000 }
+      ).catch(() => { /* proceed even if some images timed out */ });
+
+      await page.waitForTimeout(800);
       await page.screenshot({ path: out, type: "jpeg", quality: 78, fullPage: true });
       done++;
       const ms = Date.now() - start;
