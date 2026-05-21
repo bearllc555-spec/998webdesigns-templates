@@ -91,12 +91,15 @@ export default function Gallery() {
                     rel="noopener noreferrer"
                     className="group block overflow-hidden rounded-2xl border border-rule bg-bg shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
                   >
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-rule-soft">
+                    <div
+                      className="relative w-full overflow-hidden bg-rule-soft"
+                      style={{ aspectRatio: "4 / 3" }}
+                    >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={thumbUrl(t.slug)}
                         alt={`${t.name} template preview`}
-                        loading="lazy"
+                        loading="eager"
                         decoding="async"
                         className="thumb absolute inset-0 h-full w-full object-cover"
                         style={{
