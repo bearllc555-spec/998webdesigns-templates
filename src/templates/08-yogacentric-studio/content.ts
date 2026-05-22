@@ -86,6 +86,18 @@ export const content: TemplateContent = {
       name: "Valentina Lazirko",
       role: "14-year student",
     },
+    {
+      quote:
+        "The community here is real. You walk in stressed and leave feeling like yourself again.",
+      name: "James Ortiz",
+      role: "Power flow regular",
+    },
+    {
+      quote:
+        "Best decision I made this year was trying a beginner class. Welcoming from the first minute.",
+      name: "Sarah Mitchell",
+      role: "New member",
+    },
   ],
   ctaBanner: {
     headline: "Transform your body, mind, and life",
