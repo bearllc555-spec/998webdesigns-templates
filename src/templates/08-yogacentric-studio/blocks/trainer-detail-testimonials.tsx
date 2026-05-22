@@ -1,10 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import type { TrainerProfile } from "../content";
 
 const SCROLL_PX_PER_FRAME = 0.4;
+
+const controlClass =
+  "inline-flex items-center justify-center p-3 text-[var(--tpl-muted)] opacity-35 transition-opacity hover:opacity-70 focus-visible:opacity-90 focus-visible:outline-none";
 
 function TestimonialCard({
   quote,
@@ -123,52 +125,21 @@ export function TrainerDetailTestimonials({
         </div>
       </div>
 
-      <div className="mt-6 flex flex-wrap items-center gap-3">
-        <button
-          type="button"
-          onClick={() => nudge(-1)}
-          aria-label="Previous feedback"
-          className="inline-flex h-10 w-10 items-center justify-center transition hover:opacity-70"
-          style={{
-            background: "var(--tpl-card)",
-            border: "1px solid var(--tpl-line)",
-            borderRadius: 999,
-            color: "var(--tpl-ink)",
-          }}
-        >
-          <ChevronLeft className="h-5 w-5" />
+      <div className="mt-6 flex items-center justify-center gap-1">
+        <button type="button" onClick={() => nudge(-1)} aria-label="Previous feedback" className={controlClass}>
+          <span className="block h-1.5 w-1.5 rounded-full bg-current" aria-hidden="true" />
         </button>
         <button
           type="button"
           onClick={togglePause}
           aria-label={paused ? "Resume auto-scroll" : "Pause auto-scroll"}
-          className="inline-flex h-10 w-10 items-center justify-center transition hover:opacity-70"
-          style={{
-            background: "var(--tpl-bg)",
-            border: "1px solid var(--tpl-line)",
-            borderRadius: 999,
-            color: "var(--tpl-ink)",
-          }}
+          className={controlClass}
         >
-          {paused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
+          <span className="block h-px w-5 rounded-full bg-current" aria-hidden="true" />
         </button>
-        <button
-          type="button"
-          onClick={() => nudge(1)}
-          aria-label="Next feedback"
-          className="inline-flex h-10 w-10 items-center justify-center transition hover:opacity-70"
-          style={{
-            background: "var(--tpl-accent)",
-            border: "1px solid rgba(19,19,19,0.12)",
-            borderRadius: 999,
-            color: "var(--tpl-accent-ink)",
-          }}
-        >
-          <ChevronRight className="h-5 w-5" />
+        <button type="button" onClick={() => nudge(1)} aria-label="Next feedback" className={controlClass}>
+          <span className="block h-1.5 w-1.5 rounded-full bg-current" aria-hidden="true" />
         </button>
-        <p className="text-xs" style={{ color: "var(--tpl-muted)" }}>
-          {paused ? "Paused — use arrows to browse" : "Scrolling — pause to browse"}
-        </p>
       </div>
     </div>
   );
