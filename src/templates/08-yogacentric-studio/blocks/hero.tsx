@@ -26,7 +26,7 @@ export function HeroBlock() {
   return (
     <section
       id="hero"
-      className="relative min-h-[85vh] overflow-hidden"
+      className="relative h-svh min-h-[640px] overflow-hidden"
       style={{ background: "var(--tpl-ink)" }}
     >
       {/* Poster fallback — visible on mobile where source hides the video */}
@@ -49,7 +49,7 @@ export function HeroBlock() {
       >
         <source src="/templates/yogacentric-studio/hero.mp4" type="video/mp4" />
       </video>
-      <div className="relative mx-auto flex min-h-[85vh] max-w-6xl flex-col items-center justify-center px-5 py-16 text-center md:px-8 md:py-20">
+      <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-5 py-12 text-center md:px-8 md:py-16">
         <div className="mx-auto max-w-2xl">
           {content.hero.eyebrow && (
             <p
@@ -107,7 +107,7 @@ export function HeroBlock() {
             )}
           </div>
         </div>
-        <div className="mx-auto mt-12 grid max-w-md grid-cols-3 gap-4 md:mt-16 md:gap-8">
+        <div className="mx-auto mt-10 grid max-w-md grid-cols-3 gap-4 md:mt-12 md:gap-6">
           {heroStats.map((s) => (
             <div key={s.label}>
               <p
