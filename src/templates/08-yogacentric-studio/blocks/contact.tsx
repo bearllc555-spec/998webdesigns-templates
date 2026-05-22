@@ -68,9 +68,9 @@ export function ContactBlock() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/templates/yogacentric-studio/contact-bg.jpg"
-            alt="Sunlit yoga studio with wood floors, mats, and natural light"
-            className="absolute inset-0 h-full w-full scale-105 object-cover object-[72%_42%]"
+            src="/templates/yogacentric-studio/community.jpg"
+            alt="YogaCentric studio community"
+            className="absolute inset-0 h-full w-full object-cover object-center"
           />
           <div
             className="absolute inset-0"
@@ -112,13 +112,6 @@ export function ContactBlock() {
             </div>
 
             <div className="relative p-3 pt-3 md:p-4 lg:pb-5 lg:pl-4 lg:pr-4 lg:pt-4">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/templates/yogacentric-studio/contact-bg.jpg"
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 h-full w-full scale-110 object-cover object-[68%_38%]"
-              />
               <div
                 className="relative w-full p-7 shadow-[0_18px_50px_rgba(19,19,19,0.14)] md:p-8"
                 style={{
