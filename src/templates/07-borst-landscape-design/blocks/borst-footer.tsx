@@ -11,7 +11,7 @@ export function BorstFooter() {
   const year = new Date().getFullYear();
   return (
     <footer style={{ background: extendedPalette.darkSection, color: "#FFFFFF" }}>
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+      <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <p
@@ -87,7 +87,7 @@ export function BorstFooter() {
           </div>
           <div className="md:col-span-3">
             <p className="mb-4 text-xs uppercase" style={{ color: "rgba(255,255,255,0.5)", letterSpacing: "0.18em" }}>
-              Follow us
+              Follow our work
             </p>
             <div className="grid grid-cols-2 gap-2">
               {instagramTiles.map((src, i) => (
@@ -114,7 +114,7 @@ export function BorstFooter() {
         </div>
       </div>
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.12)" }}>
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-6 md:flex-row md:items-center md:justify-between md:px-8 text-xs"
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 md:flex-row md:items-center md:justify-between md:px-8 text-xs"
           style={{ color: "rgba(255,255,255,0.5)" }}>
           <p>
             &copy; {year} {content.business.legalName}. All rights reserved.

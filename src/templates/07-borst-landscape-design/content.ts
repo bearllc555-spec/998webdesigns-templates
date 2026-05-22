@@ -28,7 +28,7 @@ export const content: TemplateContent = {
     },
   },
   services: {
-    sectionLabel: "Why choose us?",
+    sectionLabel: "Services",
     sectionHeadline: "Explore our wide range of services.",
     sectionSub:
       "Design through installation through the season-by-season care that keeps a property looking the way it should. One team, on the property, year after year.",
@@ -42,7 +42,7 @@ export const content: TemplateContent = {
     ],
   },
   about: {
-    eyebrow: "Why choose us?",
+    eyebrow: "About us",
     headline: "Why choose us?",
     body: [
       "An award-winning, nationally recognized firm with thirty-five years of work across Bergen County, built around a stable bench of designers, certified installation technicians, and maintenance managers.",
@@ -77,12 +77,13 @@ export const content: TemplateContent = {
   },
 };
 
-// Featured testimonial (single, large, with avatar)
+// Featured testimonial band (full-width image + overlay)
 export const featuredTestimonial = {
   quote: "Reliable and meticulous work made the renovation process easy.",
   name: "Sophie Moore",
   role: "Ridgewood, NJ",
   avatar: "/templates/borst-landscape-design/avatar-sophie-moore.jpg",
+  image: "/templates/borst-landscape-design/why-us.jpg",
 };
 
 // Why-choose-us two pillars

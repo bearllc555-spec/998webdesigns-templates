@@ -63,7 +63,7 @@ export function BorstFloatingHeader() {
           boxShadow: show ? "0 4px 24px rgba(5,31,25,0.08)" : "none",
         }}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
           <Link
             href={homePath}
             className="shrink-0 text-base font-bold tracking-tight md:text-lg"

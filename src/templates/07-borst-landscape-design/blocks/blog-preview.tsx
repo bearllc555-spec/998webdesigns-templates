@@ -1,53 +1,42 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { theme } from "../theme";
 import { blogPosts } from "../content";
+import { theme } from "../theme";
+import {
+  BORST_CONTAINER,
+  BORST_SECTION_PY,
+  BorstArrow,
+  BorstEyebrow,
+  borstOutlineBtn,
+} from "../borst-ui";
 
 export function BlogPreviewBlock() {
   return (
-    <section style={{ background: "var(--tpl-bg)" }}>
-      <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-        <div className="grid items-end gap-8 md:grid-cols-12">
-          <div className="md:col-span-8">
-            <p
-              className="text-xs"
-              style={{
-                color: "var(--tpl-accent)",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                fontFamily: "var(--tpl-font-body)",
-                fontWeight: 600,
-              }}
-            >
-              Blog
-            </p>
-            <h2
-              className="mt-4 text-4xl leading-tight md:text-5xl"
-              style={{
-                color: "var(--tpl-ink)",
-                fontFamily: "var(--tpl-font-display)",
-                fontWeight: theme.type.displayWeight,
-                letterSpacing: theme.type.displayTracking,
-              }}
-            >
-              Our latest articles.
-            </h2>
-          </div>
+    <section style={{ background: "var(--tpl-card)" }}>
+      <div className={`${BORST_CONTAINER} ${BORST_SECTION_PY}`}>
+        <div className="max-w-3xl">
+          <BorstEyebrow>Our blog</BorstEyebrow>
+          <h2
+            className="mt-4 text-4xl leading-tight md:text-5xl"
+            style={{
+              color: "var(--tpl-ink)",
+              fontFamily: "var(--tpl-font-display)",
+              fontWeight: theme.type.displayWeight,
+              letterSpacing: theme.type.displayTracking,
+            }}
+          >
+            Our latest articles.
+          </h2>
         </div>
         <ul className="mt-14 grid gap-6 md:grid-cols-2">
           {blogPosts.map((p) => (
             <li
               key={p.title}
               className="overflow-hidden"
-              style={{ background: "var(--tpl-card)", border: "1px solid var(--tpl-line)", borderRadius: 24 }}
+              style={{ background: "var(--tpl-bg)", borderRadius: 20 }}
             >
               <div className="relative overflow-hidden" style={{ aspectRatio: "16 / 10" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="block h-full w-full object-cover"
-                />
+                <img src={p.image} alt={p.title} className="block h-full w-full object-cover" />
                 <span
                   className="absolute left-4 top-4 px-3 py-1 text-xs"
                   style={{
@@ -61,7 +50,15 @@ export function BlogPreviewBlock() {
                 </span>
               </div>
               <div className="p-7">
-                <p className="text-xs" style={{ color: "var(--tpl-muted)", letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 600 }}>
+                <p
+                  className="text-xs"
+                  style={{
+                    color: "var(--tpl-muted)",
+                    letterSpacing: "0.14em",
+                    textTransform: "uppercase",
+                    fontWeight: 600,
+                  }}
+                >
                   {p.date}
                 </p>
                 <h3
@@ -80,7 +77,7 @@ export function BlogPreviewBlock() {
                   style={{ color: "var(--tpl-accent)", fontWeight: 600 }}
                 >
                   Learn more
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  <BorstArrow className="h-3.5 w-3.5" />
                 </Link>
               </div>
             </li>
@@ -90,16 +87,10 @@ export function BlogPreviewBlock() {
           <Link
             href="#"
             className="inline-flex items-center gap-2 px-6 py-3 text-sm transition hover:opacity-80"
-            style={{
-              background: "var(--tpl-card)",
-              color: "var(--tpl-ink)",
-              border: "1px solid var(--tpl-line)",
-              borderRadius: 999,
-              fontFamily: "var(--tpl-font-body)",
-              fontWeight: 500,
-            }}
+            style={borstOutlineBtn}
           >
             Browse all articles
+            <BorstArrow />
           </Link>
         </div>
       </div>

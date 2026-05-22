@@ -19,8 +19,8 @@ export const theme: TemplateTheme = {
     accentSoft: "#D4F5DC",
   },
   type: {
-    display: "var(--font-geist-sans)",
-    body: "var(--font-manrope)",
+    display: "var(--font-plus-jakarta)",
+    body: "var(--font-plus-jakarta)",
     displayWeight: 700,
     bodyWeight: 400,
     displayTracking: "-0.02em",
