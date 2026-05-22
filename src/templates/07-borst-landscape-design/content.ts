@@ -77,13 +77,12 @@ export const content: TemplateContent = {
   },
 };
 
-// Featured testimonial band (full-width image + overlay)
+// Featured testimonial (text-only on home; no hero-scale image)
 export const featuredTestimonial = {
   quote: "Reliable and meticulous work made the renovation process easy.",
   name: "Sophie Moore",
   role: "Ridgewood, NJ",
   avatar: "/templates/borst-landscape-design/avatar-sophie-moore.jpg",
-  image: "/templates/borst-landscape-design/gallery-01.jpg",
 };
 
 // Why-choose-us two pillars
@@ -110,9 +109,8 @@ export const serviceAssets = [
   { thumb: "/templates/borst-landscape-design/svc-pond-maintenance.jpg", icon: "/templates/borst-landscape-design/icon-pond-maintenance.svg" },
 ];
 
-// Six portfolio images
+// Portfolio images (home grid)
 export const portfolio = [
-  { title: "Stone terrace and perennial garden", location: "Ridgewood, NJ", image: "/templates/borst-landscape-design/gallery-01.jpg" },
   { title: "Front entry redesign with boxwood parterre", location: "Saddle River, NJ", image: "/templates/borst-landscape-design/gallery-02.jpg" },
   { title: "Pool surround and outdoor kitchen", location: "Franklin Lakes, NJ", image: "/templates/borst-landscape-design/gallery-03.jpg" },
   { title: "Corporate campus seasonal program", location: "Mahwah, NJ", image: "/templates/borst-landscape-design/gallery-04.jpg" },
