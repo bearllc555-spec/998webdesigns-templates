@@ -2,11 +2,11 @@ import type { TemplateContent } from "../types";
 
 export const content: TemplateContent = {
   business: {
-    name: "Borst Landscape & Design",
-    legalName: "Borst Landscape & Design, Inc.",
-    address: "260 W. Crescent Ave., Suite 1\nAllendale, NJ 07401",
-    phone: "(201) 785-9400",
-    email: "hello@borstlandscape.com",
+    name: "GardenView",
+    legalName: "GardenView Landscaping, Inc.",
+    address: "325 Park Avenue\nNew York, NY 10010",
+    phone: "(212) 555-0149",
+    email: "hello@gardenview.com",
     hours: [
       "Mon to Fri, 9am to 5pm",
       "Saturday by appointment",
@@ -19,9 +19,9 @@ export const content: TemplateContent = {
     ],
   },
   hero: {
-    eyebrow: "Bergen County, NJ - since 1989",
-    headline: "Let us bring life to your landscape.",
-    sub: "An award-winning, full-service landscape design-build firm in Allendale, New Jersey. Thirty-five years of transforming Bergen County properties with an organic, environmentally conscious hand.",
+    eyebrow: "New York, NY - since 1992",
+    headline: "Let us bring life to your garden.",
+    sub: "Lorem ipsum dolor sit amet consectetur adipiscing elidolor mattis sit phasellus mollis sit aliquam sit nullam neques.",
     secondaryLink: {
       label: "Browse services",
       href: "/templates/borst-landscape-design/services",
@@ -31,21 +31,21 @@ export const content: TemplateContent = {
     sectionLabel: "Services",
     sectionHeadline: "Explore our wide range of services.",
     sectionSub:
-      "Design through installation through the season-by-season care that keeps a property looking the way it should. One team, on the property, year after year.",
+      "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada massa cursus vel vulputate lorem tincidunt.",
     items: [
-      { name: "Landscape design", summary: "Master plans, planting design, and concept drawings tailored to your property and your patience." },
-      { name: "Flower planting", summary: "Seasonal color rotations and perennial gardens, planted by hand, in the right window for the zone." },
-      { name: "Garden maintenance", summary: "Weekly visits to keep beds composed, edges crisp, and the perennial garden looking like the day it was installed." },
-      { name: "Lawn mowing", summary: "Crew-cut lawns on a consistent schedule, with organic-based fertility programs tuned to Bergen County turf." },
-      { name: "Leaf removal", summary: "Fall and spring cleanups handled in a single visit, with bagged or mulched leaves per your preference." },
-      { name: "Pond maintenance", summary: "Year-round care for residential water features - filtration, planting, and seasonal opening and closing." },
+      { name: "Garden design", summary: "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada massa." },
+      { name: "Flower planting", summary: "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada massa." },
+      { name: "Garden maintenance", summary: "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada massa." },
+      { name: "Lawn mowing", summary: "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada massa." },
+      { name: "Leaf removal", summary: "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada massa." },
+      { name: "Pond maintenance", summary: "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada massa." },
     ],
   },
   about: {
     eyebrow: "About us",
     headline: "Why choose us?",
     body: [
-      "An award-winning, nationally recognized firm with thirty-five years of work across Bergen County, built around a stable bench of designers, certified installation technicians, and maintenance managers.",
+      "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada massa cursus vel vulputate lorem tincidunt vulputate sollicitudin sit viverra viverra.",
     ],
     stats: [
       { label: "Founded", value: "1989" },
@@ -54,14 +54,14 @@ export const content: TemplateContent = {
     ],
   },
   testimonials: [
-    { quote: "Fantastic landscaping service with remarkable results. Highly recommended!", name: "John Carter", role: "@johncarter" },
-    { quote: "Transformed our yard into a beautiful outdoor oasis, absolutely stunning.", name: "Sophie Moore", role: "@sophiemoore" },
-    { quote: "Exceptional service and breathtaking results. Our garden looks amazing!", name: "Matt Cannon", role: "@mattcannon" },
-    { quote: "Highly professional team delivering top-notch landscaping every single time.", name: "Lilly Woods", role: "@lillywoods" },
-    { quote: "Impressive transformation of our outdoor space, couldn't be happier!", name: "Sandy Houston", role: "@sandyhouston" },
-    { quote: "Expert landscapers who deliver incredible results. Our yard is gorgeous!", name: "Patrick Meyer", role: "@patrickmeyer" },
-    { quote: "Unmatched expertise and dedication to landscaping perfection every time.", name: "Kathie Corl", role: "@kathiecorl" },
-    { quote: "Exceeded all our expectations with their landscaping skills and creativity.", name: "Andy Smith", role: "@andysmith" },
+    { quote: "Fantastic landscaping service with remarkable results. Highly recommended!", name: "John Carter", role: "@john_c" },
+    { quote: "Transformed our yard into a beautiful outdoor oasis, absolutely stunning.", name: "Sophie Moore", role: "@sophi_m" },
+    { quote: "Exceptional service and breathtaking results. Our garden looks amazing!", name: "Matt Cannon", role: "@matt_c" },
+    { quote: "Highly professional team delivering top-notch landscaping every single time.", name: "Lilly Woods", role: "@lilly_w" },
+    { quote: "Impressive transformation of our outdoor space, couldn't be happier!", name: "Sandy Houston", role: "@sandy_h" },
+    { quote: "Expert landscapers who deliver incredible results. Our yard is gorgeous!", name: "Patrick Meyer", role: "@patrick_m" },
+    { quote: "Unmatched expertise and dedication to landscaping perfection every time.", name: "Kathie Corl", role: "@kathie_c" },
+    { quote: "Exceeded all our expectations with their landscaping skills and creativity.", name: "Andy Smith", role: "@andy_s" },
   ],
   ctaBanner: {
     headline: "Get in touch",
@@ -73,7 +73,7 @@ export const content: TemplateContent = {
   },
   footer: {
     blurb:
-      "An award-winning, full-service landscape design-build and maintenance firm in Allendale, NJ. Serving Bergen County and the surrounding North Jersey area since 1989.",
+      "A full-service landscape design and maintenance company serving homeowners and commercial spaces with detail-first outdoor work.",
   },
 };
 
@@ -91,12 +91,12 @@ export const pillars = [
   {
     icon: "/templates/borst-landscape-design/icon-eco-friendly.svg",
     title: "Eco friendly",
-    body: "Organic-based fertility programs, IPM, and a careful hand with the chemistry. Better for the property and the dog.",
+    body: "Hendrerit sagittis pretium enim mi duis euol.",
   },
   {
     icon: "/templates/borst-landscape-design/icon-love.svg",
     title: "Done with love",
-    body: "The same crews on your property year after year. People who actually care how the bed looks at the end of the day.",
+    body: "Hendrerit sagittis pretium enim mi duis euol.",
   },
 ];
 
@@ -122,9 +122,9 @@ export const portfolio = [
 
 // 3-step process
 export const process = [
-  { label: "STEP 01", title: "Contact us", body: "Tell us about your property in a short note. We follow up the same business day to schedule a walk-through." },
-  { label: "STEP 02", title: "Schedule an appointment", body: "A senior designer walks the site, listens to what you have in mind, and asks the questions that shape the plan." },
-  { label: "STEP 03", title: "Get your project done", body: "Within the week, you receive a written scope, a planting list, and an install schedule tied to the season." },
+  { label: "STEP 01", title: "Contact us", body: "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada." },
+  { label: "STEP 02", title: "Schedule an appointment", body: "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada." },
+  { label: "STEP 03", title: "Get your project done", body: "Lorem ipsum dolor sit amet consectetur sed tristique fermentum malesuada." },
 ];
 
 // 8 testimonial avatars

@@ -3,9 +3,10 @@ import type { TemplateTheme } from "../types";
 export const theme: TemplateTheme = {
   meta: {
     slug: "borst-landscape-design",
-    name: "Borst Landscape & Design",
+    name: "GardenView",
     industry: "Landscape design, build, and maintenance",
-    tagline: "Let us bring life to your landscape.",
+    tagline: "Let us bring life to your garden.",
+    galleryPreview: "/templates/borst-landscape-design/hero.jpg",
     publishedAt: "2026-05-22T13:00:00Z",
   },
   palette: {
