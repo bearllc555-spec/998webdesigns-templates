@@ -24,7 +24,11 @@ export function HeroBlock() {
   }, []);
 
   return (
-    <section className="relative min-h-[85vh] overflow-hidden" style={{ background: "var(--tpl-ink)" }}>
+    <section
+      id="hero"
+      className="relative min-h-[85vh] overflow-hidden"
+      style={{ background: "var(--tpl-ink)" }}
+    >
       {/* Poster fallback — visible on mobile where source hides the video */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -53,7 +57,7 @@ export function HeroBlock() {
         }}
         aria-hidden="true"
       />
-      <div className="relative mx-auto max-w-6xl px-5 pt-28 pb-16 md:px-8 md:pt-36 md:pb-24">
+      <div className="relative mx-auto max-w-6xl px-5 pt-16 pb-16 md:px-8 md:pt-20 md:pb-24">
         <div className="max-w-3xl">
           {content.hero.eyebrow && (
             <p

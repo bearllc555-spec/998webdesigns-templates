@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { templateModule } from "@/templates/08-yogacentric-studio";
 import { ThemeStyle } from "@/lib/theme-style";
-import { SiteHeader } from "@/components/site/header";
+import { YogaCentricHeader } from "@/templates/08-yogacentric-studio/blocks/floating-header";
 import { YogaCentricFooter } from "@/templates/08-yogacentric-studio/blocks/footer";
 
 const { theme } = templateModule;
@@ -26,7 +26,7 @@ export default function YogaCentricLayout({ children }: { children: React.ReactN
       <a href="#main" className="skip-link">
         Skip to content
       </a>
-      <SiteHeader theme={theme} />
+      <YogaCentricHeader />
       <main id="main">{children}</main>
       <YogaCentricFooter />
     </div>
