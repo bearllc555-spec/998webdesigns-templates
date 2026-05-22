@@ -1,20 +1,19 @@
-import { Leaf, Flower2, Sprout, TreePine, Bug, Snowflake } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { theme } from "../theme";
-import { content } from "../content";
-
-const ICONS = [Leaf, Flower2, Sprout, TreePine, Bug, Snowflake];
+import { content, serviceAssets } from "../content";
 
 export function ServicesBlock() {
   return (
     <section style={{ background: "var(--tpl-card)" }}>
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-        <div className="grid gap-8 md:grid-cols-12 md:items-end">
-          <div className="md:col-span-7">
+        <div className="grid items-end gap-8 md:grid-cols-12">
+          <div className="md:col-span-8">
             <p
               className="text-xs"
               style={{
                 color: "var(--tpl-accent)",
-                letterSpacing: "0.16em",
+                letterSpacing: "0.18em",
                 textTransform: "uppercase",
                 fontFamily: "var(--tpl-font-body)",
                 fontWeight: 600,
@@ -35,62 +34,104 @@ export function ServicesBlock() {
             </h2>
           </div>
           <p
-            className="text-base leading-relaxed md:col-span-5"
-            style={{
-              color: "var(--tpl-muted)",
-              fontFamily: "var(--tpl-font-body)",
-            }}
+            className="text-base leading-relaxed md:col-span-4"
+            style={{ color: "var(--tpl-muted)", fontFamily: "var(--tpl-font-body)" }}
           >
             {content.services.sectionSub}
           </p>
         </div>
         <ul className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {content.services.items.map((it, i) => {
-            const Icon = ICONS[i % ICONS.length];
+            const asset = serviceAssets[i];
             return (
               <li
                 key={it.name}
-                className="p-7 transition hover:-translate-y-0.5"
+                className="overflow-hidden transition hover:-translate-y-0.5"
                 style={{
                   background: "var(--tpl-bg)",
-                  border: `1px solid var(--tpl-line)`,
-                  borderRadius: `var(--tpl-radius)`,
+                  border: "1px solid var(--tpl-line)",
+                  borderRadius: 24,
                 }}
               >
-                <div
-                  className="inline-flex h-11 w-11 items-center justify-center"
-                  style={{
-                    background: "var(--tpl-accent-soft)",
-                    color: "var(--tpl-accent)",
-                    borderRadius: 4,
-                  }}
-                >
-                  <Icon className="h-5 w-5" aria-hidden="true" />
+                <div className="relative overflow-hidden" style={{ aspectRatio: "16 / 11" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={asset.thumb}
+                    alt={it.name}
+                    className="block h-full w-full object-cover"
+                  />
                 </div>
-                <h3
-                  className="mt-5 text-xl leading-snug"
-                  style={{
-                    color: "var(--tpl-ink)",
-                    fontFamily: "var(--tpl-font-display)",
-                    fontWeight: 600,
-                    letterSpacing: theme.type.displayTracking,
-                  }}
-                >
-                  {it.name}
-                </h3>
-                <p
-                  className="mt-3 text-base leading-relaxed"
-                  style={{
-                    color: "var(--tpl-muted)",
-                    fontFamily: "var(--tpl-font-body)",
-                  }}
-                >
-                  {it.summary}
-                </p>
+                <div className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="inline-flex h-11 w-11 shrink-0 items-center justify-center"
+                      style={{ background: "var(--tpl-accent-soft)", borderRadius: 14 }}
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={asset.icon} alt="" className="h-5 w-5" />
+                    </div>
+                    <div className="flex-1">
+                      <h3
+                        className="text-lg leading-snug"
+                        style={{
+                          color: "var(--tpl-ink)",
+                          fontFamily: "var(--tpl-font-display)",
+                          fontWeight: 700,
+                        }}
+                      >
+                        {it.name}
+                      </h3>
+                      <p
+                        className="mt-2 text-sm leading-relaxed"
+                        style={{ color: "var(--tpl-muted)" }}
+                      >
+                        {it.summary}
+                      </p>
+                    </div>
+                  </div>
+                  <Link
+                    href="/templates/borst-landscape-design/services"
+                    className="mt-5 inline-flex items-center gap-2 text-sm transition hover:opacity-80"
+                    style={{ color: "var(--tpl-accent)", fontWeight: 600 }}
+                  >
+                    Learn more
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </div>
               </li>
             );
           })}
         </ul>
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+          <Link
+            href={theme.primaryCta.href}
+            className="inline-flex items-center gap-2 px-6 py-3 text-sm transition hover:opacity-90"
+            style={{
+              background: "var(--tpl-accent)",
+              color: "var(--tpl-accent-ink)",
+              borderRadius: 999,
+              fontFamily: "var(--tpl-font-body)",
+              fontWeight: 600,
+            }}
+          >
+            Get in touch
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+          <Link
+            href="/templates/borst-landscape-design/services"
+            className="inline-flex items-center gap-2 px-5 py-3 text-sm transition hover:opacity-80"
+            style={{
+              background: "var(--tpl-bg)",
+              color: "var(--tpl-ink)",
+              border: "1px solid var(--tpl-line)",
+              borderRadius: 999,
+              fontFamily: "var(--tpl-font-body)",
+              fontWeight: 500,
+            }}
+          >
+            Browse all services
+          </Link>
+        </div>
       </div>
     </section>
   );

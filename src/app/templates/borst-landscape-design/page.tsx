@@ -1,21 +1,27 @@
 import { HeroBlock } from "@/templates/07-borst-landscape-design/blocks/hero";
+import { FeaturedTestimonial } from "@/templates/07-borst-landscape-design/blocks/featured-testimonial";
+import { WhyUsBlock } from "@/templates/07-borst-landscape-design/blocks/why-us";
 import { ServicesBlock } from "@/templates/07-borst-landscape-design/blocks/services";
-import { AboutSnippet } from "@/templates/07-borst-landscape-design/blocks/about-snippet";
+import { PortfolioBlock } from "@/templates/07-borst-landscape-design/blocks/portfolio";
 import { ProcessBlock } from "@/templates/07-borst-landscape-design/blocks/process";
 import { TestimonialsBlock } from "@/templates/07-borst-landscape-design/blocks/testimonials";
-import { CtaBanner } from "@/components/site/cta-banner";
-import { templateModule } from "@/templates/07-borst-landscape-design";
+import { CtaDarkBlock } from "@/templates/07-borst-landscape-design/blocks/cta-dark";
+import { BlogPreviewBlock } from "@/templates/07-borst-landscape-design/blocks/blog-preview";
+import { FooterCtaBlock } from "@/templates/07-borst-landscape-design/blocks/footer-cta";
 
 export default function BorstHome() {
-  const { theme, content } = templateModule;
   return (
     <>
       <HeroBlock />
+      <FeaturedTestimonial />
+      <WhyUsBlock />
       <ServicesBlock />
-      <AboutSnippet />
+      <PortfolioBlock />
       <ProcessBlock />
       <TestimonialsBlock />
-      <CtaBanner theme={theme} content={content} />
+      <CtaDarkBlock />
+      <BlogPreviewBlock />
+      <FooterCtaBlock />
     </>
   );
 }

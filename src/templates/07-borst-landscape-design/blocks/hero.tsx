@@ -1,37 +1,43 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { theme } from "../theme";
 import { content } from "../content";
-import { Hero as HeroMotif } from "../images";
 
 export function HeroBlock() {
   return (
-    <section style={{ background: "var(--tpl-bg)" }}>
-      <div className="mx-auto max-w-6xl px-5 pt-12 pb-20 md:px-8 md:pt-20 md:pb-24">
-        <div className="grid items-center gap-12 md:grid-cols-12 md:gap-12">
+    <section className="relative" style={{ background: "var(--tpl-ink)" }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/templates/borst-landscape-design/hero.jpg"
+        alt="Modern home with landscaped garden"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(180deg, rgba(5,31,25,0.0) 0%, rgba(5,31,25,0.55) 60%, rgba(5,31,25,0.85) 100%)" }}
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto max-w-6xl px-5 pt-28 pb-20 md:px-8 md:pt-40 md:pb-28">
+        <div className="grid items-end gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
-            <div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
+            <p
+              className="text-xs"
               style={{
-                background: "var(--tpl-accent-soft)",
-                color: "var(--tpl-accent)",
+                color: "var(--tpl-accent-soft)",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                fontFamily: "var(--tpl-font-body)",
+                fontWeight: 600,
               }}
             >
-              <span
-                className="inline-block h-2 w-2 rounded-full"
-                style={{ background: "var(--tpl-accent)" }}
-                aria-hidden="true"
-              />
-              <p
-                className="text-xs font-medium"
-                style={{ fontFamily: "var(--tpl-font-body)" }}
-              >
-                {content.hero.eyebrow}
-              </p>
-            </div>
+              {content.hero.eyebrow}
+            </p>
             <h1
-              className="mt-6 text-5xl leading-[1.05] md:text-6xl lg:text-7xl"
+              className="mt-5 text-5xl leading-[1.05] md:text-7xl"
               style={{
-                color: "var(--tpl-ink)",
+                color: "#FFFFFF",
                 fontFamily: "var(--tpl-font-display)",
                 fontWeight: theme.type.displayWeight,
                 letterSpacing: theme.type.displayTracking,
@@ -40,11 +46,8 @@ export function HeroBlock() {
               {content.hero.headline}
             </h1>
             <p
-              className="mt-7 max-w-xl text-lg leading-relaxed"
-              style={{
-                color: "var(--tpl-muted)",
-                fontFamily: "var(--tpl-font-body)",
-              }}
+              className="mt-7 max-w-xl text-base leading-relaxed md:text-lg"
+              style={{ color: "rgba(255,255,255,0.85)", fontFamily: "var(--tpl-font-body)" }}
             >
               {content.hero.sub}
             </p>
@@ -55,7 +58,7 @@ export function HeroBlock() {
                 style={{
                   background: "var(--tpl-accent)",
                   color: "var(--tpl-accent-ink)",
-                  borderRadius: `var(--tpl-radius)`,
+                  borderRadius: 999,
                   fontFamily: "var(--tpl-font-body)",
                   fontWeight: 600,
                 }}
@@ -66,28 +69,84 @@ export function HeroBlock() {
               {content.hero.secondaryLink && (
                 <Link
                   href={content.hero.secondaryLink.href}
-                  className="inline-flex items-center gap-2 px-5 py-3 text-sm transition hover:opacity-80"
+                  className="inline-flex items-center gap-2 px-5 py-3 text-sm transition hover:opacity-90"
                   style={{
-                    background: "var(--tpl-card)",
-                    color: "var(--tpl-ink)",
-                    border: `1px solid var(--tpl-line)`,
-                    borderRadius: `var(--tpl-radius)`,
+                    background: "rgba(255,255,255,0.1)",
+                    color: "#FFFFFF",
+                    border: "1px solid rgba(255,255,255,0.4)",
+                    borderRadius: 999,
                     fontFamily: "var(--tpl-font-body)",
                     fontWeight: 500,
+                    backdropFilter: "blur(8px)",
                   }}
                 >
                   {content.hero.secondaryLink.label}
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               )}
             </div>
           </div>
           <div className="md:col-span-5">
-            <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5", borderRadius: `var(--tpl-radius)` }}>
-              <HeroMotif theme={theme} className="block h-full w-full" />
-            </div>
+            <NewsletterCard />
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function NewsletterCard() {
+  return (
+    <div
+      className="p-6 md:p-7"
+      style={{
+        background: "rgba(255,255,255,0.96)",
+        borderRadius: 16,
+        boxShadow: "0 20px 60px rgba(0,0,0,0.25)",
+      }}
+    >
+      <p
+        className="text-xl leading-snug md:text-2xl"
+        style={{
+          color: "var(--tpl-ink)",
+          fontFamily: "var(--tpl-font-display)",
+          fontWeight: 700,
+          letterSpacing: "-0.01em",
+        }}
+      >
+        Book your service today
+      </p>
+      <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--tpl-muted)" }}>
+        Drop your email - a designer will reach out the same business day.
+      </p>
+      <form className="mt-5 flex flex-col gap-2 sm:flex-row" onSubmit={(e) => e.preventDefault()}>
+        <input
+          type="email"
+          aria-label="Email address"
+          placeholder="Enter your email"
+          className="w-full flex-1 px-4 py-3 text-sm focus:outline-none"
+          style={{
+            background: "var(--tpl-card)",
+            color: "var(--tpl-ink)",
+            border: "1px solid var(--tpl-line)",
+            borderRadius: 999,
+            fontFamily: "var(--tpl-font-body)",
+          }}
+        />
+        <button
+          type="submit"
+          className="shrink-0 px-5 py-3 text-sm transition hover:opacity-90"
+          style={{
+            background: "var(--tpl-accent)",
+            color: "var(--tpl-accent-ink)",
+            borderRadius: 999,
+            fontFamily: "var(--tpl-font-body)",
+            fontWeight: 600,
+          }}
+        >
+          Sign up
+        </button>
+      </form>
+    </div>
   );
 }

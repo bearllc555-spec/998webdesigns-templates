@@ -19,34 +19,33 @@ export const content: TemplateContent = {
     ],
   },
   hero: {
-    eyebrow: "Serving Bergen County since 1989",
+    eyebrow: "Bergen County, NJ - since 1989",
     headline: "Let us bring life to your landscape.",
-    sub: "A nationally recognized, award-winning design-build firm. Thirty-five years of transforming Bergen County properties with an organic, environmentally conscious hand.",
+    sub: "An award-winning, full-service landscape design-build firm in Allendale, New Jersey. Thirty-five years of transforming Bergen County properties with an organic, environmentally conscious hand.",
     secondaryLink: {
-      label: "Browse our services",
+      label: "Browse services",
       href: "/templates/borst-landscape-design/services",
     },
   },
   services: {
-    sectionLabel: "What we do",
-    sectionHeadline: "A full-service landscape practice.",
+    sectionLabel: "Why choose us?",
+    sectionHeadline: "Explore our wide range of services.",
     sectionSub:
       "Design through installation through the season-by-season care that keeps a property looking the way it should. One team, on the property, year after year.",
     items: [
-      { name: "Landscape design & build", summary: "Master plans, planting design, and full installation by certified technicians who have built it before." },
-      { name: "Garden design & maintenance", summary: "Seasonal color rotations, perennial gardens, and the trimming schedule that keeps them composed." },
-      { name: "Organic lawn care", summary: "Organic-based fertility programs, soil testing, and overseeding tuned to Bergen County turf." },
-      { name: "Tree & shrub care", summary: "Pruning, fertilization, and disease prevention from a certified arborist on staff." },
-      { name: "Mosquito, flea & tick control", summary: "Organic and conventional programs from a licensed applicator, on a schedule that actually works." },
-      { name: "Commercial snow removal", summary: "Plowing, salting, and sidewalk service for commercial properties across northern New Jersey." },
+      { name: "Landscape design", summary: "Master plans, planting design, and concept drawings tailored to your property and your patience." },
+      { name: "Flower planting", summary: "Seasonal color rotations and perennial gardens, planted by hand, in the right window for the zone." },
+      { name: "Garden maintenance", summary: "Weekly visits to keep beds composed, edges crisp, and the perennial garden looking like the day it was installed." },
+      { name: "Lawn mowing", summary: "Crew-cut lawns on a consistent schedule, with organic-based fertility programs tuned to Bergen County turf." },
+      { name: "Leaf removal", summary: "Fall and spring cleanups handled in a single visit, with bagged or mulched leaves per your preference." },
+      { name: "Pond maintenance", summary: "Year-round care for residential water features - filtration, planting, and seasonal opening and closing." },
     ],
   },
   about: {
-    eyebrow: "About the firm",
-    headline: "Mark Borst started this firm in 1989. He still runs it.",
+    eyebrow: "Why choose us?",
+    headline: "Why choose us?",
     body: [
-      "Borst Landscape & Design is a full-service, award-winning landscape design-build firm headquartered in Allendale, New Jersey. Founded by Mark Borst in 1989 with one truck and one lawn mower, the firm has grown into one of the most respected landscape practices in Bergen County.",
-      "The team is built around a stable bench of landscape designers, certified installation technicians, and seasonal maintenance managers. We work on residential estates, commercial properties, and the long-term, year-after-year maintenance contracts that hold them together.",
+      "An award-winning, nationally recognized firm with thirty-five years of work across Bergen County, built around a stable bench of designers, certified installation technicians, and maintenance managers.",
     ],
     stats: [
       { label: "Founded", value: "1989" },
@@ -55,30 +54,20 @@ export const content: TemplateContent = {
     ],
   },
   testimonials: [
-    {
-      quote:
-        "Mark and his crew transformed a tired front yard into something the neighbors actually stop to photograph. Two years later, the maintenance team still shows up on the same day every week.",
-      name: "Jennifer K.",
-      role: "Homeowner, Ridgewood",
-    },
-    {
-      quote:
-        "We hired Borst to redesign a half-acre back garden. They presented three options, took our notes, and delivered something better than any of them.",
-      name: "Robert and Lila M.",
-      role: "Homeowners, Saddle River",
-    },
-    {
-      quote:
-        "Borst has maintained our corporate campus for the better part of a decade. Snow at 5am, fresh mulch in April, and a real human on the phone when we need anything in between.",
-      name: "Daniel W.",
-      role: "Facilities manager, Mahwah",
-    },
+    { quote: "Fantastic landscaping service with remarkable results. Highly recommended!", name: "John Carter", role: "@johncarter" },
+    { quote: "Transformed our yard into a beautiful outdoor oasis, absolutely stunning.", name: "Sophie Moore", role: "@sophiemoore" },
+    { quote: "Exceptional service and breathtaking results. Our garden looks amazing!", name: "Matt Cannon", role: "@mattcannon" },
+    { quote: "Highly professional team delivering top-notch landscaping every single time.", name: "Lilly Woods", role: "@lillywoods" },
+    { quote: "Impressive transformation of our outdoor space, couldn't be happier!", name: "Sandy Houston", role: "@sandyhouston" },
+    { quote: "Expert landscapers who deliver incredible results. Our yard is gorgeous!", name: "Patrick Meyer", role: "@patrickmeyer" },
+    { quote: "Unmatched expertise and dedication to landscaping perfection every time.", name: "Kathie Corl", role: "@kathiecorl" },
+    { quote: "Exceeded all our expectations with their landscaping skills and creativity.", name: "Andy Smith", role: "@andysmith" },
   ],
   ctaBanner: {
-    headline: "Get in touch for a free on-site quote.",
-    sub: "A designer will walk the property, listen to what you have in mind, and follow up with a written estimate within the week.",
+    headline: "Get in touch",
+    sub: "Get in touch to design a beautiful landscape today.",
     cta: {
-      label: "Request a quote",
+      label: "Get in touch",
       href: "/templates/borst-landscape-design/contact",
     },
   },
@@ -88,82 +77,108 @@ export const content: TemplateContent = {
   },
 };
 
-export const process = [
+// Featured testimonial (single, large, with avatar)
+export const featuredTestimonial = {
+  quote: "Reliable and meticulous work made the renovation process easy.",
+  name: "Sophie Moore",
+  role: "Ridgewood, NJ",
+  avatar: "/templates/borst-landscape-design/avatar-sophie-moore.jpg",
+};
+
+// Why-choose-us two pillars
+export const pillars = [
   {
-    label: "Step 01",
-    title: "Tell us about the property",
-    body: "Share a few notes and photos. We will follow up to schedule an on-site visit at no cost.",
+    icon: "/templates/borst-landscape-design/icon-eco-friendly.svg",
+    title: "Eco friendly",
+    body: "Organic-based fertility programs, IPM, and a careful hand with the chemistry. Better for the property and the dog.",
   },
   {
-    label: "Step 02",
-    title: "Walk the property with a designer",
-    body: "A senior designer walks the site, listens to what you have in mind, and asks the questions that shape the plan.",
-  },
-  {
-    label: "Step 03",
-    title: "Receive a written plan and quote",
-    body: "Within the week, you receive a clear written scope, a planting list, and an installation schedule tied to the season.",
+    icon: "/templates/borst-landscape-design/icon-love.svg",
+    title: "Done with love",
+    body: "The same crews on your property year after year. People who actually care how the bed looks at the end of the day.",
   },
 ];
 
+// Service card photo + icon mapping
+export const serviceAssets = [
+  { thumb: "/templates/borst-landscape-design/svc-garden-design.jpg", icon: "/templates/borst-landscape-design/icon-garden-design.svg" },
+  { thumb: "/templates/borst-landscape-design/svc-flower-planting.jpg", icon: "/templates/borst-landscape-design/icon-flower-planting.svg" },
+  { thumb: "/templates/borst-landscape-design/svc-garden-maintenance.jpg", icon: "/templates/borst-landscape-design/icon-garden-maintenance.svg" },
+  { thumb: "/templates/borst-landscape-design/svc-lawn-mowing.jpg", icon: "/templates/borst-landscape-design/icon-lawn-mowing.svg" },
+  { thumb: "/templates/borst-landscape-design/svc-leaf-removal.jpg", icon: "/templates/borst-landscape-design/icon-leaf-removal.svg" },
+  { thumb: "/templates/borst-landscape-design/svc-pond-maintenance.jpg", icon: "/templates/borst-landscape-design/icon-pond-maintenance.svg" },
+];
+
+// Six portfolio images
 export const portfolio = [
+  { title: "Stone terrace and perennial garden", location: "Ridgewood, NJ", image: "/templates/borst-landscape-design/gallery-01.jpg" },
+  { title: "Front entry redesign with boxwood parterre", location: "Saddle River, NJ", image: "/templates/borst-landscape-design/gallery-02.jpg" },
+  { title: "Pool surround and outdoor kitchen", location: "Franklin Lakes, NJ", image: "/templates/borst-landscape-design/gallery-03.jpg" },
+  { title: "Corporate campus seasonal program", location: "Mahwah, NJ", image: "/templates/borst-landscape-design/gallery-04.jpg" },
+  { title: "Estate woodland edge", location: "Upper Saddle River, NJ", image: "/templates/borst-landscape-design/gallery-05.jpg" },
+  { title: "Streetscape replant", location: "Allendale, NJ", image: "/templates/borst-landscape-design/gallery-06.jpg" },
+];
+
+// 3-step process
+export const process = [
+  { label: "STEP 01", title: "Contact us", body: "Tell us about your property in a short note. We follow up the same business day to schedule a walk-through." },
+  { label: "STEP 02", title: "Schedule an appointment", body: "A senior designer walks the site, listens to what you have in mind, and asks the questions that shape the plan." },
+  { label: "STEP 03", title: "Get your project done", body: "Within the week, you receive a written scope, a planting list, and an install schedule tied to the season." },
+];
+
+// 8 testimonial avatars
+export const testimonialAvatars = [
+  "/templates/borst-landscape-design/avatar-john-carter.jpg",
+  "/templates/borst-landscape-design/avatar-sophie-moore.jpg",
+  "/templates/borst-landscape-design/avatar-matt-cannon.jpg",
+  "/templates/borst-landscape-design/avatar-lilly-woods.jpg",
+  "/templates/borst-landscape-design/avatar-sandy-houston.jpg",
+  "/templates/borst-landscape-design/avatar-patrick-meyer.jpg",
+  "/templates/borst-landscape-design/avatar-kathie-corl.jpg",
+  "/templates/borst-landscape-design/avatar-andy-smith.jpg",
+];
+
+// Blog preview
+export const blogPosts = [
   {
-    title: "Stone terrace and perennial garden",
-    location: "Ridgewood, NJ",
-    summary:
-      "A bluestone terrace anchors a layered perennial garden built for four-season interest. Installed over six weeks; maintained year-round.",
+    title: "Landscape design 101: Basics for a beautiful yard",
+    category: "Articles",
+    date: "Aug 19, 2024",
+    image: "/templates/borst-landscape-design/blog-landscape-design-101.jpg",
+    href: "#",
   },
   {
-    title: "Front entry redesign with boxwood parterre",
-    location: "Saddle River, NJ",
-    summary:
-      "A formal boxwood parterre frames a re-graded entry walk and replaces a tired foundation planting. Designed to scale into thirty years.",
-  },
-  {
-    title: "Corporate campus seasonal program",
-    location: "Mahwah, NJ",
-    summary:
-      "A four-acre commercial property under a year-round maintenance contract. Spring color, summer turf, fall cleanup, and snow.",
-  },
-  {
-    title: "Pool surround and outdoor kitchen",
-    location: "Franklin Lakes, NJ",
-    summary:
-      "An integrated pool surround, outdoor kitchen, and shade-tree planting on a half-acre back property. Hardscape by our masonry team.",
-  },
-  {
-    title: "Estate woodland edge",
-    location: "Upper Saddle River, NJ",
-    summary:
-      "A two-acre woodland edge planted with native understory and a deer-resistant perennial palette. Year-three growing in.",
-  },
-  {
-    title: "Streetscape replant",
-    location: "Allendale, NJ",
-    summary:
-      "A municipal streetscape replant of twenty-two flowering trees and a curb-side perennial bed. Installed in one weekend.",
+    title: "How to choose a garden that suits your personal needs: A step-by-step guide",
+    category: "News",
+    date: "Aug 19, 2024",
+    image: "/templates/borst-landscape-design/blog-how-to-choose-garden.jpg",
+    href: "#",
   },
 ];
 
-export const team = [
-  {
-    name: "Mark Borst",
-    role: "Founder & President",
-    bio: "Started the firm in 1989 with one truck and one mower. Still walks every major design property with the client. Lives in Allendale.",
-  },
-  {
-    name: "Christine Hoover",
-    role: "Senior Designer",
-    bio: "Joined in 2007. Leads the residential design team. Carries a soft spot for hydrangeas and a thirty-year planting horizon.",
-  },
-  {
-    name: "Anthony DiPasquale",
-    role: "Operations Manager",
-    bio: "Twenty years in landscape installation. Runs the field crews and makes sure the schedule holds together through July.",
-  },
-  {
-    name: "Rebecca Liu",
-    role: "Account Manager",
-    bio: "Your single point of contact for maintenance accounts. Returns calls the same day. Has met most of your dogs.",
-  },
+// Instagram strip
+export const instagramTiles = [
+  "/templates/borst-landscape-design/ig-01.jpg",
+  "/templates/borst-landscape-design/ig-02.jpg",
+  "/templates/borst-landscape-design/ig-03.jpg",
+  "/templates/borst-landscape-design/ig-04.jpg",
 ];
+
+// Footer pages columns
+export const footerLinks = {
+  mainPages: [
+    { label: "Home", href: "/templates/borst-landscape-design" },
+    { label: "About", href: "/templates/borst-landscape-design/about" },
+    { label: "Services", href: "/templates/borst-landscape-design/services" },
+    { label: "Portfolio", href: "/templates/borst-landscape-design/portfolio" },
+    { label: "Contact", href: "/templates/borst-landscape-design/contact" },
+  ],
+  utility: [
+    { label: "Free quote", href: "/templates/borst-landscape-design/contact" },
+    { label: "Maintenance accounts", href: "/templates/borst-landscape-design/services" },
+    { label: "Commercial snow", href: "/templates/borst-landscape-design/services" },
+    { label: "Careers", href: "#" },
+    { label: "Privacy policy", href: "#" },
+    { label: "Terms", href: "#" },
+  ],
+};

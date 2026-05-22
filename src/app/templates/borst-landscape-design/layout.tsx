@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { templateModule } from "@/templates/07-borst-landscape-design";
 import { ThemeStyle } from "@/lib/theme-style";
 import { SiteHeader } from "@/components/site/header";
-import { SiteFooter } from "@/components/site/footer";
+import { BorstFooter } from "@/templates/07-borst-landscape-design/blocks/borst-footer";
 
-const { theme, content } = templateModule;
+const { theme } = templateModule;
 
 export const metadata: Metadata = {
   title: `${theme.meta.name} | ${theme.meta.industry}`,
@@ -28,7 +28,7 @@ export default function BorstLayout({ children }: { children: React.ReactNode })
       </a>
       <SiteHeader theme={theme} />
       <main id="main">{children}</main>
-      <SiteFooter theme={theme} content={content} />
+      <BorstFooter />
     </div>
   );
 }

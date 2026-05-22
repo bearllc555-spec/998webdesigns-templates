@@ -1,26 +1,27 @@
-import { Star } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { theme } from "../theme";
-import { content } from "../content";
+import { content, testimonialAvatars } from "../content";
 
 export function TestimonialsBlock() {
   return (
     <section style={{ background: "var(--tpl-card)" }}>
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-        <div className="text-center">
+        <div className="max-w-3xl">
           <p
             className="text-xs"
             style={{
               color: "var(--tpl-accent)",
-              letterSpacing: "0.16em",
+              letterSpacing: "0.18em",
               textTransform: "uppercase",
               fontFamily: "var(--tpl-font-body)",
               fontWeight: 600,
             }}
           >
-            What our clients say
+            Testimonials
           </p>
           <h2
-            className="mx-auto mt-4 max-w-2xl text-3xl leading-tight md:text-4xl"
+            className="mt-4 text-4xl leading-tight md:text-5xl"
             style={{
               color: "var(--tpl-ink)",
               fontFamily: "var(--tpl-font-display)",
@@ -28,59 +29,73 @@ export function TestimonialsBlock() {
               letterSpacing: theme.type.displayTracking,
             }}
           >
-            Thirty-five years of properties that grow into themselves.
+            What our clients say about our work.
           </h2>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {content.testimonials.map((t, i) => (
-            <figure
+            <li
               key={i}
-              className="p-7"
+              className="p-6"
               style={{
                 background: "var(--tpl-bg)",
-                border: `1px solid var(--tpl-line)`,
-                borderRadius: `var(--tpl-radius)`,
+                border: "1px solid var(--tpl-line)",
+                borderRadius: 20,
               }}
             >
-              <div className="flex items-center gap-1" aria-label="5 out of 5 stars">
-                {[0, 1, 2, 3, 4].map((s) => (
-                  <Star
-                    key={s}
-                    className="h-4 w-4"
-                    fill="var(--tpl-accent)"
-                    stroke="var(--tpl-accent)"
-                    aria-hidden="true"
+              <div className="flex items-center gap-3">
+                <div className="relative overflow-hidden" style={{ borderRadius: 999, width: 44, height: 44 }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={testimonialAvatars[i]}
+                    alt={t.name}
+                    className="block h-full w-full object-cover"
                   />
-                ))}
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-1.5">
+                    <p
+                      className="text-sm leading-tight"
+                      style={{ color: "var(--tpl-ink)", fontWeight: 700 }}
+                    >
+                      {t.name}
+                    </p>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/templates/borst-landscape-design/icon-verified.svg"
+                      alt="Verified"
+                      className="h-3.5 w-3.5"
+                    />
+                  </div>
+                  <p className="mt-0.5 text-xs" style={{ color: "var(--tpl-muted)" }}>
+                    {t.role}
+                  </p>
+                </div>
               </div>
-              <blockquote
-                className="mt-5 text-base leading-relaxed"
-                style={{
-                  color: "var(--tpl-ink)",
-                  fontFamily: "var(--tpl-font-body)",
-                }}
+              <p
+                className="mt-4 text-sm leading-relaxed"
+                style={{ color: "var(--tpl-ink)", fontFamily: "var(--tpl-font-body)" }}
               >
                 {t.quote}
-              </blockquote>
-              <figcaption
-                className="mt-6 border-t pt-4"
-                style={{ borderColor: "var(--tpl-line)" }}
-              >
-                <p
-                  className="text-sm"
-                  style={{ color: "var(--tpl-ink)", fontWeight: 600 }}
-                >
-                  {t.name}
-                </p>
-                <p
-                  className="mt-0.5 text-xs"
-                  style={{ color: "var(--tpl-muted)" }}
-                >
-                  {t.role}
-                </p>
-              </figcaption>
-            </figure>
+              </p>
+            </li>
           ))}
+        </ul>
+        <div className="mt-12 flex justify-center">
+          <Link
+            href={theme.primaryCta.href}
+            className="inline-flex items-center gap-2 px-6 py-3 text-sm transition hover:opacity-90"
+            style={{
+              background: "var(--tpl-accent)",
+              color: "var(--tpl-accent-ink)",
+              borderRadius: 999,
+              fontFamily: "var(--tpl-font-body)",
+              fontWeight: 600,
+            }}
+          >
+            Get in touch
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>
