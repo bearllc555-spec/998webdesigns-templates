@@ -64,7 +64,7 @@ export function PortfolioBlock() {
                 <img
                   src={p.image}
                   alt={p.title}
-                  className="absolute inset-0 h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.03]"
+                  className="absolute inset-0 h-full w-full bg-[#eef2f1] object-contain object-center transition duration-500 group-hover:scale-[1.03]"
                 />
               </figure>
             </li>

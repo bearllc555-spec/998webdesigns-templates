@@ -24,7 +24,7 @@ export function WhyUsBlock() {
               <img
                 src="/templates/borst-landscape-design/why-us.jpg"
                 alt="Landscape specialist reviewing garden installation"
-                className="block h-full w-full object-cover"
+                className="block h-full w-full bg-[#eef2f1] object-contain object-center"
               />
             </div>
           </div>

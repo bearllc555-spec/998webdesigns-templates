@@ -49,7 +49,7 @@ export function ProcessBlock() {
             <img
               src="/templates/borst-landscape-design/gallery-03.jpg"
               alt="Landscape design consultation"
-              className="block h-full w-full object-cover"
+              className="block h-full w-full bg-[#eef2f1] object-contain object-center"
             />
             <div
               className="absolute inset-0"

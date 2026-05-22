@@ -39,7 +39,11 @@ export function BlogPreviewBlock() {
                 }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.image} alt={p.title} className="block h-full w-full object-cover" />
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="block h-full w-full bg-[#eef2f1] object-contain object-center"
+                />
                 <span
                   className="absolute left-4 top-4 px-3 py-1 text-xs"
                   style={{

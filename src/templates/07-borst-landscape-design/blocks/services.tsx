@@ -75,7 +75,7 @@ export function ServicesBlock() {
                   <img
                     src={asset.thumb}
                     alt={it.name}
-                    className="block h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="block h-full w-full bg-[#0a3a31] object-contain object-center transition duration-500 group-hover:scale-105"
                   />
                   <div
                     className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-full"
