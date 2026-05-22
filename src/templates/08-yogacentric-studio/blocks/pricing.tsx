@@ -29,9 +29,13 @@ export function PricingBlock() {
               key={plan.name}
               className="flex flex-col p-7 md:p-8"
               style={{
-                background: plan.featured ? extendedPalette.lime : "var(--tpl-card)",
+                background: plan.featured
+                  ? extendedPalette.lime
+                  : plan.name === "10-Class Pass"
+                  ? "#C8D8C8"
+                  : "var(--tpl-card)",
                 borderRadius: "var(--tpl-radius)",
-                border: plan.featured ? "none" : "1px solid var(--tpl-line)",
+                border: plan.featured || plan.name === "10-Class Pass" ? "none" : "1px solid var(--tpl-line)",
               }}
             >
               <p className="text-sm font-semibold uppercase tracking-wide" style={{ color: "var(--tpl-muted)" }}>
