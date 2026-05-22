@@ -83,8 +83,7 @@ export const featuredTestimonial = {
   name: "Sophie Moore",
   role: "Ridgewood, NJ",
   avatar: "/templates/borst-landscape-design/avatar-sophie-moore.jpg",
-  image:
-    "https://cdn.prod.website-files.com/66be1e2c791627e193a54f36/66c3814a0f81baf7061732b6_reliable-and-meticulous-work-image-landscaping-x-webflow-template.jpg",
+  image: "/templates/borst-landscape-design/meticulous-work.jpg",
 };
 
 // Why-choose-us two pillars
