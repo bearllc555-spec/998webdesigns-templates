@@ -92,21 +92,27 @@ Gallery sorts newest-first by `theme.meta.publishedAt`. Template 06 (Tidewater C
 
 All composition uses only the template's palette. All decorative SVGs include `<title>`/`<desc>`. There are no external image services and no stock photos in the repo.
 
+## Hero header pattern (locked 2026-05-22)
+
+Every template that uses a full-bleed image or video in the hero section uses the **scroll-reveal floating header** pattern:
+
+- The header is hidden (translated off-screen, opacity 0, pointer-events none) on initial page load.
+- A scroll listener fires when the user scrolls past the bottom edge of the hero section (`window.scrollY >= hero.offsetHeight - 24`).
+- Once past the hero, the header transitions in (translate to 0, opacity 1) and stays fixed for the rest of the page — including all sub-pages (non-hero pages show the header immediately on load).
+- The header never reappears over the hero video/image — it only lives in the content area below.
+- Implementation reference: `src/templates/08-yogacentric-studio/blocks/floating-header.tsx`. Replicate this pattern for every new template that has a hero image or video.
+
 ## How to ship a change
 
 ```bash
 cd repos/998webdesigns-templates
-git checkout -b feat/<name>
-pnpm install
-pnpm dev                       # local on :3000
-pnpm build                     # verify production build is green
+# push directly to main for this project — Vercel branch preview URLs are non-functional
 git add . && git commit -m "<ascii-only message>"
-git push -u origin feat/<name>
-# review the Vercel preview URL, then merge to main
+git push origin main
 ```
 
 Rules:
-- Never push directly to main; branch first.
+- Push directly to main. Branch previews on this Vercel project return dead links — skip the branch/preview step entirely.
 - ASCII-only commit messages.
 - Bump `SITE_VERSION` in `src/lib/version.ts` by one each commit.
 - Pricing wording in any `content.ts` is the product. Do not change without explicit approval.
@@ -117,7 +123,7 @@ Rules:
 2. Add the slug to `lib/svg-placeholder.tsx` REGISTRY and to `src/templates/registry.ts`.
 3. Add the route folder `src/app/templates/<slug>/` with `layout.tsx`, `page.tsx`, and the sub-pages you want.
 4. Set `theme.meta.publishedAt` to "now"; the gallery auto-sorts and the "New" badge moves to the new entry.
-5. Push, review preview, merge to main.
+5. Push directly to main.
 
 ## Quick links
 
