@@ -1,7 +1,7 @@
 import type { TemplateTheme } from "../types";
 
 /** Temporary deploy tell — bump one step on every YogaCentric change. */
-export const TEMPLATE_VERSION = "v07";
+export const TEMPLATE_VERSION = "v08";
 
 export const theme: TemplateTheme = {
   meta: {

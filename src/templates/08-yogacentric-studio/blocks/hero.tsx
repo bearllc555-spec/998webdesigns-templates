@@ -84,12 +84,6 @@ export function HeroBlock() {
           >
             {content.hero.sub}
           </p>
-          <p
-            className="mx-auto mt-3 max-w-md text-xs leading-relaxed md:text-sm"
-            style={{ color: "rgba(255,255,255,0.65)" }}
-          >
-            Discover the transformative power of yoga, whether you&apos;re a beginner or an advanced practitioner.
-          </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href={theme.primaryCta.href}
