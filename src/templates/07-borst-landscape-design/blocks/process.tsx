@@ -36,55 +36,68 @@ export function ProcessBlock() {
           </Link>
         </div>
 
-        <div className="mt-12 grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
-          <div
-            className="relative overflow-hidden"
-            style={{ borderRadius: 24, aspectRatio: "4 / 5" }}
-          >
+        <div className="mt-12">
+          <div className="relative overflow-hidden" style={{ borderRadius: 24, aspectRatio: "16 / 9" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/templates/borst-landscape-design/gallery-03.jpg"
               alt="Landscape design consultation"
               className="block h-full w-full object-cover"
             />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(5,31,25,0.12) 0%, rgba(5,31,25,0.06) 45%, rgba(5,31,25,0.42) 100%)",
+              }}
+              aria-hidden="true"
+            />
+
+            <ol
+              className="absolute right-4 top-4 bottom-4 w-full max-w-[420px] space-y-1 overflow-hidden p-6 md:right-6 md:top-6 md:bottom-6 md:p-7"
+              style={{
+                borderRadius: 20,
+                background: "rgba(255,255,255,0.58)",
+                backdropFilter: "blur(2px)",
+              }}
+            >
+              {process.map((s) => (
+                <li
+                  key={s.title}
+                  className="border-b pb-5 pt-4 first:pt-0 last:border-b-0 last:pb-0"
+                  style={{ borderColor: "rgba(5,31,25,0.18)" }}
+                >
+                  <p
+                    className="text-xs"
+                    style={{
+                      color: "var(--tpl-accent)",
+                      letterSpacing: "0.18em",
+                      fontFamily: "var(--tpl-font-body)",
+                      fontWeight: 700,
+                    }}
+                  >
+                    {s.label}
+                  </p>
+                  <h3
+                    className="mt-2 text-[2rem] leading-tight"
+                    style={{
+                      color: "var(--tpl-ink)",
+                      fontFamily: "var(--tpl-font-display)",
+                      fontWeight: 700,
+                    }}
+                  >
+                    {s.title}
+                  </h3>
+                  <p
+                    className="mt-2 text-base leading-relaxed"
+                    style={{ color: "rgba(5,31,25,0.8)", fontFamily: "var(--tpl-font-body)" }}
+                  >
+                    {s.body}
+                  </p>
+                </li>
+              ))}
+            </ol>
           </div>
-          <ol className="space-y-0">
-            {process.map((s) => (
-              <li
-                key={s.title}
-                className="border-b py-8 first:pt-0 last:border-b-0 last:pb-0"
-                style={{ borderColor: "var(--tpl-line)" }}
-              >
-                <p
-                  className="text-xs"
-                  style={{
-                    color: "var(--tpl-accent)",
-                    letterSpacing: "0.18em",
-                    fontFamily: "var(--tpl-font-body)",
-                    fontWeight: 700,
-                  }}
-                >
-                  {s.label}
-                </p>
-                <h3
-                  className="mt-2 text-xl leading-snug md:text-2xl"
-                  style={{
-                    color: "var(--tpl-ink)",
-                    fontFamily: "var(--tpl-font-display)",
-                    fontWeight: 700,
-                  }}
-                >
-                  {s.title}
-                </h3>
-                <p
-                  className="mt-3 text-sm leading-relaxed"
-                  style={{ color: "var(--tpl-muted)", fontFamily: "var(--tpl-font-body)" }}
-                >
-                  {s.body}
-                </p>
-              </li>
-            ))}
-          </ol>
         </div>
       </div>
     </section>

@@ -29,12 +29,8 @@ export function BlogPreviewBlock() {
         </div>
         <ul className="mt-14 grid gap-6 md:grid-cols-2">
           {blogPosts.map((p) => (
-            <li
-              key={p.title}
-              className="overflow-hidden"
-              style={{ background: "var(--tpl-bg)", borderRadius: 20 }}
-            >
-              <div className="relative overflow-hidden" style={{ aspectRatio: "16 / 10" }}>
+            <li key={p.title}>
+              <div className="relative overflow-hidden" style={{ aspectRatio: "6 / 4", borderRadius: 20 }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={p.image} alt={p.title} className="block h-full w-full object-cover" />
                 <span
@@ -49,32 +45,34 @@ export function BlogPreviewBlock() {
                   {p.category}
                 </span>
               </div>
-              <div className="p-7">
+              <h3
+                className="mt-4 text-[2.8rem] leading-[1.08]"
+                style={{
+                  color: "var(--tpl-ink)",
+                  fontFamily: "var(--tpl-font-display)",
+                  fontWeight: 700,
+                  letterSpacing: "-0.012em",
+                }}
+              >
+                {p.title}
+              </h3>
+              <div
+                className="mt-4 flex items-center justify-between border-t pt-4"
+                style={{ borderColor: "var(--tpl-line)" }}
+              >
                 <p
-                  className="text-xs"
+                  className="text-base"
                   style={{
                     color: "var(--tpl-muted)",
-                    letterSpacing: "0.14em",
-                    textTransform: "uppercase",
-                    fontWeight: 600,
+                    fontWeight: 500,
                   }}
                 >
                   {p.date}
                 </p>
-                <h3
-                  className="mt-3 text-xl leading-snug"
-                  style={{
-                    color: "var(--tpl-ink)",
-                    fontFamily: "var(--tpl-font-display)",
-                    fontWeight: 700,
-                  }}
-                >
-                  {p.title}
-                </h3>
                 <Link
                   href={p.href}
-                  className="mt-5 inline-flex items-center gap-2 text-sm transition hover:opacity-80"
-                  style={{ color: "var(--tpl-accent)", fontWeight: 600 }}
+                  className="inline-flex items-center gap-2 text-[1.75rem] transition hover:opacity-80"
+                  style={{ color: "var(--tpl-ink)", fontWeight: 600 }}
                 >
                   Learn more
                   <BorstArrow className="h-3.5 w-3.5" />
@@ -83,7 +81,7 @@ export function BlogPreviewBlock() {
             </li>
           ))}
         </ul>
-        <div className="mt-12 flex justify-center">
+        <div className="mt-12 flex justify-end">
           <Link
             href="#"
             className="inline-flex items-center gap-2 px-6 py-3 text-sm transition hover:opacity-80"
