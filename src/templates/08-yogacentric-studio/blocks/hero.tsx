@@ -1,19 +1,50 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { theme } from "../theme";
 import { content, heroStats } from "../content";
 
 export function HeroBlock() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    const play = () => {
+      void video.play().catch(() => {
+        /* autoplay blocked — poster frame remains visible */
+      });
+    };
+    play();
+    video.addEventListener("loadeddata", play);
+    return () => video.removeEventListener("loadeddata", play);
+  }, []);
+
   return (
-    <section className="relative overflow-hidden" style={{ background: "var(--tpl-ink)" }}>
+    <section className="relative min-h-[85vh] overflow-hidden" style={{ background: "var(--tpl-ink)" }}>
+      {/* Poster fallback — visible on mobile where source hides the video */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/templates/yogacentric-studio/hero.webp"
-        alt="Yoga practitioner in studio"
-        className="absolute inset-0 h-full w-full object-cover"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover md:hidden"
       />
+      <video
+        ref={videoRef}
+        className="absolute inset-0 hidden h-full w-full object-cover md:block"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/templates/yogacentric-studio/hero.webp"
+      >
+        <source src="/templates/yogacentric-studio/hero.mp4" type="video/mp4" />
+      </video>
       <div
         className="absolute inset-0"
         style={{
