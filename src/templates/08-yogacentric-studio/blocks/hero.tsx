@@ -87,14 +87,6 @@ export function HeroBlock() {
           }}
           aria-hidden="true"
         />
-        <div
-          className="pointer-events-none absolute inset-0 hidden md:block"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(19,19,19,0.25) 0%, rgba(19,19,19,0.45) 42%, rgba(19,19,19,0.82) 78%, rgba(19,19,19,0.94) 100%)",
-          }}
-          aria-hidden="true"
-        />
       </div>
 
       <div
