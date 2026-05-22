@@ -207,3 +207,10 @@ export const footerLinks = [
 
 export const contactNote =
   "YogaCentric strives to create a perfect balance between silence, self, and joy. Whether you're a beginner or a seasoned yogi, we can't wait to welcome you into the community.";
+
+export const socialLinks = [
+  { label: "Instagram", href: "https://www.instagram.com/yogacentricstudio/", icon: "Instagram" },
+  { label: "Facebook",  href: "https://www.facebook.com/yogacentricstudio/",  icon: "Facebook"  },
+  { label: "LinkedIn",  href: "https://www.linkedin.com/company/yogacentric", icon: "Linkedin"  },
+  { label: "X",         href: "https://x.com/yogacentric",                   icon: "Twitter"   },
+] as const;

@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Instagram, Facebook, Linkedin, Twitter } from "lucide-react";
 import { theme } from "../theme";
-import { content, footerLinks } from "../content";
+import { content, footerLinks, socialLinks } from "../content";
+
+const SOCIAL_ICONS = { Instagram, Facebook, Linkedin, Twitter } as const;
 
 const SAGE = "#C8D8C8";
 const SAGE_INK = "#131313";
@@ -74,6 +77,24 @@ export function YogaCentricFooter() {
           >
             {theme.meta.name}
           </p>
+          <div className="flex items-center gap-4">
+            {socialLinks.map((s) => {
+              const Icon = SOCIAL_ICONS[s.icon];
+              return (
+                <Link
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="transition-opacity hover:opacity-60"
+                  style={{ color: "rgba(255,255,255,0.7)" }}
+                >
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </Link>
+              );
+            })}
+          </div>
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>
             &copy; {year} {content.business.legalName}. {content.business.address.split("\n")[1]}
           </p>
