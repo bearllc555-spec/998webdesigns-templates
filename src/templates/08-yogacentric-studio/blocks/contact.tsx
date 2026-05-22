@@ -72,14 +72,8 @@ export function ContactBlock() {
             alt="YogaCentric studio community"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
-
           <div
-            className="absolute inset-0 md:hidden"
-            style={{ background: "#4b4d4f" }}
-            aria-hidden="true"
-          />
-          <div
-            className="absolute inset-0 hidden md:block"
+            className="absolute inset-0"
             style={{
               background:
                 "linear-gradient(100deg, rgba(19,19,19,0.62) 0%, rgba(19,19,19,0.45) 34%, rgba(19,19,19,0.08) 58%, transparent 72%)",
