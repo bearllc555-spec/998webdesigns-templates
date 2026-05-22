@@ -73,6 +73,15 @@ export function ContactBlock() {
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
 
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(100deg, rgba(19,19,19,0.62) 0%, rgba(19,19,19,0.45) 34%, rgba(19,19,19,0.08) 58%, transparent 72%)",
+            }}
+            aria-hidden="true"
+          />
+
           <div className="relative grid gap-8 lg:grid-cols-[1fr_minmax(0,28rem)] lg:gap-0 xl:grid-cols-[1fr_30rem]">
             <div className="flex flex-col justify-center p-8 md:p-10 lg:py-11 lg:pl-10 lg:pr-8 xl:pl-12">
               <h2
