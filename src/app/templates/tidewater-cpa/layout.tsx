@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MARKETING_SITE_URL } from "@/lib/marketing-site";
 import { templateModule } from "@/templates/06-tidewater-cpa";
 import { offices } from "@/templates/06-tidewater-cpa/content";
 import { ThemeStyle } from "@/lib/theme-style";
@@ -147,7 +148,7 @@ function DenseFooter() {
           <p>
             Built by{" "}
             <a
-              href="https://998webdesigns-com-app.vercel.app"
+              href={MARKETING_SITE_URL}
               className="hover:opacity-70"
               style={{ color: "var(--tpl-ink)" }}
             >

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Instagram, Facebook, Linkedin, ArrowRight } from "lucide-react";
+import { MARKETING_SITE_URL } from "@/lib/marketing-site";
 import { theme } from "../theme";
 import { content, instagramTiles, footerLinks } from "../content";
 import { extendedPalette } from "../theme";
@@ -122,7 +123,7 @@ export function BorstFooter() {
             <span>
               Built by{" "}
               <a
-                href="https://998webdesigns-com-app.vercel.app"
+                href={MARKETING_SITE_URL}
                 className="transition hover:opacity-80"
                 style={{ color: "#FFFFFF" }}
               >

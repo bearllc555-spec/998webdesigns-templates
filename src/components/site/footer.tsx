@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Instagram, Facebook, Linkedin, Twitter, Youtube } from "lucide-react";
+import { MARKETING_SITE_URL } from "@/lib/marketing-site";
 import type { TemplateTheme, TemplateContent } from "@/templates/types";
 
 const ICONS = {
@@ -126,7 +127,7 @@ export function SiteFooter({
           <p>
             Built by{" "}
             <a
-              href="https://998webdesigns-com-app.vercel.app"
+              href={MARKETING_SITE_URL}
               className="hover:opacity-70"
               style={{ color: "var(--tpl-ink)" }}
             >

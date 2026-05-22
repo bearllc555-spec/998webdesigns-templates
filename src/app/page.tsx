@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { GalleryGrid } from "@/components/gallery/gallery-grid";
+import { MARKETING_SITE_URL } from "@/lib/marketing-site";
 import { SITE_VERSION } from "@/lib/version";
+
+const ctaButtonClass =
+  "inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-6 py-3 text-sm font-medium text-neutral-900 transition hover:border-neutral-500";
 
 export const metadata = {
   title: "Template library | 998 web designs",
@@ -28,7 +32,7 @@ export default function GalleryPage() {
             </span>
           </Link>
           <Link
-            href="https://998webdesigns-com-app.vercel.app"
+            href={MARKETING_SITE_URL}
             className="hidden text-sm text-neutral-700 hover:opacity-70 md:inline-block"
           >
             Back to 998webdesigns.com
@@ -51,17 +55,11 @@ export default function GalleryPage() {
               Every template is a fully built site. We customize it to your business in 5 to 7 days. $998, once.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Link
-                href="https://998webdesigns-com-app.vercel.app/#start"
-                className="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-neutral-800"
-              >
+              <Link href={`${MARKETING_SITE_URL}/#start`} className={ctaButtonClass}>
                 Start my $998 site
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
-              <Link
-                href="#templates"
-                className="inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-6 py-3 text-sm font-medium text-neutral-900 transition hover:border-neutral-500"
-              >
+              <Link href="#templates" className={ctaButtonClass}>
                 Browse the six
               </Link>
             </div>
@@ -83,10 +81,7 @@ export default function GalleryPage() {
               </p>
               <p className="mt-2 text-sm text-neutral-600">Same $998. Same 5 to 7 day build window.</p>
             </div>
-            <Link
-              href="https://998webdesigns-com-app.vercel.app/start"
-              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-neutral-800"
-            >
+            <Link href={`${MARKETING_SITE_URL}/#start`} className={`${ctaButtonClass} shrink-0`}>
               Start from scratch
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
