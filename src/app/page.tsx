@@ -60,15 +60,6 @@ export default function GalleryPage() {
             <p className="mt-7 max-w-2xl text-base leading-relaxed text-neutral-600 md:text-lg">
               We hand customize every design and deliver to your business in 5 to 7 days.
             </p>
-            <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Link href={`${MARKETING_SITE_URL}/#start`} className={ctaButtonClass}>
-                Start my $998 site
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-              <Link href="#templates" className={ctaButtonClass}>
-                Browse the six
-              </Link>
-            </div>
           </div>
         </section>
         <section id="templates">
