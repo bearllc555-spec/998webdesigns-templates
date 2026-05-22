@@ -77,12 +77,14 @@ export const content: TemplateContent = {
   },
 };
 
-// Featured testimonial (text-only on home; no hero-scale image)
+// Featured work band under hero (GardenView Home V1 pattern)
 export const featuredTestimonial = {
   quote: "Reliable and meticulous work made the renovation process easy.",
   name: "Sophie Moore",
   role: "Ridgewood, NJ",
   avatar: "/templates/borst-landscape-design/avatar-sophie-moore.jpg",
+  image:
+    "https://cdn.prod.website-files.com/66be1e2c791627e193a54f36/66c3814a0f81baf7061732b6_reliable-and-meticulous-work-image-landscaping-x-webflow-template.jpg",
 };
 
 // Why-choose-us two pillars
