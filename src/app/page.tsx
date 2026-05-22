@@ -45,7 +45,7 @@ export default function GalleryPage() {
       <main>
         <section className="border-b border-neutral-200">
           <div
-            className="mx-auto max-w-6xl px-5 pt-8 pb-12 md:px-8 md:pt-10 md:pb-16"
+            className="mx-auto max-w-6xl px-5 pt-8 pb-0 md:px-8 md:pt-10"
             style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
           >
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-600">
@@ -63,7 +63,7 @@ export default function GalleryPage() {
           </div>
         </section>
         <section id="templates">
-          <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-6xl px-5 pb-16 pt-8 md:px-8 md:pb-20 md:pt-10">
             <GalleryGrid />
           </div>
         </section>
