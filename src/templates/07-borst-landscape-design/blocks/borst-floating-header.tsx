@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { SITE_VERSION } from "@/lib/version";
 import { theme } from "../theme";
 
 export function BorstFloatingHeader() {
@@ -66,15 +67,29 @@ export function BorstFloatingHeader() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
           <Link
             href={homePath}
-            className="shrink-0 text-base font-bold tracking-tight md:text-lg"
-            style={{
-              color: "var(--tpl-accent)",
-              fontFamily: "var(--tpl-font-display)",
-              letterSpacing: theme.type.displayTracking,
-            }}
+            className="inline-flex shrink-0 items-center gap-2"
             aria-label={`${theme.meta.name} home`}
           >
-            {theme.meta.name}
+            <span
+              className="text-base font-bold tracking-tight md:text-lg"
+              style={{
+                color: "var(--tpl-accent)",
+                fontFamily: "var(--tpl-font-display)",
+                letterSpacing: theme.type.displayTracking,
+              }}
+            >
+              {theme.meta.name}
+            </span>
+            <span
+              aria-hidden="true"
+              className="rounded-full px-1.5 py-0.5 text-[10px] font-medium tracking-wider"
+              style={{
+                background: "var(--tpl-card)",
+                color: "var(--tpl-muted)",
+              }}
+            >
+              {SITE_VERSION}
+            </span>
           </Link>
 
           <nav className="hidden items-center gap-7 md:flex">
