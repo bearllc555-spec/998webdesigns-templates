@@ -29,11 +29,12 @@ export default function TrainersPage() {
           </p>
           <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {trainers.map((t) => (
-              <article key={`${t.name}-${t.specialty}`} className="group">
-                <div
-                  className="overflow-hidden"
-                  style={{ borderRadius: "var(--tpl-radius)" }}
-                >
+              <article
+                key={`${t.name}-${t.specialty}`}
+                className="group overflow-hidden"
+                style={{ borderRadius: "var(--tpl-radius)" }}
+              >
+                <div className="overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={t.photo}
@@ -42,7 +43,7 @@ export default function TrainersPage() {
                   />
                 </div>
                 <div
-                  className="mt-4 w-full rounded-xl border border-transparent px-4 py-3 text-center transition-colors duration-300 group-hover:border-[#C8D8C8] group-hover:bg-[#C8D8C8]"
+                  className="w-full border border-transparent px-4 py-5 text-center transition-colors duration-300 group-hover:border-[#C8D8C8] group-hover:bg-[#C8D8C8]"
                 >
                   <h2 className="text-xl font-semibold" style={{ color: "var(--tpl-ink)" }}>
                     {t.name}

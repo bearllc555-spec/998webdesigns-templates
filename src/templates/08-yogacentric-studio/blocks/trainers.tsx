@@ -27,12 +27,10 @@ export function TrainersBlock() {
             <li key={`${t.name}-${t.specialty}`}>
               <Link
                 href="/templates/yogacentric-studio/trainers"
-                className="group block"
+                className="group block overflow-hidden"
+                style={{ borderRadius: "var(--tpl-radius)" }}
               >
-                <div
-                  className="overflow-hidden"
-                  style={{ borderRadius: "var(--tpl-radius)" }}
-                >
+                <div className="overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={t.photo}
@@ -41,7 +39,7 @@ export function TrainersBlock() {
                   />
                 </div>
                 <div
-                  className="mt-3 w-full rounded-xl border border-transparent px-2 py-2.5 text-center transition-colors duration-300 group-hover:border-[#C8D8C8] group-hover:bg-[#C8D8C8] md:px-3 md:py-3"
+                  className="w-full border border-transparent px-2 py-3.5 text-center transition-colors duration-300 group-hover:border-[#C8D8C8] group-hover:bg-[#C8D8C8] md:px-3 md:py-4"
                 >
                   <p className="text-sm font-semibold leading-snug" style={{ color: "var(--tpl-ink)" }}>
                     {t.name}
