@@ -1,10 +1,48 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { theme, extendedPalette } from "../theme";
 import { content, heroStats } from "../content";
+
+function TypewriterHeadline({ text }: { text: string }) {
+  const [displayed, setDisplayed] = useState(0);
+
+  useEffect(() => {
+    setDisplayed(0);
+    let i = 0;
+    // small initial delay so the video has a moment to start
+    const start = setTimeout(() => {
+      const interval = setInterval(() => {
+        i += 1;
+        setDisplayed(i);
+        if (i >= text.length) clearInterval(interval);
+      }, 42);
+      return () => clearInterval(interval);
+    }, 400);
+    return () => clearTimeout(start);
+  }, [text]);
+
+  return (
+    <>
+      {text.split("").map((char, i) => (
+        <span
+          key={i}
+          style={{
+            opacity: i < displayed ? 1 : 0,
+            transition: "opacity 0.06s",
+            whiteSpace: char === " " ? "pre" : undefined,
+          }}
+          aria-hidden={i >= displayed}
+        >
+          {char}
+        </span>
+      ))}
+      <span className="sr-only">{text}</span>
+    </>
+  );
+}
 
 export function HeroBlock() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -69,7 +107,7 @@ export function HeroBlock() {
               letterSpacing: theme.type.displayTracking,
             }}
           >
-            {content.hero.headline}
+            <TypewriterHeadline text={content.hero.headline} />
           </h1>
           <p
             className="mx-auto mt-5 max-w-lg text-sm leading-relaxed md:text-base"
