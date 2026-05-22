@@ -42,15 +42,15 @@ export default function TrainersPage() {
                   />
                 </div>
                 <div
-                  className="mt-5 inline-block rounded-xl px-4 py-2 transition-colors duration-300 group-hover:bg-[#C8D8C8]"
+                  className="mt-4 w-full rounded-xl border border-transparent px-4 py-3 text-center transition-colors duration-300 group-hover:border-[#C8D8C8] group-hover:bg-[#C8D8C8]"
                 >
                   <h2 className="text-xl font-semibold" style={{ color: "var(--tpl-ink)" }}>
                     {t.name}
                   </h2>
+                  <p className="mt-1 text-sm" style={{ color: "var(--tpl-muted)" }}>
+                    {t.specialty}
+                  </p>
                 </div>
-                <p className="mt-1 text-sm" style={{ color: "var(--tpl-muted)" }}>
-                  {t.specialty}
-                </p>
               </article>
             ))}
           </div>

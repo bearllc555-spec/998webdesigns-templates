@@ -40,13 +40,13 @@ export function TrainersBlock() {
                     className="aspect-[3/4] w-full object-cover object-center transition duration-500 ease-out group-hover:scale-105"
                   />
                 </div>
-                <div className="pt-4">
-                  <span className="inline-block rounded-lg px-2.5 py-1.5 transition-colors duration-300 group-hover:bg-[#C8D8C8]">
-                    <p className="text-sm font-semibold" style={{ color: "var(--tpl-ink)" }}>
-                      {t.name}
-                    </p>
-                  </span>
-                  <p className="mt-0.5 text-xs leading-snug" style={{ color: "var(--tpl-muted)" }}>
+                <div
+                  className="mt-3 w-full rounded-xl border border-transparent px-2 py-2.5 text-center transition-colors duration-300 group-hover:border-[#C8D8C8] group-hover:bg-[#C8D8C8] md:px-3 md:py-3"
+                >
+                  <p className="text-sm font-semibold leading-snug" style={{ color: "var(--tpl-ink)" }}>
+                    {t.name}
+                  </p>
+                  <p className="mt-1 text-xs leading-snug" style={{ color: "var(--tpl-muted)" }}>
                     {t.specialty}
                   </p>
                 </div>
