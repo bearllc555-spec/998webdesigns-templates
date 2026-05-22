@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { theme } from "../theme";
+import { theme, extendedPalette } from "../theme";
 import { content, heroStats } from "../content";
 
 export function HeroBlock() {
@@ -62,7 +62,7 @@ export function HeroBlock() {
           {content.hero.eyebrow && (
             <p
               className="text-xs font-semibold uppercase"
-              style={{ color: "var(--tpl-accent)", letterSpacing: "0.18em" }}
+              style={{ color: extendedPalette.lime, letterSpacing: "0.18em" }}
             >
               {content.hero.eyebrow}
             </p>
@@ -97,6 +97,7 @@ export function HeroBlock() {
               style={{
                 background: "var(--tpl-accent)",
                 color: "var(--tpl-accent-ink)",
+                border: "1px solid rgba(19,19,19,0.12)",
                 borderRadius: 999,
               }}
             >

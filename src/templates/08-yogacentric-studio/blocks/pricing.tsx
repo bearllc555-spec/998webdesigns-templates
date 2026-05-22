@@ -59,6 +59,7 @@ export function PricingBlock() {
                 style={{
                   background: plan.featured ? "var(--tpl-ink)" : "var(--tpl-accent)",
                   color: plan.featured ? "#FFFFFF" : "var(--tpl-accent-ink)",
+                  border: plan.featured ? "none" : "1px solid rgba(19,19,19,0.12)",
                   borderRadius: 999,
                 }}
               >

@@ -49,9 +49,9 @@ export function FaqBlock() {
                     <span
                       className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center"
                       style={{
-                        background: isOpen ? "var(--tpl-accent)" : "var(--tpl-card)",
+                        background: isOpen ? "var(--tpl-ink)" : "var(--tpl-card)",
                         borderRadius: 999,
-                        color: "var(--tpl-ink)",
+                        color: isOpen ? "#FFFFFF" : "var(--tpl-ink)",
                       }}
                     >
                       {isOpen ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}

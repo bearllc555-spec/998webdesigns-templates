@@ -89,6 +89,7 @@ export function TestimonialsBlock() {
               className="inline-flex h-10 w-10 items-center justify-center transition hover:opacity-70"
               style={{
                 background: "var(--tpl-accent)",
+                border: "1px solid rgba(19,19,19,0.12)",
                 borderRadius: 999,
                 color: "var(--tpl-accent-ink)",
               }}

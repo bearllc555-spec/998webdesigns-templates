@@ -1,7 +1,7 @@
 import type { TemplateTheme } from "../types";
 
 /** Temporary deploy tell — bump one step on every YogaCentric change. */
-export const TEMPLATE_VERSION = "v06";
+export const TEMPLATE_VERSION = "v07";
 
 export const theme: TemplateTheme = {
   meta: {
@@ -17,7 +17,7 @@ export const theme: TemplateTheme = {
     mutedInk: "#777874",
     line: "#E3E3E3",
     card: "#F6F6F6",
-    accent: "#ECF86E",
+    accent: "#FFFFFF",
     accentInk: "#131313",
     accentSoft: "#DFECFE",
   },

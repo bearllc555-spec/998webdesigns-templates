@@ -44,6 +44,7 @@ export function BenefitsBlock() {
               style={{
                 background: "var(--tpl-accent)",
                 color: "var(--tpl-accent-ink)",
+                border: "1px solid rgba(19,19,19,0.12)",
                 borderRadius: 999,
               }}
             >
