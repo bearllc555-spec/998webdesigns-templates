@@ -48,5 +48,5 @@ export const extendedPalette = {
   blueSoft: "#DFECFE",
   pinkSoft: "#F9DFFA",
   /** Letterbox / pillarbox tone from hero.mp4 (mobile stack below video) */
-  heroVideoBg: "#828C90",
+  heroVideoBg: "#59676a",
 };
