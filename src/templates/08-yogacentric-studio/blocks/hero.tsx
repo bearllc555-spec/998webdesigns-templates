@@ -50,6 +50,7 @@ export function HeroBlock() {
         <source src="/templates/yogacentric-studio/hero.mp4" type="video/mp4" />
       </video>
       <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-5 py-12 text-center md:px-8 md:py-16">
+        <div className="flex w-full translate-y-8 flex-col items-center md:translate-y-12">
         <div className="mx-auto max-w-2xl">
           {content.hero.eyebrow && (
             <p
@@ -121,6 +122,7 @@ export function HeroBlock() {
               </p>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>
