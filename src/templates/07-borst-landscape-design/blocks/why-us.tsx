@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { theme } from "../theme";
+import { theme, extendedPalette } from "../theme";
 import { content, pillars } from "../content";
 import {
   BORST_CONTAINER,
@@ -11,12 +11,12 @@ import {
 
 export function WhyUsBlock() {
   return (
-    <section style={{ background: "var(--tpl-bg)" }}>
+    <section style={{ background: extendedPalette.pinkSoft }}>
       <div className={`${BORST_CONTAINER} ${BORST_SECTION_PY}`}>
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div
-            className="relative overflow-hidden"
-            style={{ borderRadius: 24, aspectRatio: "1 / 1" }}
+            className="relative overflow-hidden lg:order-1"
+            style={{ borderRadius: 24, aspectRatio: "5 / 6" }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -25,7 +25,7 @@ export function WhyUsBlock() {
               className="block h-full w-full object-cover"
             />
           </div>
-          <div>
+          <div className="lg:order-2">
             <BorstEyebrow>{content.about.eyebrow}</BorstEyebrow>
             <h2
               className="mt-4 text-4xl leading-[1.05] md:text-5xl"
@@ -47,15 +47,15 @@ export function WhyUsBlock() {
                 {p}
               </p>
             ))}
-            <ul className="mt-9 grid gap-6 sm:grid-cols-2">
+            <ul className="mt-8 grid gap-8 sm:grid-cols-2">
               {pillars.map((p) => (
                 <li key={p.title}>
                   <div
-                    className="inline-flex h-12 w-12 items-center justify-center"
+                    className="inline-flex h-14 w-14 items-center justify-center"
                     style={{ background: "var(--tpl-accent-soft)", borderRadius: 16 }}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.icon} alt="" className="h-6 w-6" />
+                    <img src={p.icon} alt="" className="h-7 w-7" />
                   </div>
                   <h3
                     className="mt-4 text-lg"
@@ -78,7 +78,7 @@ export function WhyUsBlock() {
             </ul>
             <Link
               href={theme.primaryCta.href}
-              className="mt-9 inline-flex items-center justify-center gap-2 px-6 py-3 text-sm transition hover:opacity-90"
+              className="mt-10 inline-flex items-center justify-center gap-2 px-6 py-3 text-sm transition hover:opacity-90"
               style={borstPrimaryBtn}
             >
               Get in touch

@@ -64,7 +64,7 @@ export function TestimonialsBlock() {
   const loopItems = [...content.testimonials, ...content.testimonials];
 
   return (
-    <section style={{ background: "var(--tpl-bg)" }}>
+    <section style={{ background: "var(--tpl-card)" }}>
       <BorstMarqueeStyles />
       <div className={`${BORST_CONTAINER} ${BORST_SECTION_PY}`}>
         <div className="max-w-3xl">

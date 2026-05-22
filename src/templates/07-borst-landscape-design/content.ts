@@ -83,7 +83,7 @@ export const featuredTestimonial = {
   name: "Sophie Moore",
   role: "Ridgewood, NJ",
   avatar: "/templates/borst-landscape-design/avatar-sophie-moore.jpg",
-  image: "/templates/borst-landscape-design/why-us.jpg",
+  image: "/templates/borst-landscape-design/gallery-01.jpg",
 };
 
 // Why-choose-us two pillars

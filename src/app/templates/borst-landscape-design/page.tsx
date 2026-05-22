@@ -13,8 +13,8 @@ export default function BorstHome() {
   return (
     <>
       <HeroBlock />
-      <WhyUsBlock />
       <FeaturedTestimonial />
+      <WhyUsBlock />
       <ServicesBlock />
       <PortfolioBlock />
       <ProcessBlock />
