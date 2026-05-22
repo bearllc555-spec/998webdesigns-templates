@@ -98,8 +98,7 @@ export function HeroBlock() {
       </div>
 
       <div
-        className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-10 pt-3 text-center md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-center md:bg-transparent md:px-8 md:py-16"
-        style={{ background: heroVideoBg }}
+        className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-10 pt-3 text-center bg-[#828C90] md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-center md:bg-transparent md:px-8 md:py-16"
       >
         <div className="mx-auto w-full max-w-2xl px-1">
           {content.hero.eyebrow && (

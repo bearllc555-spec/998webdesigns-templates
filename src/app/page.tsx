@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { GalleryGrid } from "@/components/gallery/gallery-grid";
 import { MARKETING_SITE_URL } from "@/lib/marketing-site";
 import { SITE_VERSION } from "@/lib/version";
+import { ALL_TEMPLATES } from "@/templates/registry";
 
 const ctaButtonClass =
   "inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-6 py-3 text-sm font-medium text-neutral-900 transition hover:border-neutral-500";
@@ -64,7 +65,15 @@ export default function GalleryPage() {
         </section>
         <section id="templates">
           <div className="mx-auto max-w-6xl px-5 pb-16 pt-8 md:px-8 md:pb-20 md:pt-10">
-            <GalleryGrid />
+            <p
+              className="text-xs font-medium uppercase tracking-[0.2em] text-neutral-500"
+              aria-live="polite"
+            >
+              {ALL_TEMPLATES.length} handcrafted {ALL_TEMPLATES.length === 1 ? "template" : "templates"}
+            </p>
+            <div className="mt-6">
+              <GalleryGrid />
+            </div>
           </div>
         </section>
         <section className="border-t border-neutral-200 bg-neutral-50">
