@@ -111,7 +111,7 @@ export function HeroBlock() {
             </p>
           )}
           <h1
-            className="mt-3 text-center text-[1.65rem] leading-[1.1] text-[#131313] sm:text-4xl md:mt-4 md:text-5xl md:text-white lg:text-6xl"
+            className="mt-3 text-center text-[1.65rem] leading-[1.1] text-white sm:text-4xl md:mt-4 md:text-5xl lg:text-6xl"
             style={{
               fontFamily: "var(--tpl-font-display)",
               fontWeight: theme.type.displayWeight,
@@ -120,7 +120,10 @@ export function HeroBlock() {
           >
             <TypewriterHeadline text={content.hero.headline} />
           </h1>
-          <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-[#131313] md:text-base md:text-[rgba(255,255,255,0.82)]">
+          <p
+            className="mx-auto mt-5 max-w-lg text-sm leading-relaxed md:text-base"
+            style={{ color: "rgba(255,255,255,0.82)" }}
+          >
             {content.hero.sub}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -129,14 +132,9 @@ export function HeroBlock() {
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </YcBtn>
             {content.hero.secondaryLink && (
-              <>
-                <YcBtn href={content.hero.secondaryLink.href} dark className="md:hidden">
-                  {content.hero.secondaryLink.label}
-                </YcBtn>
-                <YcBtn href={content.hero.secondaryLink.href} ghost className="hidden md:inline-flex">
-                  {content.hero.secondaryLink.label}
-                </YcBtn>
-              </>
+              <YcBtn href={content.hero.secondaryLink.href} ghost>
+                {content.hero.secondaryLink.label}
+              </YcBtn>
             )}
           </div>
         </div>
@@ -144,12 +142,12 @@ export function HeroBlock() {
           {heroStats.map((s) => (
             <div key={s.label}>
               <p
-                className="text-2xl font-bold text-[#131313] md:text-3xl md:text-white"
+                className="text-2xl font-bold text-white md:text-3xl"
                 style={{ letterSpacing: "-0.03em" }}
               >
                 {s.value}
               </p>
-              <p className="mt-1 text-xs text-[#131313] md:text-sm md:text-[rgba(255,255,255,0.6)]">
+              <p className="mt-1 text-xs md:text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>
                 {s.label}
               </p>
             </div>
