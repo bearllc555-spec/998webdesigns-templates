@@ -11,7 +11,7 @@ import {
 
 export function PortfolioBlock() {
   return (
-    <section style={{ background: "var(--tpl-bg)" }}>
+    <section className="overflow-visible" style={{ background: "var(--tpl-bg)" }}>
       <div className={`${BORST_CONTAINER} ${BORST_SECTION_PY}`}>
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
@@ -37,17 +37,20 @@ export function PortfolioBlock() {
             <BorstArrow />
           </Link>
         </div>
-        <ul className="mt-12 grid grid-cols-2 gap-3 md:gap-4 lg:grid-cols-3 lg:gap-5">
+        <ul className="mt-12 grid grid-cols-2 items-start gap-4 lg:grid-cols-3 lg:gap-5">
           {portfolio.map((p) => (
-            <li key={p.title} className="group overflow-hidden" style={{ borderRadius: 16 }}>
-              <div className="relative overflow-hidden" style={{ aspectRatio: "1 / 1" }}>
+            <li key={p.title} className="min-h-0 min-w-0">
+              <figure
+                className="group relative m-0 w-full overflow-hidden"
+                style={{ borderRadius: 16, aspectRatio: "4 / 3" }}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={p.image}
                   alt={p.title}
-                  className="block h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="absolute inset-0 h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.03]"
                 />
-              </div>
+              </figure>
             </li>
           ))}
         </ul>

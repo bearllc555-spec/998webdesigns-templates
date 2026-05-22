@@ -109,13 +109,14 @@ export const serviceAssets = [
   { thumb: "/templates/borst-landscape-design/svc-pond-maintenance.jpg", icon: "/templates/borst-landscape-design/icon-pond-maintenance.svg" },
 ];
 
-// Portfolio images (home grid)
+// Portfolio images (home grid — six tiles, 3x2)
 export const portfolio = [
   { title: "Front entry redesign with boxwood parterre", location: "Saddle River, NJ", image: "/templates/borst-landscape-design/gallery-02.jpg" },
   { title: "Pool surround and outdoor kitchen", location: "Franklin Lakes, NJ", image: "/templates/borst-landscape-design/gallery-03.jpg" },
   { title: "Corporate campus seasonal program", location: "Mahwah, NJ", image: "/templates/borst-landscape-design/gallery-04.jpg" },
   { title: "Estate woodland edge", location: "Upper Saddle River, NJ", image: "/templates/borst-landscape-design/gallery-05.jpg" },
   { title: "Streetscape replant", location: "Allendale, NJ", image: "/templates/borst-landscape-design/gallery-06.jpg" },
+  { title: "Garden design and seasonal color", location: "Wyckoff, NJ", image: "/templates/borst-landscape-design/svc-garden-design.jpg" },
 ];
 
 // 3-step process
