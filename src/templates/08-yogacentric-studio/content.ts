@@ -156,7 +156,7 @@ export const pricingPlans = [
       "For those who value flexibility and want to experience our full class schedule before a monthly membership.",
     cta: "View pricing",
     href: "/templates/yogacentric-studio/pricing",
-    featured: true,
+    featured: false,
   },
   {
     name: "Custom Yoga Plans",

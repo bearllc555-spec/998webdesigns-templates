@@ -35,7 +35,10 @@ export function PricingBlock() {
                   ? "#C8D8C8"
                   : "var(--tpl-card)",
                 borderRadius: "var(--tpl-radius)",
-                border: plan.featured || plan.name === "10-Class Pass" ? "none" : "1px solid var(--tpl-line)",
+                border:
+                  plan.featured || plan.name === "10-Class Pass"
+                    ? "none"
+                    : "1px solid var(--tpl-line)",
               }}
             >
               <p className="text-sm font-semibold uppercase tracking-wide" style={{ color: "var(--tpl-muted)" }}>
