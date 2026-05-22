@@ -4,9 +4,9 @@ A library of six handcrafted website templates, each a fully built mini-site at 
 
 Production URL: https://998webdesigns-templates.vercel.app
 
-## Status (v0.2, 2026-05-21)
+## Status (v0.3, 2026-05-22)
 
-Six production-grade templates shipped together. The legacy Crafto bundle (57 stock demos) was removed during the rebuild. The repo is now the source of truth for the Mockup Library; new templates added here ship to production on push to main via Vercel.
+A growing library of handcrafted templates, each shipped as a fully built mini-site. The legacy Crafto bundle (57 stock demos) was removed during the v0.2 rebuild. The repo is the source of truth for the Mockup Library; new templates added here ship to production on push to main via Vercel. The live template count is rendered above the gallery grid on the home page and auto-derives from `src/templates/registry.ts` (no hardcoded count anywhere).
 
 Pricing is `$998 once` for any template tailored to a client (5-7 day customization window). Pricing wording is the product; do not change without explicit approval.
 
@@ -55,13 +55,23 @@ src/
 
 ## The customization contract
 
-To clone a template for a new client, edit exactly three files:
+To clone a template for a new client, edit exactly four surfaces:
 
 1. `src/templates/<slug>/theme.ts` — palette, font variables, radius, density, motion, nav, primary CTA.
 2. `src/templates/<slug>/content.ts` — business info, hero copy, services list, about copy, testimonials, CTA banner, footer blurb. **All copy lives here, never hardcoded in JSX.**
 3. `src/templates/<slug>/images.tsx` — the SVG motif compositions (Hero, Tile, Portrait, Wide, Thumb). Swap colors and shape choices to taste.
+4. **Form endpoints — REQUIRED before any client deploy.** Every `<form>` in the repo ships as a display-only no-op (`onSubmit={(e) => e.preventDefault()}`, with the shared `ContactForm` faking success after a 500ms `setTimeout`). A live client site with unwired forms will silently swallow leads.
 
-Everything else (pages, blocks, shared components) reads from those three files via the imported `templateModule`. No JSX edits needed for a re-skin.
+   Wiring path: every client signs up for a free Formspree account, creates a form, and supplies their own hashid. For each `<form>` in the templates the client is using, set `action="https://formspree.io/f/<CLIENT_HASHID>"` and `method="POST"`, then remove the `onSubmit={(e) => e.preventDefault()}` handler. In the shared `ContactForm`, also delete the `setTimeout` fake-success block (lines around `window.setTimeout(... setSubmitted(true) ...)`) so the form posts and Formspree returns the user to its thank-you page (or wire `_next` per Formspree docs to bounce back to a custom page).
+
+   Forms currently live in five files (every new form-bearing template must inherit this same Formspree wiring step):
+   - `src/components/site/contact-form.tsx` — used by templates 01-06
+   - `src/templates/07-borst-landscape-design/blocks/hero.tsx` (newsletter card)
+   - `src/templates/07-borst-landscape-design/blocks/borst-footer.tsx` (footer newsletter)
+   - `src/templates/08-yogacentric-studio/blocks/contact.tsx` (main contact form)
+   - `src/templates/08-yogacentric-studio/blocks/footer.tsx` (footer newsletter)
+
+Everything else (pages, blocks, shared components) reads from `theme.ts` + `content.ts` + `images.tsx` via the imported `templateModule`. No JSX edits needed for a re-skin beyond the form-action swap in step 4.
 
 ## The six templates
 
@@ -124,3 +134,4 @@ Rules:
 |---|---|
 | 2026-05-21 | v0.1 initial 57-template Crafto gallery shipped. |
 | 2026-05-21 | v0.2 rebuild. Crafto bundle removed. Six handcrafted templates (Haldwell Law, Maple Street, Northwind, Ironclad, Quietfield, Tidewater) shipped together. Gallery rebuilt with newest-first sort, branded SVG thumbnails, and a "New" badge. |
+| 2026-05-22 | v0.3. Customization contract expanded to four surfaces (added form-wiring step - Formspree-per-client). Live template count rendered above the gallery grid, auto-derived from `src/templates/registry.ts`. Templates 07-borst-landscape-design and 08-yogacentric-studio added to the library since v0.2. |
