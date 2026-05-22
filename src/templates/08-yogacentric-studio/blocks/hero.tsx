@@ -57,8 +57,8 @@ export function HeroBlock() {
         }}
         aria-hidden="true"
       />
-      <div className="relative mx-auto max-w-6xl px-5 pt-16 pb-16 md:px-8 md:pt-20 md:pb-24">
-        <div className="max-w-3xl">
+      <div className="relative mx-auto flex min-h-[85vh] max-w-6xl flex-col items-center justify-center px-5 py-16 text-center md:px-8 md:py-20">
+        <div className="mx-auto max-w-2xl">
           {content.hero.eyebrow && (
             <p
               className="text-xs font-semibold uppercase"
@@ -68,7 +68,7 @@ export function HeroBlock() {
             </p>
           )}
           <h1
-            className="mt-5 text-5xl leading-[1.02] md:text-7xl lg:text-8xl"
+            className="mt-4 text-4xl leading-[1.05] md:text-5xl lg:text-6xl"
             style={{
               color: "#FFFFFF",
               fontFamily: "var(--tpl-font-display)",
@@ -79,21 +79,21 @@ export function HeroBlock() {
             {content.hero.headline}
           </h1>
           <p
-            className="mt-7 max-w-xl text-base leading-relaxed md:text-lg"
+            className="mx-auto mt-5 max-w-lg text-sm leading-relaxed md:text-base"
             style={{ color: "rgba(255,255,255,0.82)" }}
           >
             {content.hero.sub}
           </p>
           <p
-            className="mt-4 max-w-lg text-sm leading-relaxed md:text-base"
+            className="mx-auto mt-3 max-w-md text-xs leading-relaxed md:text-sm"
             style={{ color: "rgba(255,255,255,0.65)" }}
           >
             Discover the transformative power of yoga, whether you&apos;re a beginner or an advanced practitioner.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href={theme.primaryCta.href}
-              className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold transition hover:opacity-90"
+              className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold transition hover:opacity-90"
               style={{
                 background: "var(--tpl-accent)",
                 color: "var(--tpl-accent-ink)",
@@ -106,7 +106,7 @@ export function HeroBlock() {
             {content.hero.secondaryLink && (
               <Link
                 href={content.hero.secondaryLink.href}
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-medium transition hover:opacity-90"
+                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium transition hover:opacity-90"
                 style={{
                   background: "rgba(255,255,255,0.12)",
                   color: "#FFFFFF",
@@ -120,11 +120,11 @@ export function HeroBlock() {
             )}
           </div>
         </div>
-        <div className="mt-14 grid grid-cols-3 gap-4 md:mt-20 md:max-w-xl md:gap-8">
+        <div className="mx-auto mt-12 grid max-w-md grid-cols-3 gap-4 md:mt-16 md:gap-8">
           {heroStats.map((s) => (
             <div key={s.label}>
               <p
-                className="text-3xl font-bold md:text-4xl"
+                className="text-2xl font-bold md:text-3xl"
                 style={{ color: "#FFFFFF", letterSpacing: "-0.03em" }}
               >
                 {s.value}
