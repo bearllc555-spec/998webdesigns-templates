@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { templateModule } from "@/templates/07-borst-landscape-design";
 import { ThemeStyle } from "@/lib/theme-style";
-import { SiteHeader } from "@/components/site/header";
+import { BorstFloatingHeader } from "@/templates/07-borst-landscape-design/blocks/borst-floating-header";
 import { BorstFooter } from "@/templates/07-borst-landscape-design/blocks/borst-footer";
 
 const { theme } = templateModule;
@@ -26,7 +26,7 @@ export default function BorstLayout({ children }: { children: React.ReactNode })
       <a href="#main" className="skip-link">
         Skip to content
       </a>
-      <SiteHeader theme={theme} />
+      <BorstFloatingHeader />
       <main id="main">{children}</main>
       <BorstFooter />
     </div>

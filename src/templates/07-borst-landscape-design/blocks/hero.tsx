@@ -7,7 +7,11 @@ import { content } from "../content";
 
 export function HeroBlock() {
   return (
-    <section className="relative" style={{ background: "var(--tpl-ink)" }}>
+    <section
+      id="hero"
+      className="relative min-h-screen"
+      style={{ background: "var(--tpl-ink)" }}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/templates/borst-landscape-design/hero.jpg"
@@ -19,7 +23,7 @@ export function HeroBlock() {
         style={{ background: "linear-gradient(180deg, rgba(5,31,25,0.0) 0%, rgba(5,31,25,0.55) 60%, rgba(5,31,25,0.85) 100%)" }}
         aria-hidden="true"
       />
-      <div className="relative mx-auto max-w-6xl px-5 pt-28 pb-20 md:px-8 md:pt-40 md:pb-28">
+      <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col justify-end px-5 pb-20 pt-8 md:px-8 md:pb-28">
         <div className="grid items-end gap-10 md:grid-cols-12">
           <div className="md:col-span-7">
             <p
