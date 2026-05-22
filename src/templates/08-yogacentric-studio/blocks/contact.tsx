@@ -1,149 +1,197 @@
 "use client";
 
-import { useState } from "react";
+import type { ReactNode } from "react";
+import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { theme } from "../theme";
-import { content, contactNote } from "../content";
+import { content, contactNote, socialLinks } from "../content";
 
 const SAGE = "#C8D8C8";
 const SAGE_INK = "#131313";
 
+function ContactIconRow({
+  href,
+  icon: Icon,
+  children,
+}: {
+  href?: string;
+  icon: typeof Phone;
+  children: ReactNode;
+}) {
+  const inner = (
+    <>
+      <span
+        className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full"
+        style={{ background: "rgba(255,255,255,0.22)" }}
+        aria-hidden="true"
+      >
+        <Icon className="h-4 w-4 text-white" strokeWidth={1.75} />
+      </span>
+      <span className="text-base font-medium text-white md:text-lg">{children}</span>
+    </>
+  );
+
+  if (href) {
+    return (
+      <li>
+        <a href={href} className="inline-flex items-center gap-4 transition hover:opacity-80">
+          {inner}
+        </a>
+      </li>
+    );
+  }
+
+  return (
+    <li>
+      <div className="inline-flex items-center gap-4">{inner}</div>
+    </li>
+  );
+}
+
+const fieldClass =
+  "w-full border-0 border-b bg-transparent py-2.5 text-sm focus:outline-none focus:ring-0";
+const fieldStyle = {
+  borderColor: "var(--tpl-line)",
+  color: "var(--tpl-ink)",
+} as const;
+
 export function ContactBlock() {
   const { business } = content;
-  const [submitHovered, setSubmitHovered] = useState(false);
+  const instagram = socialLinks.find((s) => s.label === "Instagram");
+  const phoneHref = `tel:${business.phone.replace(/\D/g, "")}`;
+
   return (
     <section className="py-20 md:py-28" style={{ background: "var(--tpl-card)" }}>
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <h2
-              className="text-4xl leading-tight md:text-5xl"
-              style={{
-                fontFamily: "var(--tpl-font-display)",
-                fontWeight: theme.type.displayWeight,
-                letterSpacing: theme.type.displayTracking,
-                color: "var(--tpl-ink)",
-              }}
-            >
-              Get in touch with {business.name}
-            </h2>
-            <ul className="mt-8 space-y-4">
-              <li>
-                <a
-                  href={`tel:${business.phone.replace(/\D/g, "")}`}
-                  className="text-lg font-semibold hover:opacity-70"
-                  style={{ color: "var(--tpl-ink)" }}
-                >
-                  {business.phone}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`mailto:${business.email}`}
-                  className="text-base hover:opacity-70"
-                  style={{ color: "var(--tpl-muted)" }}
-                >
-                  {business.email}
-                </a>
-              </li>
-              <li>
-                <p className="whitespace-pre-line text-base" style={{ color: "var(--tpl-muted)" }}>
-                  {business.address}
-                </p>
-              </li>
-            </ul>
-            <div
-              className="mt-10 overflow-hidden"
-              style={{ borderRadius: "var(--tpl-radius)" }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/templates/yogacentric-studio/contact-bg.jpg"
-                alt="Yoga studio interior"
-                className="aspect-video w-full object-cover"
-              />
-            </div>
-          </div>
+        <div
+          className="relative min-h-[32rem] overflow-hidden md:min-h-[36rem]"
+          style={{ borderRadius: "var(--tpl-radius)" }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/templates/yogacentric-studio/contact-bg.jpg"
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+          />
           <div
-            className="p-7 md:p-9"
+            className="absolute inset-0"
             style={{
-              background: "var(--tpl-bg)",
-              borderRadius: "var(--tpl-radius)",
-              border: "1px solid var(--tpl-line)",
+              background:
+                "linear-gradient(105deg, rgba(19,19,19,0.62) 0%, rgba(19,19,19,0.38) 42%, rgba(19,19,19,0.12) 68%, rgba(19,19,19,0.05) 100%)",
             }}
-          >
-            <h3 className="text-xl font-semibold" style={{ color: "var(--tpl-ink)" }}>
-              Send us a message
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed" style={{ color: "var(--tpl-muted)" }}>
-              {contactNote}
-            </p>
-            <form className="mt-8 space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <div>
-                <label htmlFor="yc-name" className="mb-1.5 block text-xs font-medium uppercase tracking-wide" style={{ color: "var(--tpl-muted)" }}>
-                  Name (required)
-                </label>
-                <input
-                  id="yc-name"
-                  type="text"
-                  required
-                  className="w-full px-4 py-3 text-sm focus:outline-none"
-                  style={{
-                    background: "var(--tpl-card)",
-                    border: "1px solid var(--tpl-line)",
-                    borderRadius: 12,
-                    color: "var(--tpl-ink)",
-                  }}
-                />
-              </div>
-              <div>
-                <label htmlFor="yc-email" className="mb-1.5 block text-xs font-medium uppercase tracking-wide" style={{ color: "var(--tpl-muted)" }}>
-                  Email (required)
-                </label>
-                <input
-                  id="yc-email"
-                  type="email"
-                  required
-                  className="w-full px-4 py-3 text-sm focus:outline-none"
-                  style={{
-                    background: "var(--tpl-card)",
-                    border: "1px solid var(--tpl-line)",
-                    borderRadius: 12,
-                    color: "var(--tpl-ink)",
-                  }}
-                />
-              </div>
-              <div>
-                <label htmlFor="yc-message" className="mb-1.5 block text-xs font-medium uppercase tracking-wide" style={{ color: "var(--tpl-muted)" }}>
-                  Message
-                </label>
-                <textarea
-                  id="yc-message"
-                  rows={4}
-                  className="w-full resize-none px-4 py-3 text-sm focus:outline-none"
-                  style={{
-                    background: "var(--tpl-card)",
-                    border: "1px solid var(--tpl-line)",
-                    borderRadius: 12,
-                    color: "var(--tpl-ink)",
-                  }}
-                />
-              </div>
-              <button
-                type="submit"
-                onMouseEnter={() => setSubmitHovered(true)}
-                onMouseLeave={() => setSubmitHovered(false)}
-                className="w-full px-6 py-3.5 text-sm font-semibold"
+            aria-hidden="true"
+          />
+
+          <div className="relative grid gap-10 p-8 md:p-10 lg:grid-cols-[1fr_minmax(0,26rem)] lg:items-center lg:gap-12 lg:p-12 xl:grid-cols-[1fr_28rem]">
+            <div className="flex flex-col justify-center lg:pr-4">
+              <h2
+                className="text-4xl leading-tight text-white md:text-5xl lg:max-w-md"
                 style={{
-                  background: submitHovered ? SAGE : "var(--tpl-accent)",
-                  color: submitHovered ? SAGE_INK : "var(--tpl-accent-ink)",
-                  border: submitHovered ? `1px solid ${SAGE}` : "1px solid rgba(19,19,19,0.12)",
-                  borderRadius: 999,
-                  transition: "background 0.2s, color 0.2s, border-color 0.2s",
+                  fontFamily: "var(--tpl-font-display)",
+                  fontWeight: theme.type.displayWeight,
+                  letterSpacing: theme.type.displayTracking,
                 }}
               >
-                Submit
-              </button>
-            </form>
+                Get in touch with {business.name}
+              </h2>
+              <ul className="mt-8 space-y-5 md:mt-10">
+                <ContactIconRow href={phoneHref} icon={Phone}>
+                  {business.phone}
+                </ContactIconRow>
+                <ContactIconRow href={`mailto:${business.email}`} icon={Mail}>
+                  {business.email}
+                </ContactIconRow>
+                <ContactIconRow icon={MapPin}>
+                  <span className="whitespace-pre-line">{business.address}</span>
+                </ContactIconRow>
+                {instagram ? (
+                  <ContactIconRow href={instagram.href} icon={Instagram}>
+                    @yogacentricstudio
+                  </ContactIconRow>
+                ) : null}
+              </ul>
+            </div>
+
+            <div
+              className="w-full p-7 shadow-[0_18px_50px_rgba(19,19,19,0.14)] md:p-9"
+              style={{
+                background: "var(--tpl-bg)",
+                borderRadius: "var(--tpl-radius)",
+              }}
+            >
+              <h3
+                className="text-xl md:text-2xl"
+                style={{
+                  fontFamily: "var(--tpl-font-display)",
+                  fontWeight: theme.type.displayWeight,
+                  letterSpacing: theme.type.displayTracking,
+                  color: "var(--tpl-ink)",
+                }}
+              >
+                Send us a message
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed md:text-base" style={{ color: "var(--tpl-muted)" }}>
+                {contactNote}
+              </p>
+              <form className="mt-8 space-y-7" onSubmit={(e) => e.preventDefault()}>
+                <div>
+                  <label htmlFor="yc-name" className="block text-sm" style={{ color: "var(--tpl-ink)" }}>
+                    Name (required)
+                  </label>
+                  <input
+                    id="yc-name"
+                    type="text"
+                    required
+                    className={fieldClass}
+                    style={fieldStyle}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="yc-email" className="block text-sm" style={{ color: "var(--tpl-ink)" }}>
+                    Email (required)
+                  </label>
+                  <input
+                    id="yc-email"
+                    type="email"
+                    required
+                    className={fieldClass}
+                    style={fieldStyle}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="yc-message" className="block text-sm" style={{ color: "var(--tpl-ink)" }}>
+                    Message
+                  </label>
+                  <textarea
+                    id="yc-message"
+                    rows={3}
+                    className={`${fieldClass} min-h-[5.5rem] resize-y`}
+                    style={fieldStyle}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="inline-flex px-8 py-3 text-sm font-semibold transition"
+                  style={{
+                    background: "var(--tpl-accent)",
+                    color: "var(--tpl-accent-ink)",
+                    borderRadius: 999,
+                    border: "1px solid rgba(19,19,19,0.12)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = SAGE;
+                    e.currentTarget.style.color = SAGE_INK;
+                    e.currentTarget.style.borderColor = SAGE;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "var(--tpl-accent)";
+                    e.currentTarget.style.color = "var(--tpl-accent-ink)";
+                    e.currentTarget.style.borderColor = "rgba(19,19,19,0.12)";
+                  }}
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
