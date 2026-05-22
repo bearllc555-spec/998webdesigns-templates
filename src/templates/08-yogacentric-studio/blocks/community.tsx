@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { theme } from "../theme";
 import { content } from "../content";
 import { extendedPalette } from "../theme";
+import { YcBtn } from "./yc-btn";
 
 export function CommunityBlock() {
   return (
@@ -34,19 +34,10 @@ export function CommunityBlock() {
                 {p}
               </p>
             ))}
-            <Link
-              href={theme.primaryCta.href}
-              className="mt-8 inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold transition hover:opacity-90"
-              style={{
-                background: "var(--tpl-accent)",
-                color: "var(--tpl-accent-ink)",
-                border: "1px solid rgba(19,19,19,0.12)",
-                borderRadius: 999,
-              }}
-            >
+            <YcBtn href={theme.primaryCta.href} className="mt-8">
               Join member
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
+            </YcBtn>
             {content.about.stats && (
               <div className="mt-12 grid grid-cols-3 gap-6 border-t pt-10" style={{ borderColor: "var(--tpl-line)" }}>
                 {content.about.stats.map((s) => (

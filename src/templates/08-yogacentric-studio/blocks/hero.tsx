@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { theme, extendedPalette } from "../theme";
 import { content, heroStats } from "../content";
+import { YcBtn } from "./yc-btn";
 
 function TypewriterHeadline({ text }: { text: string }) {
   const [displayed, setDisplayed] = useState(0);
@@ -116,33 +116,14 @@ export function HeroBlock() {
             {content.hero.sub}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href={theme.primaryCta.href}
-              className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold transition hover:opacity-90"
-              style={{
-                background: "var(--tpl-accent)",
-                color: "var(--tpl-accent-ink)",
-                border: "1px solid rgba(19,19,19,0.12)",
-                borderRadius: 999,
-              }}
-            >
+            <YcBtn href={theme.primaryCta.href}>
               {theme.primaryCta.label}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
+            </YcBtn>
             {content.hero.secondaryLink && (
-              <Link
-                href={content.hero.secondaryLink.href}
-                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium transition hover:opacity-90"
-                style={{
-                  background: "rgba(255,255,255,0.12)",
-                  color: "#FFFFFF",
-                  border: "1px solid rgba(255,255,255,0.35)",
-                  borderRadius: 999,
-                  backdropFilter: "blur(8px)",
-                }}
-              >
+              <YcBtn href={content.hero.secondaryLink.href} ghost>
                 {content.hero.secondaryLink.label}
-              </Link>
+              </YcBtn>
             )}
           </div>
         </div>

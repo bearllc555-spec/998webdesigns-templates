@@ -1,10 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { theme } from "../theme";
 import { content, contactNote } from "../content";
 
+const SAGE = "#C8D8C8";
+const SAGE_INK = "#131313";
+
 export function ContactBlock() {
   const { business } = content;
+  const [submitHovered, setSubmitHovered] = useState(false);
   return (
     <section className="py-20 md:py-28" style={{ background: "var(--tpl-card)" }}>
       <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -125,12 +130,15 @@ export function ContactBlock() {
               </div>
               <button
                 type="submit"
-                className="w-full px-6 py-3.5 text-sm font-semibold transition hover:opacity-90"
+                onMouseEnter={() => setSubmitHovered(true)}
+                onMouseLeave={() => setSubmitHovered(false)}
+                className="w-full px-6 py-3.5 text-sm font-semibold"
                 style={{
-                  background: "var(--tpl-accent)",
-                  color: "var(--tpl-accent-ink)",
-                  border: "1px solid rgba(19,19,19,0.12)",
+                  background: submitHovered ? SAGE : "var(--tpl-accent)",
+                  color: submitHovered ? SAGE_INK : "var(--tpl-accent-ink)",
+                  border: submitHovered ? `1px solid ${SAGE}` : "1px solid rgba(19,19,19,0.12)",
                   borderRadius: 999,
+                  transition: "background 0.2s, color 0.2s, border-color 0.2s",
                 }}
               >
                 Submit

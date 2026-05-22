@@ -1,11 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { theme } from "../theme";
 import { content, footerLinks } from "../content";
 
+const SAGE = "#C8D8C8";
+const SAGE_INK = "#131313";
+
 export function YogaCentricFooter() {
   const year = new Date().getFullYear();
+  const [subHovered, setSubHovered] = useState(false);
   return (
     <footer style={{ background: "var(--tpl-ink)", color: "#FFFFFF" }}>
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
@@ -29,11 +34,14 @@ export function YogaCentricFooter() {
               />
               <button
                 type="submit"
-                className="shrink-0 px-5 py-3 text-sm font-semibold transition hover:opacity-90"
+                onMouseEnter={() => setSubHovered(true)}
+                onMouseLeave={() => setSubHovered(false)}
+                className="shrink-0 px-5 py-3 text-sm font-semibold"
                 style={{
-                  background: "var(--tpl-accent)",
-                  color: "var(--tpl-accent-ink)",
+                  background: subHovered ? SAGE : "var(--tpl-accent)",
+                  color: subHovered ? SAGE_INK : "var(--tpl-accent-ink)",
                   borderRadius: 999,
+                  transition: "background 0.2s, color 0.2s",
                 }}
               >
                 Subscribe

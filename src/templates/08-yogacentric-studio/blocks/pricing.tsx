@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { theme } from "../theme";
 import { pricingPlans } from "../content";
+import { YcBtn } from "./yc-btn";
 
 const SAGE = "#C8D8C8";
 const DEFAULT_INDEX = 1; // center card
@@ -65,19 +65,13 @@ export function PricingBlock() {
                 <p className="mt-5 flex-1 text-sm leading-relaxed" style={{ color: "var(--tpl-muted)" }}>
                   {plan.description}
                 </p>
-                <Link
+                <YcBtn
                   href={plan.href}
+                  className="mt-8 w-full"
                   onClick={(e) => e.stopPropagation()}
-                  className="mt-8 inline-flex items-center justify-center px-5 py-3 text-sm font-semibold transition hover:opacity-90"
-                  style={{
-                    background: "var(--tpl-accent)",
-                    color: "var(--tpl-accent-ink)",
-                    border: "1px solid rgba(19,19,19,0.12)",
-                    borderRadius: 999,
-                  }}
                 >
                   {plan.cta}
-                </Link>
+                </YcBtn>
               </li>
             );
           })}
