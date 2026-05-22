@@ -1,4 +1,4 @@
-import { TEMPLATE_VERSION } from "../theme";
+import { SITE_VERSION } from "@/lib/version";
 
 export function VersionLabel() {
   return (
@@ -9,9 +9,9 @@ export function VersionLabel() {
         color: "var(--tpl-accent)",
         backdropFilter: "blur(8px)",
       }}
-      aria-label={`Template version ${TEMPLATE_VERSION}`}
+      aria-label={`Template version ${SITE_VERSION}`}
     >
-      {TEMPLATE_VERSION}
+      {SITE_VERSION}
     </div>
   );
 }
