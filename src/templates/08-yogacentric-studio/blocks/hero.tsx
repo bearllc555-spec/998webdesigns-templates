@@ -18,7 +18,7 @@ function TypewriterHeadline({ text }: { text: string }) {
         i += 1;
         setDisplayed(i);
         if (i >= text.length) clearInterval(interval);
-      }, 42);
+      }, 62);
       return () => clearInterval(interval);
     }, 400);
     return () => clearTimeout(start);
