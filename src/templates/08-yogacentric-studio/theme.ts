@@ -7,6 +7,7 @@ export const theme: TemplateTheme = {
     industry: "Yoga studio",
     tagline: "Find your balance with YogaCentric.",
     publishedAt: "2026-05-21T18:00:00Z",
+    galleryPreview: "/templates/yogacentric-studio/hero.webp",
   },
   palette: {
     bg: "#FFFFFF",

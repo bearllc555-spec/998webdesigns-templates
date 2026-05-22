@@ -23,6 +23,8 @@ export type TemplateMeta = {
   industry: string;
   tagline: string;
   publishedAt: string;
+  /** Gallery card thumbnail; defaults to /templates/{slug}/hero.jpg */
+  galleryPreview?: string;
 };
 
 export type TemplateTheme = {

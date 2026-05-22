@@ -11,6 +11,8 @@ export function TemplateCard({
 }) {
   const { theme } = template;
   const slug = theme.meta.slug;
+  const previewSrc =
+    theme.meta.galleryPreview ?? `/templates/${slug}/hero.jpg`;
   return (
     <Link
       href={`/templates/${slug}`}
@@ -28,7 +30,7 @@ export function TemplateCard({
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={`/templates/${slug}/hero.jpg`}
+          src={previewSrc}
           alt={`${theme.meta.name} template preview`}
           loading="lazy"
           decoding="async"
