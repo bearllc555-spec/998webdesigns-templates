@@ -1,5 +1,4 @@
 import { HeroBlock } from "@/templates/07-borst-landscape-design/blocks/hero";
-import { FeaturedTestimonial } from "@/templates/07-borst-landscape-design/blocks/featured-testimonial";
 import { WhyUsBlock } from "@/templates/07-borst-landscape-design/blocks/why-us";
 import { ServicesBlock } from "@/templates/07-borst-landscape-design/blocks/services";
 import { PortfolioBlock } from "@/templates/07-borst-landscape-design/blocks/portfolio";
@@ -13,7 +12,6 @@ export default function BorstHome() {
   return (
     <>
       <HeroBlock />
-      <FeaturedTestimonial />
       <WhyUsBlock />
       <ServicesBlock />
       <PortfolioBlock />
