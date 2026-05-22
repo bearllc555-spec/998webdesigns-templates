@@ -142,11 +142,36 @@ export const trainers: TrainerListItem[] = [
     photo: "/templates/yogacentric-studio/trainer-robin.jpg",
     slug: "robin",
   },
-  { name: "Catherine", specialty: "Reiki & Restorative Yoga", photo: "/templates/yogacentric-studio/trainer-catherine.jpg" },
-  { name: "Brandi", specialty: "Restorative & Breathwork", photo: "/templates/yogacentric-studio/trainer-brandi.jpg" },
-  { name: "Angela", specialty: "Sound Healing & Meditation", photo: "/templates/yogacentric-studio/trainer-angela.jpg" },
-  { name: "Lisseth", specialty: "Studio Director & Hatha", photo: "/templates/yogacentric-studio/trainer-lisseth.jpg" },
-  { name: "Anastasia", specialty: "Gentle Flow & Beginners", photo: "/templates/yogacentric-studio/trainer-robin-2.jpg" },
+  {
+    name: "Catherine",
+    specialty: "Reiki & Restorative Yoga",
+    photo: "/templates/yogacentric-studio/trainer-catherine.jpg",
+    slug: "catherine",
+  },
+  {
+    name: "Brandi",
+    specialty: "Restorative & Breathwork",
+    photo: "/templates/yogacentric-studio/trainer-brandi.jpg",
+    slug: "brandi",
+  },
+  {
+    name: "Angela",
+    specialty: "Sound Healing & Meditation",
+    photo: "/templates/yogacentric-studio/trainer-angela.jpg",
+    slug: "angela",
+  },
+  {
+    name: "Lisseth",
+    specialty: "Studio Director & Hatha",
+    photo: "/templates/yogacentric-studio/trainer-lisseth.jpg",
+    slug: "lisseth",
+  },
+  {
+    name: "Anastasia",
+    specialty: "Gentle Flow & Beginners",
+    photo: "/templates/yogacentric-studio/trainer-robin-2.jpg",
+    slug: "anastasia",
+  },
 ];
 
 export const trainerProfiles: Record<string, TrainerProfile> = {
@@ -212,6 +237,331 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
         quote: "She meets you where you are — beginners feel welcome, and experienced yogis still get a challenge.",
         name: "James Ortiz",
         role: "Power flow regular",
+      },
+    ],
+  },
+  catherine: {
+    slug: "catherine",
+    name: "Catherine",
+    specialty: "Reiki & Restorative Yoga",
+    photo: "/templates/yogacentric-studio/trainer-catherine.jpg",
+    bio: "Catherine blends Reiki energy work with restorative yoga to help students release tension and restore balance. Her calm, grounding classes are a favorite for anyone recovering from stress or returning to the mat after time away.",
+    coachingTitle: "Personalized coaching",
+    coachingBody:
+      "One-on-one Reiki and restorative sessions tailored to your body, breath, and energy. Gentle guidance for students who want a slower, healing-focused practice.",
+    servicesHeadline: "Services offered",
+    servicesIntro:
+      "Catherine brings years of Reiki training and restorative experience to YogaCentric. Explore how her sessions can support deep rest, nervous-system calm, and renewed vitality.",
+    offeredServices: [
+      {
+        title: "Reiki sessions",
+        description: "Hands-on energy work to promote relaxation, clarity, and emotional balance.",
+      },
+      {
+        title: "Restorative yoga",
+        description: "Supported poses held with props so the body can fully soften and restore.",
+      },
+      {
+        title: "Healing workshops",
+        description: "Themed workshops combining Reiki, restorative postures, and guided meditation.",
+      },
+    ],
+    galleryImages: [
+      "/templates/yogacentric-studio/svc-restorative.jpg",
+      "/templates/yogacentric-studio/community.jpg",
+      "/templates/yogacentric-studio/benefits.jpg",
+      "/templates/yogacentric-studio/svc-beginner.jpg",
+    ],
+    testimonials: [
+      {
+        quote: "Catherine's Reiki sessions left me feeling lighter than I have in years. Truly healing.",
+        name: "Donna Keane",
+        role: "Restorative regular",
+      },
+      {
+        quote: "I come for the stillness. Her restorative classes are the reset my week needs.",
+        name: "Paula Russo",
+        role: "Clifton local",
+      },
+      {
+        quote: "She holds space with such care. Every student feels seen and supported.",
+        name: "Mark DeGise",
+        role: "Evening class member",
+      },
+      {
+        quote: "After injury, Catherine helped me ease back in without pressure. I'm grateful.",
+        name: "Lisa Annunziata",
+        role: "Returning student",
+      },
+      {
+        quote: "The Full Moon Reiki workshop was magical. I signed up for the next one immediately.",
+        name: "Karen Miller",
+        role: "Workshop attendee",
+      },
+      {
+        quote: "Gentle, knowledgeable, and intuitive — exactly what restorative practice should feel like.",
+        name: "Tom Gargiulo",
+        role: "Monthly member",
+      },
+    ],
+  },
+  brandi: {
+    slug: "brandi",
+    name: "Brandi",
+    specialty: "Restorative & Breathwork",
+    photo: "/templates/yogacentric-studio/trainer-brandi.jpg",
+    bio: "Brandi guides restorative flows and conscious breathwork that quiet the mind and open the body. Her teaching emphasizes slow movement, intentional breathing, and the kind of deep rest busy people rarely make time for.",
+    coachingTitle: "Personalized coaching",
+    coachingBody:
+      "Private breathwork and restorative sessions designed around your stress patterns, mobility, and goals. Learn techniques you can carry off the mat into everyday life.",
+    servicesHeadline: "Services offered",
+    servicesIntro:
+      "Whether you need to unwind after a long week or build a sustainable breath practice, Brandi meets you with patience and clear instruction rooted in Clifton studio tradition.",
+    offeredServices: [
+      {
+        title: "Breathwork sessions",
+        description: "Guided breathing practices to reduce stress, improve focus, and support recovery.",
+      },
+      {
+        title: "Restorative classes",
+        description: "Slow, prop-supported classes that release physical tension and mental clutter.",
+      },
+      {
+        title: "Stress-release workshops",
+        description: "Focused workshops pairing breath techniques with restorative sequencing.",
+      },
+    ],
+    galleryImages: [
+      "/templates/yogacentric-studio/benefits.jpg",
+      "/templates/yogacentric-studio/svc-restorative.jpg",
+      "/templates/yogacentric-studio/svc-beginner.jpg",
+      "/templates/yogacentric-studio/community.jpg",
+    ],
+    testimonials: [
+      {
+        quote: "Brandi's breathwork changed how I handle stress at work. Simple tools, big impact.",
+        name: "Jennifer Wu",
+        role: "Corporate member",
+      },
+      {
+        quote: "I leave her restorative classes feeling like I slept eight hours.",
+        name: "Chris Paladino",
+        role: "Saturday regular",
+      },
+      {
+        quote: "She explains breath in a way that finally clicks. No jargon, just results.",
+        name: "Maria Santos",
+        role: "New to breathwork",
+      },
+      {
+        quote: "The studio feels safer when Brandi is teaching. Warm, steady, and present.",
+        name: "David Chen",
+        role: "3-year member",
+      },
+      {
+        quote: "My shoulders used to live at my ears. Restorative with Brandi fixed that.",
+        name: "Amy Rothfeld",
+        role: "Desk worker",
+      },
+      {
+        quote: "Perfect pace for beginners who want calm without feeling lost.",
+        name: "Brian O'Neill",
+        role: "Intro pass holder",
+      },
+    ],
+  },
+  angela: {
+    slug: "angela",
+    name: "Angela",
+    specialty: "Sound Healing & Meditation",
+    photo: "/templates/yogacentric-studio/trainer-angela.jpg",
+    bio: "Angela leads sound healing and meditation experiences that invite deep stillness. From crystal bowls to guided silence, her sessions help students unplug, listen inward, and leave with a steadier mind.",
+    coachingTitle: "Personalized coaching",
+    coachingBody:
+      "One-on-one meditation coaching and private sound sessions for students building a consistent mindfulness practice or exploring healing sound for the first time.",
+    servicesHeadline: "Services offered",
+    servicesIntro:
+      "Angela's work at YogaCentric connects ancient sound traditions with accessible meditation for modern lives. Discover how her offerings can anchor your week.",
+    offeredServices: [
+      {
+        title: "Sound healing sessions",
+        description: "Immersive sound baths using bowls and chimes to promote relaxation and inner calm.",
+      },
+      {
+        title: "Meditation classes",
+        description: "Guided and silent meditation practices for focus, sleep, and emotional balance.",
+      },
+      {
+        title: "Mindfulness workshops",
+        description: "Special events blending sound, breath, and meditation techniques you can practice at home.",
+      },
+    ],
+    galleryImages: [
+      "/templates/yogacentric-studio/community.jpg",
+      "/templates/yogacentric-studio/svc-restorative.jpg",
+      "/templates/yogacentric-studio/benefits.jpg",
+      "/templates/yogacentric-studio/svc-power.jpg",
+    ],
+    testimonials: [
+      {
+        quote: "Angela's sound bath was the most relaxed I've felt in a decade. I booked again right away.",
+        name: "Rachel Kim",
+        role: "Sound bath fan",
+      },
+      {
+        quote: "Meditation used to intimidate me. She makes it approachable and real.",
+        name: "Steve Lambert",
+        role: "First-time meditator",
+      },
+      {
+        quote: "The bowls, the silence, the guidance — everything lands exactly where it should.",
+        name: "Nina Patel",
+        role: "Wellness blogger",
+      },
+      {
+        quote: "I sleep better the night after Angela's class. That's worth every minute.",
+        name: "Greg Morrison",
+        role: "Evening student",
+      },
+      {
+        quote: "Her voice and pacing create instant trust. You can let go the moment class starts.",
+        name: "Helen Vasquez",
+        role: "Retreat guest",
+      },
+      {
+        quote: "Sound healing here beats anything I've tried on apps. In-person makes the difference.",
+        name: "Jordan Lee",
+        role: "Monthly unlimited",
+      },
+    ],
+  },
+  lisseth: {
+    slug: "lisseth",
+    name: "Lisseth",
+    specialty: "Studio Director & Hatha",
+    photo: "/templates/yogacentric-studio/trainer-lisseth.jpg",
+    bio: "As studio director, Lisseth keeps YogaCentric's Clifton community running while teaching thoughtful Hatha classes rooted in alignment and breath. She knows every corner of the schedule and every student who walks through the door.",
+    coachingTitle: "Personalized coaching",
+    coachingBody:
+      "Private Hatha instruction and new-student guidance from the person who knows our studio best. Ideal for beginners, returning yogis, and anyone navigating class options.",
+    servicesHeadline: "Services offered",
+    servicesIntro:
+      "Lisseth has helped grow YogaCentric since 2005. Her Hatha classes build strength and awareness step by step — and as director, she ensures every visit feels welcoming.",
+    offeredServices: [
+      {
+        title: "Hatha yoga classes",
+        description: "Alignment-focused classes that build stability, breath awareness, and confidence.",
+      },
+      {
+        title: "Private instruction",
+        description: "One-on-one sessions tailored to your level, injuries, and long-term goals.",
+      },
+      {
+        title: "New student orientation",
+        description: "Intro sessions covering studio etiquette, props, and how to choose the right classes.",
+      },
+    ],
+    galleryImages: [
+      "/templates/yogacentric-studio/svc-beginner.jpg",
+      "/templates/yogacentric-studio/community.jpg",
+      "/templates/yogacentric-studio/svc-power.jpg",
+      "/templates/yogacentric-studio/benefits.jpg",
+    ],
+    testimonials: [
+      {
+        quote: "Lisseth welcomed me on day one and matched me to the perfect classes. The studio runs like clockwork.",
+        name: "Patricia Gomez",
+        role: "New member",
+      },
+      {
+        quote: "Her Hatha classes are clear, patient, and never rushed. I finally understand alignment.",
+        name: "Frank DiMarco",
+        role: "Hatha regular",
+      },
+      {
+        quote: "As director she solves problems fast — billing, schedule, anything. Real leadership.",
+        name: "Susan Wright",
+        role: "Family plan member",
+      },
+      {
+        quote: "Fourteen years at this studio and Lisseth is still the heart of why I stay.",
+        name: "Valentina Lazirko",
+        role: "Longtime student",
+      },
+      {
+        quote: "She remembers your name, your goals, your last class. That personal touch matters.",
+        name: "Kevin Hartman",
+        role: "Weekday attendee",
+      },
+      {
+        quote: "If you're nervous about starting yoga, take her intro session. You'll feel at home immediately.",
+        name: "Diane Foster",
+        role: "Beginner graduate",
+      },
+    ],
+  },
+  anastasia: {
+    slug: "anastasia",
+    name: "Anastasia",
+    specialty: "Gentle Flow & Beginners",
+    photo: "/templates/yogacentric-studio/trainer-robin-2.jpg",
+    bio: "Anastasia specializes in gentle flow and true-beginner classes where no prior experience is required. She breaks poses into simple steps, celebrates small wins, and helps new students build confidence without intimidation.",
+    coachingTitle: "Personalized coaching",
+    coachingBody:
+      "One-on-one beginner coaching for students who want extra support before joining group classes. Patient, encouraging, and focused on foundations.",
+    servicesHeadline: "Services offered",
+    servicesIntro:
+      "New to yoga or returning after a long break? Anastasia's gentle flow classes at our Clifton studio are the friendliest place to start — mats, props, and encouragement included.",
+    offeredServices: [
+      {
+        title: "Beginner yoga",
+        description: "Foundational poses, breathing, and studio basics in a no-pressure environment.",
+      },
+      {
+        title: "Gentle flow",
+        description: "Slow, linked movement that builds mobility without intensity or overwhelm.",
+      },
+      {
+        title: "Intro workshops",
+        description: "Short workshops covering form, props, and how to choose your next classes.",
+      },
+    ],
+    galleryImages: [
+      "/templates/yogacentric-studio/svc-beginner.jpg",
+      "/templates/yogacentric-studio/benefits.jpg",
+      "/templates/yogacentric-studio/community.jpg",
+      "/templates/yogacentric-studio/svc-restorative.jpg",
+    ],
+    testimonials: [
+      {
+        quote: "I was terrified of my first class. Anastasia made me laugh, breathe, and come back.",
+        name: "Melissa Grant",
+        role: "Brand-new yogi",
+      },
+      {
+        quote: "Gentle flow with her is my favorite hour of the week. Never competitive, always kind.",
+        name: "Robert Ellis",
+        role: "Senior beginner",
+      },
+      {
+        quote: "She explains every pose like she's talking to a friend. Zero ego, all support.",
+        name: "Tanya Brooks",
+        role: "Intro workshop alum",
+      },
+      {
+        quote: "My doctor said try yoga. Anastasia was the right first teacher — slow and safe.",
+        name: "George Nunez",
+        role: "Health referral",
+      },
+      {
+        quote: "Finally a class where I don't feel behind everyone else. Pure encouragement.",
+        name: "Hannah Cole",
+        role: "Gentle flow regular",
+      },
+      {
+        quote: "She checked on me after my first visit. That small gesture kept me coming back.",
+        name: "Ian Murphy",
+        role: "2-month member",
       },
     ],
   },
