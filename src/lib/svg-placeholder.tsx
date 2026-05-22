@@ -6,6 +6,7 @@ import * as northwind from "@/templates/03-northwind-dental/images";
 import * as ironclad from "@/templates/04-ironclad-roofing/images";
 import * as quietfield from "@/templates/05-quietfield-yoga/images";
 import * as tidewater from "@/templates/06-tidewater-cpa/images";
+import * as borst from "@/templates/07-borst-landscape-design/images";
 
 export type PlaceholderKind = "hero" | "tile" | "portrait" | "wide" | "thumb";
 
@@ -24,6 +25,7 @@ const REGISTRY: Record<string, ImageMod> = {
   "ironclad-roofing": ironclad as unknown as ImageMod,
   "quietfield-yoga": quietfield as unknown as ImageMod,
   "tidewater-cpa": tidewater as unknown as ImageMod,
+  "borst-landscape-design": borst as unknown as ImageMod,
 };
 
 export function Placeholder({
