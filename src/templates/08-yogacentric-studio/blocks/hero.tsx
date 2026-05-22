@@ -68,7 +68,7 @@ export function HeroBlock() {
     >
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-contain object-center md:object-cover md:object-[50%_42%]"
+        className="absolute left-0 right-0 top-0 h-auto max-h-[58dvh] w-full object-contain object-top md:inset-0 md:h-full md:max-h-none md:object-cover md:object-[50%_42%]"
         autoPlay
         muted
         loop
