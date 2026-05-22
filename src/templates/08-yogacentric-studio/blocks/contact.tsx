@@ -60,7 +60,7 @@ export function ContactBlock() {
   const phoneHref = `tel:${business.phone.replace(/\D/g, "")}`;
 
   return (
-    <section className="py-20 md:py-28" style={{ background: "#59676a" }}>
+    <section className="pt-20 pb-0 md:pt-28 md:pb-0" style={{ background: "#59676a" }}>
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div
           className="relative overflow-hidden"
@@ -111,7 +111,7 @@ export function ContactBlock() {
               </ul>
             </div>
 
-            <div className="relative p-3 pt-3 md:p-4 lg:pb-5 lg:pl-4 lg:pr-4 lg:pt-4">
+            <div className="relative p-3 pt-3 md:p-4 lg:pb-5 lg:pl-4 lg:pr-4 lg:pt-4" style={{ background: "#59676a" }}>
               <div
                 className="relative w-full p-7 shadow-[0_18px_50px_rgba(19,19,19,0.14)] md:p-8"
                 style={{
