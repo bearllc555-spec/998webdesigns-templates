@@ -8,6 +8,7 @@ import {
   BorstEyebrow,
   borstPrimaryBtn,
 } from "../borst-ui";
+import { IMAGE_GEOMETRY } from "../image-geometry";
 
 export function PortfolioBlock() {
   return (
@@ -42,7 +43,10 @@ export function PortfolioBlock() {
             <li key={p.title} className="min-h-0 min-w-0">
               <figure
                 className="group relative m-0 w-full overflow-hidden"
-                style={{ borderRadius: 20, aspectRatio: "6 / 5" }}
+                style={{
+                  borderRadius: IMAGE_GEOMETRY.mediaRadius,
+                  aspectRatio: IMAGE_GEOMETRY.portfolioAspect,
+                }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img

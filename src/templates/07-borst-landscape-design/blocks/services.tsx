@@ -9,6 +9,7 @@ import {
   borstOutlineBtn,
   borstPrimaryBtn,
 } from "../borst-ui";
+import { IMAGE_GEOMETRY } from "../image-geometry";
 
 export function ServicesBlock() {
   const featuredServices = content.services.items.slice(0, 3);
@@ -63,7 +64,13 @@ export function ServicesBlock() {
             const asset = serviceAssets[i];
             return (
               <li key={it.name} className="group">
-                <div className="relative overflow-hidden" style={{ borderRadius: 20, aspectRatio: "6 / 5" }}>
+                <div
+                  className="relative overflow-hidden"
+                  style={{
+                    borderRadius: IMAGE_GEOMETRY.mediaRadius,
+                    aspectRatio: IMAGE_GEOMETRY.servicesAspect,
+                  }}
+                >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={asset.thumb}

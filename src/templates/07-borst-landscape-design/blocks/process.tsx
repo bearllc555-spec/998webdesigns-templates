@@ -8,6 +8,7 @@ import {
   BorstEyebrow,
   borstPrimaryBtn,
 } from "../borst-ui";
+import { IMAGE_GEOMETRY } from "../image-geometry";
 
 export function ProcessBlock() {
   return (
@@ -37,7 +38,13 @@ export function ProcessBlock() {
         </div>
 
         <div className="mt-12">
-          <div className="relative overflow-hidden" style={{ borderRadius: 24, aspectRatio: "16 / 9" }}>
+          <div
+            className="relative overflow-hidden"
+            style={{
+              borderRadius: IMAGE_GEOMETRY.heroRadius,
+              aspectRatio: IMAGE_GEOMETRY.processAspect,
+            }}
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/templates/borst-landscape-design/gallery-03.jpg"
@@ -56,7 +63,7 @@ export function ProcessBlock() {
             <ol
               className="absolute right-4 top-4 bottom-4 w-full max-w-[420px] space-y-1 overflow-hidden p-6 md:right-6 md:top-6 md:bottom-6 md:p-7"
               style={{
-                borderRadius: 20,
+                borderRadius: IMAGE_GEOMETRY.mediaRadius,
                 background: "rgba(255,255,255,0.58)",
                 backdropFilter: "blur(2px)",
               }}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { theme } from "../theme";
 import { content } from "../content";
 import { BorstArrow, borstPrimaryBtn } from "../borst-ui";
+import { IMAGE_GEOMETRY } from "../image-geometry";
 
 export function HeroBlock() {
   return (
@@ -11,7 +12,7 @@ export function HeroBlock() {
       <div className="mx-auto max-w-[1440px] px-3 md:px-4">
         <div
           className="relative overflow-hidden"
-          style={{ borderRadius: 24, minHeight: "min(76vh, 720px)" }}
+          style={{ borderRadius: IMAGE_GEOMETRY.heroRadius, minHeight: "min(76vh, 720px)" }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

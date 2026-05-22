@@ -8,6 +8,7 @@ import {
   BorstEyebrow,
   borstPrimaryBtn,
 } from "../borst-ui";
+import { IMAGE_GEOMETRY } from "../image-geometry";
 
 export function WhyUsBlock() {
   return (
@@ -15,7 +16,10 @@ export function WhyUsBlock() {
       <div className={`${BORST_CONTAINER} ${BORST_SECTION_PY}`}>
         <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-7">
-            <div className="relative overflow-hidden" style={{ borderRadius: 20, aspectRatio: "16 / 10" }}>
+            <div
+              className="relative overflow-hidden"
+              style={{ borderRadius: IMAGE_GEOMETRY.mediaRadius, aspectRatio: IMAGE_GEOMETRY.whyUsAspect }}
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/templates/borst-landscape-design/why-us.jpg"

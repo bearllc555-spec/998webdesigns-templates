@@ -8,6 +8,7 @@ import {
   BorstEyebrow,
   borstOutlineBtn,
 } from "../borst-ui";
+import { IMAGE_GEOMETRY } from "../image-geometry";
 
 export function BlogPreviewBlock() {
   return (
@@ -30,7 +31,13 @@ export function BlogPreviewBlock() {
         <ul className="mt-14 grid gap-6 md:grid-cols-2">
           {blogPosts.map((p) => (
             <li key={p.title}>
-              <div className="relative overflow-hidden" style={{ aspectRatio: "6 / 4", borderRadius: 20 }}>
+              <div
+                className="relative overflow-hidden"
+                style={{
+                  aspectRatio: IMAGE_GEOMETRY.blogAspect,
+                  borderRadius: IMAGE_GEOMETRY.mediaRadius,
+                }}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={p.image} alt={p.title} className="block h-full w-full object-cover" />
                 <span
