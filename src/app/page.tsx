@@ -10,7 +10,7 @@ const ctaButtonClass =
 export const metadata = {
   title: "Template library | 998 web designs",
   description:
-    "A library of handcrafted templates. Pick a starting point. We customize it to your business in 5 to 7 days. $998, once.",
+    "A library of handcrafted templates. Pick a starting point. We hand customize every design and deliver to your business in 5 to 7 days.",
 };
 
 export default function GalleryPage() {
@@ -58,7 +58,7 @@ export default function GalleryPage() {
               <span className="block sm:whitespace-nowrap">Pick a starting point.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-base leading-relaxed text-neutral-600 md:text-lg">
-              Every template is a fully built site. We customize it to your business in 5 to 7 days. $998, once.
+              We hand customize every design and deliver to your business in 5 to 7 days.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Link href={`${MARKETING_SITE_URL}/#start`} className={ctaButtonClass}>
@@ -95,12 +95,11 @@ export default function GalleryPage() {
         </section>
       </main>
       <footer className="border-t border-neutral-200">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-8 text-sm text-neutral-500 md:flex-row md:items-center md:justify-between md:px-8">
+        <div className="mx-auto max-w-6xl px-5 py-8 text-sm text-neutral-500 md:px-8">
           <p>
             <span className="font-semibold text-blue-600">998</span>
             <span className="font-semibold text-neutral-900">webdesigns</span> / templates &middot; a Bear LLC digital property
           </p>
-          <p className="text-xs">Six handcrafted templates, tailored per client for $998.</p>
         </div>
       </footer>
     </div>
