@@ -12,7 +12,7 @@ export function HeroBlock() {
       <div className="mx-auto max-w-[1440px] px-3 md:px-4">
         <div
           className="relative overflow-hidden"
-          style={{ borderRadius: IMAGE_GEOMETRY.heroRadius, minHeight: "min(76vh, 720px)" }}
+          style={{ borderRadius: IMAGE_GEOMETRY.heroRadius, aspectRatio: IMAGE_GEOMETRY.heroAspect }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -29,7 +29,7 @@ export function HeroBlock() {
             aria-hidden="true"
           />
           <div
-            className="relative mx-auto flex min-h-[min(76vh,720px)] max-w-7xl flex-col justify-end px-6 pb-12 pt-10 md:px-9 md:pb-14"
+            className="relative mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-12 pt-10 md:px-9 md:pb-14"
             style={{ fontFamily: "var(--tpl-font-display)" }}
           >
             <div className="grid items-end gap-10 md:grid-cols-12">

@@ -1,9 +1,12 @@
 export const IMAGE_GEOMETRY = {
   heroRadius: 24,
-  mediaRadius: 20,
-  servicesAspect: "6 / 5",
-  whyUsAspect: "16 / 10",
-  portfolioAspect: "6 / 5",
-  blogAspect: "6 / 4",
-  processAspect: "16 / 9",
+  mediaRadius: 24,
+  // Measured from GardenView reference at desktop widths.
+  heroAspect: "18 / 11", // ~1.636
+  servicesAspect: "97 / 100", // ~0.966
+  whyUsAspect: "19 / 20", // ~0.95 portrait rectangle
+  portfolioSquareAspect: "1 / 1",
+  portfolioWideAspect: "302 / 273", // ~1.106
+  blogAspect: "89 / 60", // ~1.483
+  processAspect: "37 / 20", // ~1.85
 } as const;

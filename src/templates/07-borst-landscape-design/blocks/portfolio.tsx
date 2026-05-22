@@ -11,6 +11,15 @@ import {
 import { IMAGE_GEOMETRY } from "../image-geometry";
 
 export function PortfolioBlock() {
+  const layout = [
+    { aspect: IMAGE_GEOMETRY.portfolioSquareAspect, span: "lg:col-span-3" },
+    { aspect: IMAGE_GEOMETRY.portfolioSquareAspect, span: "lg:col-span-3" },
+    { aspect: IMAGE_GEOMETRY.portfolioWideAspect, span: "lg:col-span-6" },
+    { aspect: IMAGE_GEOMETRY.portfolioWideAspect, span: "lg:col-span-6" },
+    { aspect: IMAGE_GEOMETRY.portfolioSquareAspect, span: "lg:col-span-3" },
+    { aspect: IMAGE_GEOMETRY.portfolioSquareAspect, span: "lg:col-span-3" },
+  ] as const;
+
   return (
     <section className="overflow-visible" style={{ background: "var(--tpl-bg)" }}>
       <div className={`${BORST_CONTAINER} ${BORST_SECTION_PY}`}>
@@ -38,14 +47,17 @@ export function PortfolioBlock() {
             <BorstArrow />
           </Link>
         </div>
-        <ul className="mt-12 grid grid-cols-2 items-start gap-4 lg:grid-cols-3 lg:gap-5">
-          {portfolio.map((p) => (
-            <li key={p.title} className="min-h-0 min-w-0">
+        <ul className="mt-12 grid grid-cols-2 items-start gap-4 lg:grid-cols-12 lg:gap-6">
+          {portfolio.map((p, index) => (
+            <li
+              key={p.title}
+              className={`min-h-0 min-w-0 col-span-1 ${layout[index]?.span ?? "lg:col-span-3"}`}
+            >
               <figure
                 className="group relative m-0 w-full overflow-hidden"
                 style={{
                   borderRadius: IMAGE_GEOMETRY.mediaRadius,
-                  aspectRatio: IMAGE_GEOMETRY.portfolioAspect,
+                  aspectRatio: layout[index]?.aspect ?? IMAGE_GEOMETRY.portfolioSquareAspect,
                 }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
