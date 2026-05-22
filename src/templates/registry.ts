@@ -7,6 +7,7 @@ import * as ironclad from "./04-ironclad-roofing";
 import * as quietfield from "./05-quietfield-yoga";
 import * as tidewater from "./06-tidewater-cpa";
 import * as borst from "./07-borst-landscape-design";
+import * as yogacentric from "./08-yogacentric-studio";
 
 export const ALL_TEMPLATES: TemplateModule[] = [
   haldwell.templateModule,
@@ -16,6 +17,7 @@ export const ALL_TEMPLATES: TemplateModule[] = [
   quietfield.templateModule,
   tidewater.templateModule,
   borst.templateModule,
+  yogacentric.templateModule,
 ];
 
 export function getTemplate(slug: string): TemplateModule | null {
