@@ -16,7 +16,7 @@ function TestimonialCard({
   return (
     <article
       data-testimonial-card
-      className="flex h-full shrink-0 flex-col justify-between p-4 md:p-5"
+      className="flex min-h-[7.5rem] shrink-0 flex-col justify-between p-4 md:min-h-[8.25rem] md:p-5"
       style={{
         background: "var(--tpl-bg)",
         border: "1px solid var(--tpl-line)",
@@ -116,7 +116,7 @@ export function TrainerDetailTestimonials({
       <div className="overflow-hidden">
         <div
           ref={trackRef}
-          className="flex gap-3 will-change-transform [&_[data-testimonial-card]]:min-w-[calc((100%-0.75rem)/1.15)] [&_[data-testimonial-card]]:flex-[0_0_calc((100%-0.75rem)/1.15)] sm:[&_[data-testimonial-card]]:min-w-[calc((100%-0.75rem)/2)] sm:[&_[data-testimonial-card]]:flex-[0_0_calc((100%-0.75rem)/2)] md:[&_[data-testimonial-card]]:min-w-[calc((100%-1.5rem)/3)] md:[&_[data-testimonial-card]]:flex-[0_0_calc((100%-1.5rem)/3)] lg:[&_[data-testimonial-card]]:min-w-[calc((100%-2.25rem)/4)] lg:[&_[data-testimonial-card]]:flex-[0_0_calc((100%-2.25rem)/4)] xl:[&_[data-testimonial-card]]:min-w-[calc((100%-3rem)/5)] xl:[&_[data-testimonial-card]]:flex-[0_0_calc((100%-3rem)/5)]"
+          className="flex items-start gap-3 will-change-transform [&_[data-testimonial-card]]:w-[17.5rem] [&_[data-testimonial-card]]:max-w-[17.5rem] [&_[data-testimonial-card]]:flex-[0_0_17.5rem] sm:[&_[data-testimonial-card]]:w-[19rem] sm:[&_[data-testimonial-card]]:max-w-[19rem] sm:[&_[data-testimonial-card]]:flex-[0_0_19rem] md:[&_[data-testimonial-card]]:w-[20.5rem] md:[&_[data-testimonial-card]]:max-w-[20.5rem] md:[&_[data-testimonial-card]]:flex-[0_0_20.5rem]"
           style={{ transition: nudging ? undefined : "none" }}
         >
           {loopItems.map((item, i) => (
