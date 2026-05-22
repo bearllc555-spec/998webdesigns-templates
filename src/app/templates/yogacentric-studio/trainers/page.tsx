@@ -28,15 +28,21 @@ export default function TrainersPage() {
             {templateModule.content.about.body[0]}
           </p>
           <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-            {trainers.map((t) => (
+            {trainers.map((t, i) => {
+              const needsBottomAnchor = i >= trainers.length - 2;
+              return (
               <article key={`${t.name}-${t.specialty}`}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={t.photo}
-                  alt={t.name}
-                  className="aspect-[3/4] w-full object-cover"
+                <div
+                  className="overflow-hidden"
                   style={{ borderRadius: "var(--tpl-radius)" }}
-                />
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={t.photo}
+                    alt={t.name}
+                    className={`aspect-[4/5] w-full object-cover ${needsBottomAnchor ? "object-bottom" : "object-center"}`}
+                  />
+                </div>
                 <h2 className="mt-5 text-xl font-semibold" style={{ color: "var(--tpl-ink)" }}>
                   {t.name}
                 </h2>
@@ -44,7 +50,8 @@ export default function TrainersPage() {
                   {t.specialty}
                 </p>
               </article>
-            ))}
+            );
+            })}
           </div>
         </div>
       </section>
