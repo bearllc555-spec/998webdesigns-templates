@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { templateModule } from "@/templates/08-yogacentric-studio";
 import { ThemeStyle } from "@/lib/theme-style";
 import { YogaCentricHeader } from "@/templates/08-yogacentric-studio/blocks/floating-header";
+import { YogaCentricMain } from "@/templates/08-yogacentric-studio/blocks/main-shell";
 import { YogaCentricFooter } from "@/templates/08-yogacentric-studio/blocks/footer";
 import { VersionLabel } from "@/templates/08-yogacentric-studio/blocks/version-label";
 
@@ -29,7 +30,7 @@ export default function YogaCentricLayout({ children }: { children: React.ReactN
       </a>
       <VersionLabel />
       <YogaCentricHeader />
-      <main id="main">{children}</main>
+      <YogaCentricMain>{children}</YogaCentricMain>
       <YogaCentricFooter />
     </div>
   );

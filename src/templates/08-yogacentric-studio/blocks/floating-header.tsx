@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { theme } from "../theme";
 import { YcBtn } from "./yc-btn";
@@ -11,15 +12,27 @@ const SAGE_INK = "#131313";
 
 export function YogaCentricHeader() {
   const slug = theme.meta.slug;
-  const [show, setShow] = useState(false);
+  const pathname = usePathname();
+  const homePath = `/templates/${slug}`;
+  const isHomeWithHero = pathname === homePath || pathname === `${homePath}/`;
+
+  const [show, setShow] = useState(!isHomeWithHero);
   const [menuOpen, setMenuOpen] = useState(false);
   const [ctaHovered, setCtaHovered] = useState(false);
 
   useEffect(() => {
-    const getThreshold = () => {
-      const hero = document.getElementById("hero");
-      return hero ? hero.offsetHeight - 24 : 100;
-    };
+    if (!isHomeWithHero) {
+      setShow(true);
+      return;
+    }
+
+    const hero = document.getElementById("hero");
+    if (!hero) {
+      setShow(true);
+      return;
+    }
+
+    const getThreshold = () => hero.offsetHeight - 24;
 
     const onScroll = () => {
       const isPastHero = window.scrollY >= getThreshold();
@@ -35,7 +48,7 @@ export function YogaCentricHeader() {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
-  }, []);
+  }, [isHomeWithHero]);
 
   return (
     <>
