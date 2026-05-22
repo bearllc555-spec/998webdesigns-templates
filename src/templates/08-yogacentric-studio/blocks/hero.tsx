@@ -91,7 +91,7 @@ export function HeroBlock() {
           className="pointer-events-none absolute inset-0 hidden md:block"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(19,19,19,0.25) 0%, rgba(19,19,19,0.45) 42%, rgba(19,19,19,0.82) 78%, rgba(19,19,19,0.94) 100%)",
+              "linear-gradient(to bottom, rgba(19,19,19,0.45) 0%, rgba(19,19,19,0.68) 45%, rgba(19,19,19,0.88) 78%, rgba(19,19,19,0.96) 100%)",
           }}
           aria-hidden="true"
         />
@@ -115,6 +115,7 @@ export function HeroBlock() {
               fontFamily: "var(--tpl-font-display)",
               fontWeight: theme.type.displayWeight,
               letterSpacing: theme.type.displayTracking,
+              textShadow: "0 2px 16px rgba(0,0,0,0.6)",
             }}
           >
             <TypewriterHeadline text={content.hero.headline} />
