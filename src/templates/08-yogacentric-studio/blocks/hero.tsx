@@ -6,6 +6,8 @@ import { theme, extendedPalette } from "../theme";
 import { content, heroStats } from "../content";
 import { YcBtn } from "./yc-btn";
 
+const { heroVideoBg } = extendedPalette;
+
 function TypewriterHeadline({ text }: { text: string }) {
   const [displayed, setDisplayed] = useState(0);
 
@@ -64,10 +66,9 @@ export function HeroBlock() {
     <section
       id="hero"
       className="relative overflow-hidden md:min-h-[640px] md:h-svh"
-      style={{ background: "var(--tpl-ink)" }}
+      style={{ background: heroVideoBg }}
     >
-      {/* Mobile: video + content stack. Desktop: full-bleed video with centered overlay. */}
-      <div className="relative md:absolute md:inset-0 md:h-full">
+      <div className="relative md:absolute md:inset-0 md:h-full md:bg-[var(--tpl-ink)]">
         <video
           ref={videoRef}
           className="block h-auto max-h-[58dvh] w-full object-contain object-top md:absolute md:inset-0 md:h-full md:max-h-none md:object-cover md:object-[50%_42%]"
@@ -83,7 +84,7 @@ export function HeroBlock() {
         <div
           className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 md:hidden"
           style={{
-            background: "linear-gradient(to bottom, transparent, var(--tpl-ink))",
+            background: `linear-gradient(to bottom, transparent, ${heroVideoBg})`,
           }}
           aria-hidden="true"
         />
@@ -97,7 +98,10 @@ export function HeroBlock() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-10 pt-3 text-center md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-center md:px-8 md:py-16">
+      <div
+        className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-10 pt-3 text-center md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-center md:bg-transparent md:px-8 md:py-16"
+        style={{ background: heroVideoBg }}
+      >
         <div className="mx-auto w-full max-w-2xl">
           {content.hero.eyebrow && (
             <p
@@ -108,9 +112,8 @@ export function HeroBlock() {
             </p>
           )}
           <h1
-            className="mt-3 text-4xl leading-[1.05] md:mt-4 md:text-5xl lg:text-6xl"
+            className="mt-3 text-4xl leading-[1.05] text-[var(--tpl-ink)] md:mt-4 md:text-5xl md:text-white lg:text-6xl"
             style={{
-              color: "#FFFFFF",
               fontFamily: "var(--tpl-font-display)",
               fontWeight: theme.type.displayWeight,
               letterSpacing: theme.type.displayTracking,
@@ -118,10 +121,7 @@ export function HeroBlock() {
           >
             <TypewriterHeadline text={content.hero.headline} />
           </h1>
-          <p
-            className="mx-auto mt-5 max-w-lg text-sm leading-relaxed md:text-base"
-            style={{ color: "rgba(255,255,255,0.82)" }}
-          >
+          <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-[var(--tpl-muted)] md:text-base md:text-[rgba(255,255,255,0.82)]">
             {content.hero.sub}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -130,9 +130,14 @@ export function HeroBlock() {
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </YcBtn>
             {content.hero.secondaryLink && (
-              <YcBtn href={content.hero.secondaryLink.href} ghost>
-                {content.hero.secondaryLink.label}
-              </YcBtn>
+              <>
+                <YcBtn href={content.hero.secondaryLink.href} dark className="md:hidden">
+                  {content.hero.secondaryLink.label}
+                </YcBtn>
+                <YcBtn href={content.hero.secondaryLink.href} ghost className="hidden md:inline-flex">
+                  {content.hero.secondaryLink.label}
+                </YcBtn>
+              </>
             )}
           </div>
         </div>
@@ -140,12 +145,12 @@ export function HeroBlock() {
           {heroStats.map((s) => (
             <div key={s.label}>
               <p
-                className="text-2xl font-bold md:text-3xl"
-                style={{ color: "#FFFFFF", letterSpacing: "-0.03em" }}
+                className="text-2xl font-bold text-[var(--tpl-ink)] md:text-3xl md:text-white"
+                style={{ letterSpacing: "-0.03em" }}
               >
                 {s.value}
               </p>
-              <p className="mt-1 text-xs md:text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>
+              <p className="mt-1 text-xs text-[var(--tpl-muted)] md:text-sm md:text-[rgba(255,255,255,0.6)]">
                 {s.label}
               </p>
             </div>
