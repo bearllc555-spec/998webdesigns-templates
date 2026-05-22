@@ -60,7 +60,7 @@ export function ContactBlock() {
   const phoneHref = `tel:${business.phone.replace(/\D/g, "")}`;
 
   return (
-    <section className="py-20 md:py-28" style={{ background: "var(--tpl-card)" }}>
+    <section className="py-20 md:py-28" style={{ background: "#59676a" }}>
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div
           className="relative overflow-hidden"
