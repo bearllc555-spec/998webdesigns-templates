@@ -63,26 +63,26 @@ export function ContactBlock() {
     <section className="py-20 md:py-28" style={{ background: "var(--tpl-card)" }}>
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div
-          className="relative min-h-[32rem] overflow-hidden md:min-h-[36rem]"
+          className="relative overflow-hidden"
           style={{ borderRadius: "var(--tpl-radius)" }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/templates/yogacentric-studio/contact-bg.jpg"
             alt="Sunlit yoga studio with wood floors, mats, and natural light"
-            className="absolute inset-0 h-full w-full object-cover object-center"
+            className="absolute inset-0 h-full w-full scale-105 object-cover object-[72%_42%]"
           />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(105deg, rgba(19,19,19,0.58) 0%, rgba(19,19,19,0.32) 38%, rgba(19,19,19,0.1) 62%, rgba(200,216,200,0.12) 100%)",
+                "linear-gradient(100deg, rgba(19,19,19,0.62) 0%, rgba(19,19,19,0.45) 34%, rgba(19,19,19,0.08) 58%, transparent 72%)",
             }}
             aria-hidden="true"
           />
 
-          <div className="relative grid gap-10 p-8 md:p-10 lg:grid-cols-[1fr_minmax(0,26rem)] lg:items-center lg:gap-12 lg:p-12 xl:grid-cols-[1fr_28rem]">
-            <div className="flex flex-col justify-center lg:pr-4">
+          <div className="relative grid gap-8 lg:grid-cols-[1fr_minmax(0,28rem)] lg:gap-0 xl:grid-cols-[1fr_30rem]">
+            <div className="flex flex-col justify-center p-8 md:p-10 lg:py-11 lg:pl-10 lg:pr-8 xl:pl-12">
               <h2
                 className="text-4xl leading-tight text-white md:text-5xl lg:max-w-md"
                 style={{
@@ -111,13 +111,21 @@ export function ContactBlock() {
               </ul>
             </div>
 
-            <div
-              className="w-full p-7 shadow-[0_18px_50px_rgba(19,19,19,0.14)] md:p-9"
-              style={{
-                background: "var(--tpl-bg)",
-                borderRadius: "var(--tpl-radius)",
-              }}
-            >
+            <div className="relative p-3 pt-3 md:p-4 lg:pb-5 lg:pl-4 lg:pr-4 lg:pt-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/templates/yogacentric-studio/contact-bg.jpg"
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full scale-110 object-cover object-[68%_38%]"
+              />
+              <div
+                className="relative w-full p-7 shadow-[0_18px_50px_rgba(19,19,19,0.14)] md:p-8"
+                style={{
+                  background: "var(--tpl-bg)",
+                  borderRadius: "var(--tpl-radius)",
+                }}
+              >
               <h3
                 className="text-xl md:text-2xl"
                 style={{
@@ -191,6 +199,7 @@ export function ContactBlock() {
                   Submit
                 </button>
               </form>
+              </div>
             </div>
           </div>
         </div>
