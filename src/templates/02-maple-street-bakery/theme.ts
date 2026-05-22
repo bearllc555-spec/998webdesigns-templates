@@ -19,7 +19,7 @@ export const theme: TemplateTheme = {
     accentSoft: "#E9C9A1",
   },
   type: {
-    display: "var(--font-fraunces)",
+    display: "var(--font-geist-sans)",
     body: "var(--font-inter)",
     displayWeight: 600,
     bodyWeight: 400,

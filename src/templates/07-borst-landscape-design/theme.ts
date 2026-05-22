@@ -19,7 +19,7 @@ export const theme: TemplateTheme = {
     accentSoft: "#D4F5DC",
   },
   type: {
-    display: "var(--font-manrope)",
+    display: "var(--font-geist-sans)",
     body: "var(--font-manrope)",
     displayWeight: 700,
     bodyWeight: 400,

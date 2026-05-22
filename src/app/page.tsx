@@ -19,7 +19,10 @@ export default function GalleryPage() {
       <header className="border-b border-neutral-200">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-5 md:px-8">
           <Link href="/" className="inline-flex items-baseline gap-2">
-            <span className="text-lg font-semibold tracking-tight">
+            <span
+              className="text-lg font-semibold tracking-tight"
+              style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
+            >
               <span className="text-blue-600">998</span>
               <span className="text-neutral-900">webdesigns</span>
               <span className="ml-2 text-neutral-500">/ templates</span>
@@ -75,7 +78,7 @@ export default function GalleryPage() {
             <div>
               <p
                 className="text-2xl leading-tight text-neutral-900 md:text-3xl"
-                style={{ fontFamily: "var(--font-playfair-display), serif", fontWeight: 600 }}
+                style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif", fontWeight: 600 }}
               >
                 None of these quite right? We design from scratch too.
               </p>

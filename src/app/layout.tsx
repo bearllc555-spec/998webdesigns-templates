@@ -11,6 +11,7 @@ import {
   Playfair_Display,
   IBM_Plex_Sans,
 } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -84,6 +85,7 @@ const ibmPlex = IBM_Plex_Sans({
 });
 
 const fontVariables = [
+  GeistSans.variable,
   cormorant.variable,
   sourceSans.variable,
   fraunces.variable,
