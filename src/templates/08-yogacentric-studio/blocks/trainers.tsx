@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { theme } from "../theme";
 import { trainers } from "../content";
+import { TrainerCard } from "./trainer-card";
 
 export function TrainersBlock() {
   return (
@@ -25,30 +25,7 @@ export function TrainersBlock() {
         <ul className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-6">
           {trainers.map((t) => (
             <li key={`${t.name}-${t.specialty}`}>
-              <Link
-                href="/templates/yogacentric-studio/trainers"
-                className="group block overflow-hidden"
-                style={{ borderRadius: "var(--tpl-radius)" }}
-              >
-                <div className="overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={t.photo}
-                    alt={t.name}
-                    className="aspect-[3/4] w-full object-cover object-center transition duration-500 ease-out group-hover:scale-105"
-                  />
-                </div>
-                <div
-                  className="w-full border border-transparent px-2 py-3.5 text-center transition-colors duration-300 group-hover:border-[#C8D8C8] group-hover:bg-[#C8D8C8] md:px-3 md:py-4"
-                >
-                  <p className="text-sm font-semibold leading-snug" style={{ color: "var(--tpl-ink)" }}>
-                    {t.name}
-                  </p>
-                  <p className="mt-1 text-xs leading-snug" style={{ color: "var(--tpl-muted)" }}>
-                    {t.specialty}
-                  </p>
-                </div>
-              </Link>
+              <TrainerCard trainer={t} />
             </li>
           ))}
         </ul>

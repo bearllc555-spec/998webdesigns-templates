@@ -113,14 +113,103 @@ export const serviceImages = [
   "/templates/yogacentric-studio/svc-restorative.jpg",
 ];
 
-export const trainers = [
-  { name: "Robin", specialty: "Vinyasa & Power Yoga", photo: "/templates/yogacentric-studio/trainer-robin.jpg" },
+export type TrainerListItem = {
+  name: string;
+  specialty: string;
+  photo: string;
+  slug?: string;
+};
+
+export type TrainerProfile = {
+  slug: string;
+  name: string;
+  specialty: string;
+  photo: string;
+  bio: string;
+  coachingTitle: string;
+  coachingBody: string;
+  servicesHeadline: string;
+  servicesIntro: string;
+  offeredServices: { title: string; description: string }[];
+  galleryImages: string[];
+  testimonials: { quote: string; name: string; role: string }[];
+};
+
+export const trainers: TrainerListItem[] = [
+  {
+    name: "Robin",
+    specialty: "Vinyasa & Power Yoga",
+    photo: "/templates/yogacentric-studio/trainer-robin.jpg",
+    slug: "robin",
+  },
   { name: "Catherine", specialty: "Reiki & Restorative Yoga", photo: "/templates/yogacentric-studio/trainer-catherine.jpg" },
   { name: "Brandi", specialty: "Restorative & Breathwork", photo: "/templates/yogacentric-studio/trainer-brandi.jpg" },
   { name: "Angela", specialty: "Sound Healing & Meditation", photo: "/templates/yogacentric-studio/trainer-angela.jpg" },
   { name: "Lisseth", specialty: "Studio Director & Hatha", photo: "/templates/yogacentric-studio/trainer-lisseth.jpg" },
   { name: "Robin", specialty: "Gentle Flow & Beginners", photo: "/templates/yogacentric-studio/trainer-robin-2.jpg" },
 ];
+
+export const trainerProfiles: Record<string, TrainerProfile> = {
+  robin: {
+    slug: "robin",
+    name: "Robin",
+    specialty: "Vinyasa & Power Yoga",
+    photo: "/templates/yogacentric-studio/trainer-robin.jpg",
+    bio: "A passionate instructor at YogaCentric for more than a decade, Robin specializes in Vinyasa and power-focused flows, offering dynamic sessions that build endurance, strength, and mental resilience.",
+    coachingTitle: "Personalized coaching",
+    coachingBody:
+      "One-on-one sessions with our yoga instructors. Get personalized guidance and encouragement to reach your specific goals.",
+    servicesHeadline: "Services offered",
+    servicesIntro:
+      "With years of experience at our Clifton studio, Robin is dedicated to helping you achieve your wellness goals through yoga. Learn more about her approach and how she can support your journey.",
+    offeredServices: [
+      {
+        title: "Private yoga sessions",
+        description: "One-on-one sessions focused on personalized instruction and individual goals.",
+      },
+      {
+        title: "Group classes",
+        description: "Dynamic group sessions designed to improve flexibility, strength, and mindfulness.",
+      },
+      {
+        title: "Workshops and retreats",
+        description: "Immersive workshops and retreats that deepen your practice and enhance your overall wellness.",
+      },
+    ],
+    galleryImages: [
+      "/templates/yogacentric-studio/community.jpg",
+      "/templates/yogacentric-studio/svc-power.jpg",
+      "/templates/yogacentric-studio/benefits.jpg",
+      "/templates/yogacentric-studio/svc-beginner.jpg",
+    ],
+    testimonials: [
+      {
+        quote: "Robin pushes you just enough. I leave every class feeling stronger and more centered.",
+        name: "Michelle Malone",
+        role: "Yoga enthusiast",
+      },
+      {
+        quote: "The energy in Robin's vinyasa classes is incredible. I always leave feeling refreshed and motivated.",
+        name: "Teresa Van Maerssen",
+        role: "Wellness seeker",
+      },
+      {
+        quote: "I've never felt so connected to my body and mind. Her classes are truly transformative.",
+        name: "Raymond J Haskoor",
+        role: "Regular member",
+      },
+      {
+        quote: "Practicing with Robin has helped me find a sense of peace and balance I didn't know I was missing.",
+        name: "Valentina Lazirko",
+        role: "14-year student",
+      },
+    ],
+  },
+};
+
+export function getTrainerProfile(slug: string): TrainerProfile | undefined {
+  return trainerProfiles[slug];
+}
 
 export const benefits = [
   {
