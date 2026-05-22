@@ -9,7 +9,7 @@ export function HeroBlock() {
   return (
     <section
       id="hero"
-      className="relative isolate z-10 min-h-[min(85vh,820px)]"
+      className="relative min-h-[min(85vh,820px)]"
       style={{ background: "var(--tpl-ink)" }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
