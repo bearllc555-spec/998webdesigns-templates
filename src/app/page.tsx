@@ -44,13 +44,15 @@ export default function GalleryPage() {
       </header>
       <main>
         <section className="border-b border-neutral-200">
-          <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+          <div
+            className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24"
+            style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
+          >
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-600">
               Template library
             </p>
             <h1
-              className="mt-5 max-w-3xl text-5xl leading-[1.05] tracking-tight text-neutral-900 md:text-6xl lg:text-7xl"
-              style={{ fontFamily: "var(--font-playfair-display), serif", fontWeight: 600, letterSpacing: "-0.02em" }}
+              className="mt-5 max-w-3xl text-5xl font-semibold leading-[1.05] tracking-[-0.02em] text-neutral-900 md:text-6xl lg:text-7xl"
             >
               A library of handcrafted templates. Pick a starting point.
             </h1>
