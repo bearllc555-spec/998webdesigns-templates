@@ -10,14 +10,16 @@ interface YcBtnProps {
   href: string;
   children: React.ReactNode;
   className?: string;
-  /** dark variant (ink bg + white text, e.g. inside featured card) */
+  /** dark variant (ink bg + white text) */
   dark?: boolean;
   /** ghost variant (translucent bg, e.g. hero secondary CTA) */
   ghost?: boolean;
+  /** darkHover: hover turns gray/ink with white text instead of sage (use on sage backgrounds) */
+  darkHover?: boolean;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-export function YcBtn({ href, children, className = "", dark = false, ghost = false, onClick }: YcBtnProps) {
+export function YcBtn({ href, children, className = "", dark = false, ghost = false, darkHover = false, onClick }: YcBtnProps) {
   const [hovered, setHovered] = useState(false);
 
   const base: React.CSSProperties = ghost
@@ -32,6 +34,12 @@ export function YcBtn({ href, children, className = "", dark = false, ghost = fa
         background: hovered ? SAGE : "var(--tpl-ink)",
         color: hovered ? SAGE_INK : "#FFFFFF",
         border: "none",
+      }
+    : darkHover
+    ? {
+        background: hovered ? "#3A3A3A" : "var(--tpl-accent)",
+        color: hovered ? "#FFFFFF" : "var(--tpl-accent-ink)",
+        border: hovered ? "1px solid #3A3A3A" : "1px solid rgba(19,19,19,0.12)",
       }
     : {
         background: hovered ? SAGE : "var(--tpl-accent)",

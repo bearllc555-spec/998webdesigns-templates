@@ -68,6 +68,7 @@ export function PricingBlock() {
                 <YcBtn
                   href={plan.href}
                   className="mt-8 w-full"
+                  darkHover
                   onClick={(e) => e.stopPropagation()}
                 >
                   {plan.cta}
