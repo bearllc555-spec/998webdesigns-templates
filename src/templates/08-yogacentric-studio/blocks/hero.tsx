@@ -36,7 +36,6 @@ export function HeroBlock() {
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover md:hidden"
-        style={{ filter: "brightness(1.14) saturate(1.1) contrast(1.02)" }}
       />
       <video
         ref={videoRef}
@@ -47,27 +46,9 @@ export function HeroBlock() {
         playsInline
         preload="auto"
         poster="/templates/yogacentric-studio/hero.webp"
-        style={{ filter: "brightness(1.14) saturate(1.1) contrast(1.02)" }}
       >
         <source src="/templates/yogacentric-studio/hero.mp4" type="video/mp4" />
       </video>
-      {/* Warm sunlight wash */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 90% 70% at 72% 8%, rgba(255, 228, 160, 0.55) 0%, rgba(255, 210, 120, 0.22) 38%, transparent 68%), linear-gradient(165deg, rgba(255, 245, 210, 0.35) 0%, transparent 42%)",
-        }}
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(19,19,19,0.02) 0%, rgba(19,19,19,0.18) 50%, rgba(19,19,19,0.75) 100%)",
-        }}
-        aria-hidden="true"
-      />
       <div className="relative mx-auto flex min-h-[85vh] max-w-6xl flex-col items-center justify-center px-5 py-16 text-center md:px-8 md:py-20">
         <div className="mx-auto max-w-2xl">
           {content.hero.eyebrow && (
