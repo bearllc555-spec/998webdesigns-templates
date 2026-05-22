@@ -1,9 +1,16 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { theme } from "../theme";
 import { pricingPlans } from "../content";
-import { extendedPalette } from "../theme";
+
+const SAGE = "#C8D8C8";
+const DEFAULT_INDEX = 1; // center card
 
 export function PricingBlock() {
+  const [selected, setSelected] = useState(DEFAULT_INDEX);
+
   return (
     <section className="py-20 md:py-28" style={{ background: "var(--tpl-bg)" }}>
       <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -24,56 +31,56 @@ export function PricingBlock() {
           </p>
         </div>
         <ul className="mt-14 grid gap-6 md:grid-cols-3">
-          {pricingPlans.map((plan) => (
-            <li
-              key={plan.name}
-              className="flex flex-col p-7 md:p-8"
-              style={{
-                background: plan.featured
-                  ? extendedPalette.lime
-                  : plan.name === "10-Class Pass"
-                  ? "#C8D8C8"
-                  : "var(--tpl-card)",
-                borderRadius: "var(--tpl-radius)",
-                border:
-                  plan.featured || plan.name === "10-Class Pass"
-                    ? "none"
-                    : "1px solid var(--tpl-line)",
-              }}
-            >
-              <p className="text-sm font-semibold uppercase tracking-wide" style={{ color: "var(--tpl-muted)" }}>
-                {plan.name}
-              </p>
-              <div className="mt-4 flex items-baseline gap-2">
-                <span
-                  className="text-4xl font-bold md:text-5xl"
-                  style={{ color: "var(--tpl-ink)", letterSpacing: "-0.03em" }}
-                >
-                  {plan.price}
-                </span>
-                {plan.unit && (
-                  <span className="text-sm font-medium" style={{ color: "var(--tpl-muted)" }}>
-                    {plan.unit}
-                  </span>
-                )}
-              </div>
-              <p className="mt-5 flex-1 text-sm leading-relaxed" style={{ color: "var(--tpl-muted)" }}>
-                {plan.description}
-              </p>
-              <Link
-                href={plan.href}
-                className="mt-8 inline-flex items-center justify-center px-5 py-3 text-sm font-semibold transition hover:opacity-90"
+          {pricingPlans.map((plan, i) => {
+            const isSelected = i === selected;
+            return (
+              <li
+                key={plan.name}
+                onClick={() => setSelected(i)}
+                className="flex flex-col p-7 md:p-8"
                 style={{
-                  background: plan.featured ? "var(--tpl-ink)" : "var(--tpl-accent)",
-                  color: plan.featured ? "#FFFFFF" : "var(--tpl-accent-ink)",
-                  border: plan.featured ? "none" : "1px solid rgba(19,19,19,0.12)",
-                  borderRadius: 999,
+                  background: isSelected ? SAGE : "var(--tpl-card)",
+                  borderRadius: "var(--tpl-radius)",
+                  border: isSelected ? "none" : "1px solid var(--tpl-line)",
+                  cursor: "pointer",
+                  transition: "background 0.25s, border 0.25s",
                 }}
               >
-                {plan.cta}
-              </Link>
-            </li>
-          ))}
+                <p className="text-sm font-semibold uppercase tracking-wide" style={{ color: "var(--tpl-muted)" }}>
+                  {plan.name}
+                </p>
+                <div className="mt-4 flex items-baseline gap-2">
+                  <span
+                    className="text-4xl font-bold md:text-5xl"
+                    style={{ color: "var(--tpl-ink)", letterSpacing: "-0.03em" }}
+                  >
+                    {plan.price}
+                  </span>
+                  {plan.unit && (
+                    <span className="text-sm font-medium" style={{ color: "var(--tpl-muted)" }}>
+                      {plan.unit}
+                    </span>
+                  )}
+                </div>
+                <p className="mt-5 flex-1 text-sm leading-relaxed" style={{ color: "var(--tpl-muted)" }}>
+                  {plan.description}
+                </p>
+                <Link
+                  href={plan.href}
+                  onClick={(e) => e.stopPropagation()}
+                  className="mt-8 inline-flex items-center justify-center px-5 py-3 text-sm font-semibold transition hover:opacity-90"
+                  style={{
+                    background: "var(--tpl-accent)",
+                    color: "var(--tpl-accent-ink)",
+                    border: "1px solid rgba(19,19,19,0.12)",
+                    borderRadius: 999,
+                  }}
+                >
+                  {plan.cta}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
