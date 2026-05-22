@@ -5,42 +5,21 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { theme } from "../theme";
 
-const SCROLL_DELTA = 8;
-
 export function YogaCentricHeader() {
   const slug = theme.meta.slug;
-  const [pastHero, setPastHero] = useState(false);
-  const [revealed, setRevealed] = useState(false);
+  const [show, setShow] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    let lastY = window.scrollY;
-
     const getThreshold = () => {
       const hero = document.getElementById("hero");
       return hero ? hero.offsetHeight - 24 : 100;
     };
 
     const onScroll = () => {
-      const y = window.scrollY;
-      const threshold = getThreshold();
-      const isPastHero = y >= threshold;
-
-      setPastHero(isPastHero);
-
-      if (!isPastHero) {
-        setRevealed(false);
-        setMenuOpen(false);
-      } else if (y <= threshold + 40) {
-        setRevealed(true);
-      } else if (y < lastY - SCROLL_DELTA) {
-        setRevealed(true);
-      } else if (y > lastY + SCROLL_DELTA) {
-        setRevealed(false);
-        setMenuOpen(false);
-      }
-
-      lastY = y;
+      const isPastHero = window.scrollY >= getThreshold();
+      setShow(isPastHero);
+      if (!isPastHero) setMenuOpen(false);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -52,8 +31,6 @@ export function YogaCentricHeader() {
       window.removeEventListener("resize", onScroll);
     };
   }, []);
-
-  const show = pastHero && revealed;
 
   return (
     <>
