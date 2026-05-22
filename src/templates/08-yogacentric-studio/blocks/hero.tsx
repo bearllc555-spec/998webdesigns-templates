@@ -63,31 +63,41 @@ export function HeroBlock() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100dvh] min-h-svh flex-col overflow-hidden md:min-h-[640px] md:h-svh"
+      className="relative overflow-hidden md:min-h-[640px] md:h-svh"
       style={{ background: "var(--tpl-ink)" }}
     >
-      <video
-        ref={videoRef}
-        className="absolute left-0 right-0 top-0 h-auto max-h-[58dvh] w-full object-contain object-top md:inset-0 md:h-full md:max-h-none md:object-cover md:object-[50%_42%]"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="/templates/yogacentric-studio/hero.webp"
-      >
-        <source src="/templates/yogacentric-studio/hero.mp4" type="video/mp4" />
-      </video>
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(19,19,19,0.25) 0%, rgba(19,19,19,0.45) 42%, rgba(19,19,19,0.82) 78%, rgba(19,19,19,0.94) 100%)",
-        }}
-        aria-hidden="true"
-      />
+      {/* Mobile: video + content stack. Desktop: full-bleed video with centered overlay. */}
+      <div className="relative md:absolute md:inset-0 md:h-full">
+        <video
+          ref={videoRef}
+          className="block h-auto max-h-[58dvh] w-full object-contain object-top md:absolute md:inset-0 md:h-full md:max-h-none md:object-cover md:object-[50%_42%]"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/templates/yogacentric-studio/hero.webp"
+        >
+          <source src="/templates/yogacentric-studio/hero.mp4" type="video/mp4" />
+        </video>
+        <div
+          className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 md:hidden"
+          style={{
+            background: "linear-gradient(to bottom, transparent, var(--tpl-ink))",
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 hidden md:block"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(19,19,19,0.25) 0%, rgba(19,19,19,0.45) 42%, rgba(19,19,19,0.82) 78%, rgba(19,19,19,0.94) 100%)",
+          }}
+          aria-hidden="true"
+        />
+      </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-end px-5 pb-10 pt-20 text-center md:justify-center md:px-8 md:py-16">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-10 pt-3 text-center md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-center md:px-8 md:py-16">
         <div className="mx-auto w-full max-w-2xl">
           {content.hero.eyebrow && (
             <p
@@ -98,7 +108,7 @@ export function HeroBlock() {
             </p>
           )}
           <h1
-            className="mt-4 text-4xl leading-[1.05] md:text-5xl lg:text-6xl"
+            className="mt-3 text-4xl leading-[1.05] md:mt-4 md:text-5xl lg:text-6xl"
             style={{
               color: "#FFFFFF",
               fontFamily: "var(--tpl-font-display)",
@@ -126,7 +136,7 @@ export function HeroBlock() {
             )}
           </div>
         </div>
-        <div className="mx-auto mt-10 grid w-full max-w-md grid-cols-3 gap-4 md:mt-12 md:gap-6">
+        <div className="mx-auto mt-8 grid w-full max-w-md grid-cols-3 gap-4 md:mt-12 md:gap-6">
           {heroStats.map((s) => (
             <div key={s.label}>
               <p
