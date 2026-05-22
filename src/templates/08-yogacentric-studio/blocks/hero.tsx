@@ -26,14 +26,13 @@ function TypewriterHeadline({ text }: { text: string }) {
   }, [text]);
 
   return (
-    <>
+    <span className="inline-block max-w-full text-center leading-[1.05]">
       {text.split("").map((char, i) => (
         <span
           key={i}
           style={{
             opacity: i < displayed ? 1 : 0,
             transition: "opacity 0.06s",
-            whiteSpace: char === " " ? "pre" : undefined,
           }}
           aria-hidden={i >= displayed}
         >
@@ -41,7 +40,7 @@ function TypewriterHeadline({ text }: { text: string }) {
         </span>
       ))}
       <span className="sr-only">{text}</span>
-    </>
+    </span>
   );
 }
 
@@ -65,7 +64,7 @@ export function HeroBlock() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden md:min-h-[640px] md:h-svh"
+      className="relative overflow-x-hidden md:min-h-[640px] md:h-svh md:overflow-hidden"
       style={{ background: heroVideoBg }}
     >
       <div className="relative md:absolute md:inset-0 md:h-full md:bg-[var(--tpl-ink)]">
@@ -102,7 +101,7 @@ export function HeroBlock() {
         className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-10 pt-3 text-center md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-center md:bg-transparent md:px-8 md:py-16"
         style={{ background: heroVideoBg }}
       >
-        <div className="mx-auto w-full max-w-2xl">
+        <div className="mx-auto w-full max-w-2xl px-1">
           {content.hero.eyebrow && (
             <p
               className="text-xs font-semibold uppercase"
@@ -112,7 +111,7 @@ export function HeroBlock() {
             </p>
           )}
           <h1
-            className="mt-3 text-4xl leading-[1.05] text-[var(--tpl-ink)] md:mt-4 md:text-5xl md:text-white lg:text-6xl"
+            className="mt-3 text-center text-[1.65rem] leading-[1.1] text-[#131313] sm:text-4xl md:mt-4 md:text-5xl md:text-white lg:text-6xl"
             style={{
               fontFamily: "var(--tpl-font-display)",
               fontWeight: theme.type.displayWeight,
@@ -121,7 +120,7 @@ export function HeroBlock() {
           >
             <TypewriterHeadline text={content.hero.headline} />
           </h1>
-          <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-[var(--tpl-muted)] md:text-base md:text-[rgba(255,255,255,0.82)]">
+          <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-[#131313] md:text-base md:text-[rgba(255,255,255,0.82)]">
             {content.hero.sub}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -145,12 +144,12 @@ export function HeroBlock() {
           {heroStats.map((s) => (
             <div key={s.label}>
               <p
-                className="text-2xl font-bold text-[var(--tpl-ink)] md:text-3xl md:text-white"
+                className="text-2xl font-bold text-[#131313] md:text-3xl md:text-white"
                 style={{ letterSpacing: "-0.03em" }}
               >
                 {s.value}
               </p>
-              <p className="mt-1 text-xs text-[var(--tpl-muted)] md:text-sm md:text-[rgba(255,255,255,0.6)]">
+              <p className="mt-1 text-xs text-[#131313] md:text-sm md:text-[rgba(255,255,255,0.6)]">
                 {s.label}
               </p>
             </div>
