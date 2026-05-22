@@ -4,11 +4,16 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { theme } from "../theme";
+import { YcBtn } from "./yc-btn";
+
+const SAGE = "#C8D8C8";
+const SAGE_INK = "#131313";
 
 export function YogaCentricHeader() {
   const slug = theme.meta.slug;
   const [show, setShow] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [ctaHovered, setCtaHovered] = useState(false);
 
   useEffect(() => {
     const getThreshold = () => {
@@ -81,11 +86,14 @@ export function YogaCentricHeader() {
           <div className="flex items-center gap-2">
             <Link
               href={theme.primaryCta.href}
-              className="hidden shrink-0 px-4 py-2 text-sm font-semibold transition hover:opacity-90 sm:inline-flex"
+              onMouseEnter={() => setCtaHovered(true)}
+              onMouseLeave={() => setCtaHovered(false)}
+              className="hidden shrink-0 px-4 py-2 text-sm font-semibold sm:inline-flex"
               style={{
-                background: "var(--tpl-accent)",
-                color: "var(--tpl-accent-ink)",
+                background: ctaHovered ? SAGE : "var(--tpl-accent)",
+                color: ctaHovered ? SAGE_INK : "var(--tpl-accent-ink)",
                 borderRadius: 9999,
+                transition: "background 0.2s, color 0.2s",
               }}
             >
               {theme.primaryCta.label}
@@ -130,17 +138,13 @@ export function YogaCentricHeader() {
                 </li>
               ))}
               <li className="pt-1">
-                <Link
+                <YcBtn
                   href={theme.primaryCta.href}
-                  className="block rounded-full px-4 py-2.5 text-center text-sm font-semibold"
-                  style={{
-                    background: "var(--tpl-accent)",
-                    color: "var(--tpl-accent-ink)",
-                  }}
+                  className="w-full justify-center"
                   onClick={() => setMenuOpen(false)}
                 >
                   {theme.primaryCta.label}
-                </Link>
+                </YcBtn>
               </li>
             </ul>
           </nav>

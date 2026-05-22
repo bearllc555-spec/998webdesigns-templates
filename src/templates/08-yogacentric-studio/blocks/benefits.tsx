@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { theme } from "../theme";
 import { content, benefits } from "../content";
 import { extendedPalette } from "../theme";
+import { YcBtn } from "./yc-btn";
 
 export function BenefitsBlock() {
   return (
@@ -38,19 +38,10 @@ export function BenefitsBlock() {
                 </li>
               ))}
             </ul>
-            <Link
-              href={content.ctaBanner.cta.href}
-              className="mt-10 inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold transition hover:opacity-90"
-              style={{
-                background: "var(--tpl-accent)",
-                color: "var(--tpl-accent-ink)",
-                border: "1px solid rgba(19,19,19,0.12)",
-                borderRadius: 999,
-              }}
-            >
+            <YcBtn href={content.ctaBanner.cta.href} className="mt-10">
               {content.ctaBanner.cta.label}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
+            </YcBtn>
           </div>
           <div className="overflow-hidden lg:order-first" style={{ borderRadius: "var(--tpl-radius)" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
