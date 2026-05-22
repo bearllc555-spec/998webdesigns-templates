@@ -11,16 +11,20 @@ import {
 } from "../borst-ui";
 
 export function ServicesBlock() {
+  const featuredServices = content.services.items.slice(0, 3);
+
   return (
-    <section style={{ background: "var(--tpl-bg)" }}>
+    <section style={{ background: "#062E26" }}>
       <div className={`${BORST_CONTAINER} ${BORST_SECTION_PY}`}>
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <BorstEyebrow>{content.services.sectionLabel}</BorstEyebrow>
+            <BorstEyebrow>
+              <span style={{ color: "rgba(255,255,255,0.75)" }}>{content.services.sectionLabel}</span>
+            </BorstEyebrow>
             <h2
               className="mt-4 text-4xl leading-tight md:text-5xl"
               style={{
-                color: "var(--tpl-ink)",
+                color: "#FFFFFF",
                 fontFamily: "var(--tpl-font-display)",
                 fontWeight: theme.type.displayWeight,
                 letterSpacing: theme.type.displayTracking,
@@ -41,7 +45,12 @@ export function ServicesBlock() {
             <Link
               href="/templates/borst-landscape-design/services"
               className="inline-flex items-center gap-2 px-5 py-3 text-sm transition hover:opacity-80"
-              style={borstOutlineBtn}
+              style={{
+                ...borstOutlineBtn,
+                background: "transparent",
+                color: "#FFFFFF",
+                borderColor: "rgba(255,255,255,0.45)",
+              }}
             >
               Browse all services
               <BorstArrow />
@@ -49,48 +58,52 @@ export function ServicesBlock() {
           </div>
         </div>
 
-        <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-          {content.services.items.map((it, i) => {
+        <ul className="mt-12 grid gap-5 lg:grid-cols-3 lg:gap-6">
+          {featuredServices.map((it, i) => {
             const asset = serviceAssets[i];
             return (
-              <li
-                key={it.name}
-                className="group overflow-hidden"
-                style={{
-                  background: "var(--tpl-card)",
-                  borderRadius: 20,
-                }}
-              >
-                <div className="relative overflow-hidden" style={{ aspectRatio: "16 / 10" }}>
+              <li key={it.name} className="group">
+                <div className="relative overflow-hidden" style={{ borderRadius: 20, aspectRatio: "6 / 5" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={asset.thumb}
                     alt={it.name}
                     className="block h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
-                </div>
-                <div className="p-5 md:p-6">
-                  <h3
-                    className="text-lg leading-snug"
-                    style={{
-                      color: "var(--tpl-ink)",
-                      fontFamily: "var(--tpl-font-display)",
-                      fontWeight: 700,
-                    }}
+                  <div
+                    className="absolute bottom-3 left-3 inline-flex h-10 w-10 items-center justify-center rounded-full"
+                    style={{ background: "rgba(255,255,255,0.9)" }}
                   >
-                    {it.name}
-                  </h3>
-                  <p
-                    className="mt-2 text-sm leading-relaxed"
-                    style={{ color: "var(--tpl-muted)", fontFamily: "var(--tpl-font-body)" }}
-                  >
-                    {it.summary}
-                  </p>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={asset.icon} alt="" className="h-5 w-5" />
+                  </div>
                 </div>
+                <h3
+                  className="mt-4 text-4xl leading-[1.08]"
+                  style={{
+                    color: "#FFFFFF",
+                    fontFamily: "var(--tpl-font-display)",
+                    fontWeight: 700,
+                    letterSpacing: "-0.015em",
+                  }}
+                >
+                  {it.name}
+                </h3>
+                <p
+                  className="mt-2 text-base leading-relaxed"
+                  style={{ color: "rgba(255,255,255,0.82)", fontFamily: "var(--tpl-font-body)" }}
+                >
+                  {it.summary}
+                </p>
               </li>
             );
           })}
         </ul>
+
+        <div className="mt-8 flex items-center justify-center gap-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-white" aria-hidden="true" />
+          <span className="h-2.5 w-2.5 rounded-full bg-white/40" aria-hidden="true" />
+        </div>
       </div>
     </section>
   );
