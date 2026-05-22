@@ -82,7 +82,7 @@ export function ContactBlock() {
             className="absolute inset-0 hidden md:block"
             style={{
               background:
-                "linear-gradient(100deg, rgba(19,19,19,0.43) 0%, rgba(19,19,19,0.32) 34%, rgba(19,19,19,0.06) 58%, transparent 72%)",
+                "linear-gradient(100deg, rgba(19,19,19,0.62) 0%, rgba(19,19,19,0.45) 34%, rgba(19,19,19,0.08) 58%, transparent 72%)",
             }}
             aria-hidden="true"
           />
