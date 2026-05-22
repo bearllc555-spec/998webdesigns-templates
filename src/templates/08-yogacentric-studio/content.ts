@@ -203,6 +203,16 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
         name: "Valentina Lazirko",
         role: "14-year student",
       },
+      {
+        quote: "Joining Robin's classes has been life-changing. I feel more grounded and energized every day.",
+        name: "Sarah Mitchell",
+        role: "Weekend warrior",
+      },
+      {
+        quote: "She meets you where you are — beginners feel welcome, and experienced yogis still get a challenge.",
+        name: "James Ortiz",
+        role: "Power flow regular",
+      },
     ],
   },
 };
