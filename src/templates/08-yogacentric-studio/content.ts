@@ -146,7 +146,7 @@ export const trainers: TrainerListItem[] = [
   { name: "Brandi", specialty: "Restorative & Breathwork", photo: "/templates/yogacentric-studio/trainer-brandi.jpg" },
   { name: "Angela", specialty: "Sound Healing & Meditation", photo: "/templates/yogacentric-studio/trainer-angela.jpg" },
   { name: "Lisseth", specialty: "Studio Director & Hatha", photo: "/templates/yogacentric-studio/trainer-lisseth.jpg" },
-  { name: "Robin", specialty: "Gentle Flow & Beginners", photo: "/templates/yogacentric-studio/trainer-robin-2.jpg" },
+  { name: "Anastasia", specialty: "Gentle Flow & Beginners", photo: "/templates/yogacentric-studio/trainer-robin-2.jpg" },
 ];
 
 export const trainerProfiles: Record<string, TrainerProfile> = {
