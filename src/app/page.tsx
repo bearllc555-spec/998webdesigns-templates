@@ -51,13 +51,13 @@ export default function GalleryPage() {
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-600">
               Template library
             </p>
-            <h1 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-[-0.02em] text-neutral-900 sm:text-5xl md:text-6xl md:leading-[1.05] lg:text-7xl">
+            <h1 className="mt-5 text-3xl font-semibold leading-[1.08] tracking-[-0.02em] text-neutral-900 sm:text-4xl md:text-5xl md:leading-[1.05] lg:text-6xl">
               <span className="block sm:whitespace-nowrap">
                 A library of handcrafted templates.
               </span>
               <span className="block sm:whitespace-nowrap">Pick a starting point.</span>
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-neutral-600">
+            <p className="mt-7 max-w-2xl text-base leading-relaxed text-neutral-600 md:text-lg">
               Every template is a fully built site. We customize it to your business in 5 to 7 days. $998, once.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
