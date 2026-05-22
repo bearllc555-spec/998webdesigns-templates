@@ -125,21 +125,33 @@ export function TrainerDetailTestimonials({
         </div>
       </div>
 
-      <div className="mt-6 flex items-center justify-center gap-1">
-        <button type="button" onClick={() => nudge(-1)} aria-label="Previous feedback" className={controlClass}>
-          <span className="block h-1.5 w-1.5 rounded-full bg-current" aria-hidden="true" />
-        </button>
-        <button
-          type="button"
-          onClick={togglePause}
-          aria-label={paused ? "Resume auto-scroll" : "Pause auto-scroll"}
-          className={controlClass}
-        >
-          <span className="block h-px w-5 rounded-full bg-current" aria-hidden="true" />
-        </button>
-        <button type="button" onClick={() => nudge(1)} aria-label="Next feedback" className={controlClass}>
-          <span className="block h-1.5 w-1.5 rounded-full bg-current" aria-hidden="true" />
-        </button>
+      <div className="mt-6 flex justify-center">
+        <div className="inline-flex items-center">
+          <button
+            type="button"
+            onClick={() => nudge(-1)}
+            aria-label="Previous feedback"
+            className={`${controlClass} -mr-3`}
+          >
+            <span className="block h-1.5 w-1.5 rounded-full bg-current" aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            onClick={togglePause}
+            aria-label={paused ? "Resume auto-scroll" : "Pause auto-scroll"}
+            className={`${controlClass} px-1`}
+          >
+            <span className="block h-1.5 w-10 rounded-full bg-current" aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            onClick={() => nudge(1)}
+            aria-label="Next feedback"
+            className={`${controlClass} -ml-3`}
+          >
+            <span className="block h-1.5 w-1.5 rounded-full bg-current" aria-hidden="true" />
+          </button>
+        </div>
       </div>
     </div>
   );
