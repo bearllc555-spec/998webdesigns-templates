@@ -27,19 +27,25 @@ export function TrainersBlock() {
             <li key={`${t.name}-${t.specialty}`}>
               <Link
                 href="/templates/yogacentric-studio/trainers"
-                className="group block overflow-hidden transition hover:opacity-90"
-                style={{ borderRadius: "var(--tpl-radius)" }}
+                className="group block"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={t.photo}
-                  alt={t.name}
-                  className="aspect-[3/4] w-full object-cover transition group-hover:scale-[1.02]"
-                />
+                <div
+                  className="overflow-hidden"
+                  style={{ borderRadius: "var(--tpl-radius)" }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={t.photo}
+                    alt={t.name}
+                    className="aspect-[3/4] w-full object-cover object-center transition duration-500 ease-out group-hover:scale-105"
+                  />
+                </div>
                 <div className="pt-4">
-                  <p className="text-sm font-semibold" style={{ color: "var(--tpl-ink)" }}>
-                    {t.name}
-                  </p>
+                  <span className="inline-block rounded-lg px-2.5 py-1.5 transition-colors duration-300 group-hover:bg-[#C8D8C8]">
+                    <p className="text-sm font-semibold" style={{ color: "var(--tpl-ink)" }}>
+                      {t.name}
+                    </p>
+                  </span>
                   <p className="mt-0.5 text-xs leading-snug" style={{ color: "var(--tpl-muted)" }}>
                     {t.specialty}
                   </p>

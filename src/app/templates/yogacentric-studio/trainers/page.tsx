@@ -29,7 +29,7 @@ export default function TrainersPage() {
           </p>
           <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {trainers.map((t) => (
-              <article key={`${t.name}-${t.specialty}`}>
+              <article key={`${t.name}-${t.specialty}`} className="group">
                 <div
                   className="overflow-hidden"
                   style={{ borderRadius: "var(--tpl-radius)" }}
@@ -38,12 +38,16 @@ export default function TrainersPage() {
                   <img
                     src={t.photo}
                     alt={t.name}
-                    className="aspect-[3/4] w-full object-cover object-center"
+                    className="aspect-[3/4] w-full object-cover object-center transition duration-500 ease-out group-hover:scale-105"
                   />
                 </div>
-                <h2 className="mt-5 text-xl font-semibold" style={{ color: "var(--tpl-ink)" }}>
-                  {t.name}
-                </h2>
+                <div
+                  className="mt-5 inline-block rounded-xl px-4 py-2 transition-colors duration-300 group-hover:bg-[#C8D8C8]"
+                >
+                  <h2 className="text-xl font-semibold" style={{ color: "var(--tpl-ink)" }}>
+                    {t.name}
+                  </h2>
+                </div>
                 <p className="mt-1 text-sm" style={{ color: "var(--tpl-muted)" }}>
                   {t.specialty}
                 </p>
