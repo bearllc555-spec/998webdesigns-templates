@@ -12,7 +12,6 @@ function TypewriterHeadline({ text }: { text: string }) {
   useEffect(() => {
     setDisplayed(0);
     let i = 0;
-    // small initial delay so the video has a moment to start
     const start = setTimeout(() => {
       const interval = setInterval(() => {
         i += 1;
@@ -53,7 +52,7 @@ export function HeroBlock() {
     video.muted = true;
     const play = () => {
       void video.play().catch(() => {
-        /* autoplay blocked — poster frame remains visible */
+        /* autoplay blocked — poster remains visible */
       });
     };
     play();
@@ -64,20 +63,12 @@ export function HeroBlock() {
   return (
     <section
       id="hero"
-      className="relative h-svh min-h-[640px] overflow-hidden"
+      className="relative flex min-h-[100dvh] min-h-svh flex-col overflow-hidden md:min-h-[640px] md:h-svh"
       style={{ background: "var(--tpl-ink)" }}
     >
-      {/* Poster fallback — visible on mobile where source hides the video */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/templates/yogacentric-studio/hero.webp"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover md:hidden"
-      />
       <video
         ref={videoRef}
-        className="absolute inset-0 hidden h-full w-full object-cover md:block"
+        className="absolute inset-0 h-full w-full object-cover object-[50%_42%]"
         autoPlay
         muted
         loop
@@ -87,9 +78,17 @@ export function HeroBlock() {
       >
         <source src="/templates/yogacentric-studio/hero.mp4" type="video/mp4" />
       </video>
-      <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-5 py-12 text-center md:px-8 md:py-16">
-        <div className="flex w-full translate-y-8 flex-col items-center md:translate-y-12">
-        <div className="mx-auto max-w-2xl">
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(19,19,19,0.25) 0%, rgba(19,19,19,0.45) 42%, rgba(19,19,19,0.82) 78%, rgba(19,19,19,0.94) 100%)",
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-end px-5 pb-10 pt-20 text-center md:justify-center md:px-8 md:py-16">
+        <div className="mx-auto w-full max-w-2xl">
           {content.hero.eyebrow && (
             <p
               className="text-xs font-semibold uppercase"
@@ -127,7 +126,7 @@ export function HeroBlock() {
             )}
           </div>
         </div>
-        <div className="mx-auto mt-10 grid max-w-md grid-cols-3 gap-4 md:mt-12 md:gap-6">
+        <div className="mx-auto mt-10 grid w-full max-w-md grid-cols-3 gap-4 md:mt-12 md:gap-6">
           {heroStats.map((s) => (
             <div key={s.label}>
               <p
@@ -141,7 +140,6 @@ export function HeroBlock() {
               </p>
             </div>
           ))}
-        </div>
         </div>
       </div>
     </section>
