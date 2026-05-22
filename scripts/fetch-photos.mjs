@@ -53,6 +53,16 @@ const photos = [
   { slug: "quietfield-yoga", name: "teacher-4", id: "1591291621164-2c6367723315", w: 800, h: 1000, desc: "Senior female yoga teacher portrait" },
   { slug: "quietfield-yoga", name: "class", id: "1599447421416-3414500d18a5", w: 1600, h: 1100, desc: "Quiet yoga class scene" },
 
+  // ---- YogaCentric Studio ----
+  {
+    slug: "yogacentric-studio",
+    name: "contact-bg",
+    id: "1518611012118-696072aa579a",
+    w: 1920,
+    h: 1280,
+    desc: "Empty sunlit yoga studio, wood floors and mats, no people",
+  },
+
   // ---- Tidewater CPA ----
   { slug: "tidewater-cpa", name: "hero", id: "1497366216548-37526070297c", w: 1600, h: 1200, desc: "Modern professional office interior" },
   { slug: "tidewater-cpa", name: "partner-1", id: "1560250097-0b93528c311a", w: 800, h: 1000, desc: "Male partner portrait" },

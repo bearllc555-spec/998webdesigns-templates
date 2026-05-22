@@ -69,14 +69,14 @@ export function ContactBlock() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/templates/yogacentric-studio/contact-bg.jpg"
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover"
+            alt="Sunlit yoga studio with wood floors, mats, and natural light"
+            className="absolute inset-0 h-full w-full object-cover object-center"
           />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(105deg, rgba(19,19,19,0.62) 0%, rgba(19,19,19,0.38) 42%, rgba(19,19,19,0.12) 68%, rgba(19,19,19,0.05) 100%)",
+                "linear-gradient(105deg, rgba(19,19,19,0.58) 0%, rgba(19,19,19,0.32) 38%, rgba(19,19,19,0.1) 62%, rgba(200,216,200,0.12) 100%)",
             }}
             aria-hidden="true"
           />
