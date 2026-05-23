@@ -6,34 +6,82 @@ import type { TrainerProfile } from "../content";
 const SCROLL_PX_PER_FRAME = 0.4;
 
 const controlClass =
-  "inline-flex items-center justify-center p-3 text-[var(--tpl-muted)] opacity-35 transition-opacity hover:opacity-70 focus-visible:opacity-90 focus-visible:outline-none";
+  "inline-flex items-center justify-center p-1.5 text-[var(--tpl-muted)] opacity-35 transition-opacity hover:opacity-70 focus-visible:opacity-90 focus-visible:outline-none";
+
+const AVATAR_COLORS = [
+  "#4A7C6F", "#6B7F5E", "#59676a", "#7A6E5E", "#5E6E7A",
+  "#8B6F4E", "#4E6B7A", "#6F4E7A", "#7A4E5E", "#4E7A6B",
+];
+
+function avatarColor(name: string) {
+  let n = 0;
+  for (let i = 0; i < name.length; i++) n += name.charCodeAt(i);
+  return AVATAR_COLORS[n % AVATAR_COLORS.length];
+}
+
+function GoogleIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+    </svg>
+  );
+}
+
+function StarRow() {
+  return (
+    <div className="flex items-center gap-0.5" aria-label="5 out of 5 stars">
+      {[0,1,2,3,4].map((i) => (
+        <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      ))}
+    </div>
+  );
+}
 
 function TestimonialCard({
   quote,
   name,
   role,
 }: TrainerProfile["testimonials"][number]) {
+  const initial = name.charAt(0).toUpperCase();
+  const bg = avatarColor(name);
   return (
     <article
       data-testimonial-card
-      className="flex min-h-[7.5rem] shrink-0 flex-col justify-between p-4 md:min-h-[8.25rem] md:p-5"
+      className="flex shrink-0 flex-col gap-3 p-4 md:p-5"
       style={{
         background: "var(--tpl-bg)",
         border: "1px solid var(--tpl-line)",
         borderRadius: "var(--tpl-radius)",
       }}
     >
+      <div className="flex items-center gap-3">
+        <div
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+          style={{ background: bg }}
+          aria-hidden="true"
+        >
+          {initial}
+        </div>
+        <div className="min-w-0">
+          <p className="truncate text-sm font-semibold leading-tight" style={{ color: "var(--tpl-ink)" }}>
+            {name}
+          </p>
+          <div className="mt-0.5 flex items-center gap-1">
+            <span className="text-xs" style={{ color: "var(--tpl-muted)" }}>on</span>
+            <GoogleIcon />
+            <span className="text-xs font-medium" style={{ color: "var(--tpl-muted)" }}>Google</span>
+          </div>
+        </div>
+      </div>
+      <StarRow />
       <p className="text-sm leading-relaxed" style={{ color: "var(--tpl-ink)" }}>
-        &ldquo;{quote}&rdquo;
+        {quote}
       </p>
-      <footer className="mt-4 border-t pt-3" style={{ borderColor: "var(--tpl-line)" }}>
-        <p className="text-xs font-semibold" style={{ color: "var(--tpl-ink)" }}>
-          {name}
-        </p>
-        <p className="mt-0.5 text-xs" style={{ color: "var(--tpl-muted)" }}>
-          {role}
-        </p>
-      </footer>
     </article>
   );
 }
@@ -126,7 +174,7 @@ export function TrainerDetailTestimonials({
       </div>
 
       <div className="mt-6 flex justify-center">
-        <div className="inline-flex items-center gap-2">
+        <div className="inline-flex items-center gap-0.5">
           <button
             type="button"
             onClick={() => nudge(-1)}
