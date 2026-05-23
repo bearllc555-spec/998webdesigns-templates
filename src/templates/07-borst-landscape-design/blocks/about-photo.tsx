@@ -11,7 +11,7 @@ export function AboutPhotoBlock() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/templates/borst-landscape-design/why-us.jpg"
+            src="/templates/borst-landscape-design/slot-002.jpg"
             alt="Reliable and meticulous landscape work"
             className="block h-full w-full object-cover"
           />

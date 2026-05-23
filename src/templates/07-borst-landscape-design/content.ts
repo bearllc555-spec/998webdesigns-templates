@@ -102,9 +102,9 @@ export const pillars = [
 
 // Service card photo + icon mapping
 export const serviceAssets = [
-  { thumb: "/templates/borst-landscape-design/svc-garden-design.jpg", icon: "/templates/borst-landscape-design/icon-garden-design.svg" },
-  { thumb: "/templates/borst-landscape-design/svc-flower-planting.jpg", icon: "/templates/borst-landscape-design/icon-flower-planting.svg" },
-  { thumb: "/templates/borst-landscape-design/svc-garden-maintenance.jpg", icon: "/templates/borst-landscape-design/icon-garden-maintenance.svg" },
+  { thumb: "/templates/borst-landscape-design/slot-003.jpg", icon: "/templates/borst-landscape-design/icon-garden-design.svg" },
+  { thumb: "/templates/borst-landscape-design/slot-004.jpg", icon: "/templates/borst-landscape-design/icon-flower-planting.svg" },
+  { thumb: "/templates/borst-landscape-design/slot-005.jpg", icon: "/templates/borst-landscape-design/icon-garden-maintenance.svg" },
   { thumb: "/templates/borst-landscape-design/svc-lawn-mowing.jpg", icon: "/templates/borst-landscape-design/icon-lawn-mowing.svg" },
   { thumb: "/templates/borst-landscape-design/svc-leaf-removal.jpg", icon: "/templates/borst-landscape-design/icon-leaf-removal.svg" },
   { thumb: "/templates/borst-landscape-design/svc-pond-maintenance.jpg", icon: "/templates/borst-landscape-design/icon-pond-maintenance.svg" },
@@ -112,12 +112,12 @@ export const serviceAssets = [
 
 // Portfolio images (home grid — six tiles, 3x2)
 export const portfolio = [
-  { title: "Front entry redesign with boxwood parterre", location: "Saddle River, NJ", image: "/templates/borst-landscape-design/gallery-02.jpg" },
-  { title: "Pool surround and outdoor kitchen", location: "Franklin Lakes, NJ", image: "/templates/borst-landscape-design/gallery-03.jpg" },
-  { title: "Corporate campus seasonal program", location: "Mahwah, NJ", image: "/templates/borst-landscape-design/gallery-04.jpg" },
-  { title: "Estate woodland edge", location: "Upper Saddle River, NJ", image: "/templates/borst-landscape-design/gallery-05.jpg" },
-  { title: "Streetscape replant", location: "Allendale, NJ", image: "/templates/borst-landscape-design/gallery-06.jpg" },
-  { title: "Garden design and seasonal color", location: "Wyckoff, NJ", image: "/templates/borst-landscape-design/svc-garden-design.jpg" },
+  { title: "Front entry redesign with boxwood parterre", location: "Saddle River, NJ", image: "/templates/borst-landscape-design/slot-006.jpg" },
+  { title: "Pool surround and outdoor kitchen", location: "Franklin Lakes, NJ", image: "/templates/borst-landscape-design/slot-007.jpg" },
+  { title: "Corporate campus seasonal program", location: "Mahwah, NJ", image: "/templates/borst-landscape-design/slot-008.jpg" },
+  { title: "Estate woodland edge", location: "Upper Saddle River, NJ", image: "/templates/borst-landscape-design/slot-009.jpg" },
+  { title: "Streetscape replant", location: "Allendale, NJ", image: "/templates/borst-landscape-design/slot-010.jpg" },
+  { title: "Garden design and seasonal color", location: "Wyckoff, NJ", image: "/templates/borst-landscape-design/slot-011.jpg" },
 ];
 
 // 3-step process
@@ -145,14 +145,14 @@ export const blogPosts = [
     title: "Landscape design 101: Basics for a beautiful yard",
     category: "Articles",
     date: "Aug 19, 2024",
-    image: "/templates/borst-landscape-design/blog-landscape-design-101.jpg",
+    image: "/templates/borst-landscape-design/slot-013.jpg",
     href: "#",
   },
   {
     title: "How to choose a garden that suits your personal needs: A step-by-step guide",
     category: "News",
     date: "Aug 19, 2024",
-    image: "/templates/borst-landscape-design/blog-how-to-choose-garden.jpg",
+    image: "/templates/borst-landscape-design/slot-014.jpg",
     href: "#",
   },
 ];

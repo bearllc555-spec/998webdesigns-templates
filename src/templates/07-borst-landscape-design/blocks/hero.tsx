@@ -16,7 +16,7 @@ export function HeroBlock() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/templates/borst-landscape-design/hero.jpg"
+            src="/templates/borst-landscape-design/slot-001.jpg"
             alt="Modern home with landscaped garden"
             className="absolute inset-0 h-full w-full object-cover"
           />
