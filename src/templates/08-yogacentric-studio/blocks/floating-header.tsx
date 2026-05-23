@@ -10,6 +10,14 @@ import { YcBtn } from "./yc-btn";
 const SAGE = "#C8D8C8";
 const SAGE_INK = "#131313";
 
+function HomeIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true" className="shrink-0">
+      <path d="M12 2.75 3.5 10v10.25c0 .41.34.75.75.75H10v-6.5h4V21h5.75c.41 0 .75-.34.75-.75V10L12 2.75Zm-1.25 18.5v-5.5h2.5v5.5h-2.5Z" />
+    </svg>
+  );
+}
+
 export function YogaCentricHeader() {
   const slug = theme.meta.slug;
   const pathname = usePathname();
@@ -152,13 +160,7 @@ export function YogaCentricHeader() {
               }}
               onClick={() => setMenuOpen(false)}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/templates/yogacentric-studio/home-icon.png"
-                alt=""
-                aria-hidden="true"
-                className="h-5 w-5 shrink-0"
-              />
+              <HomeIcon />
               {theme.meta.name}
             </Link>
             <ul className="space-y-1">
