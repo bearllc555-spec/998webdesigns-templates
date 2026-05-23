@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { theme } from "../theme";
 import { content } from "../content";
-import { extendedPalette } from "../theme";
 import { BORST_CONTAINER, BorstArrow, borstOutlineBtn, borstPrimaryBtn } from "../borst-ui";
 
 export function FooterCtaBlock() {
   return (
-    <section style={{ background: extendedPalette.pinkSoft }}>
+    <section style={{ background: "var(--tpl-bg)" }}>
       <div className={`${BORST_CONTAINER} py-14 md:py-16`}>
         <div className="grid items-center gap-6 md:grid-cols-12">
           <div className="md:col-span-7">
