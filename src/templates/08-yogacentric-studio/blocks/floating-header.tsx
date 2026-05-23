@@ -139,7 +139,7 @@ export function YogaCentricHeader() {
           >
             <Link
               href={homePath}
-              className="mb-3 block border-b border-white/10 px-4 pb-3 text-base font-bold tracking-tight transition hover:opacity-80"
+              className="mb-3 flex items-center gap-2.5 border-b border-white/10 px-4 pb-3 text-base font-bold tracking-tight transition hover:opacity-80"
               style={{
                 color: "#FFFFFF",
                 fontFamily: "var(--tpl-font-display)",
@@ -147,6 +147,14 @@ export function YogaCentricHeader() {
               }}
               onClick={() => setMenuOpen(false)}
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/templates/yogacentric-studio/home-icon.png"
+                alt=""
+                aria-hidden="true"
+                className="h-5 w-5 shrink-0"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
               {theme.meta.name}
             </Link>
             <ul className="space-y-1">
