@@ -9,14 +9,7 @@ import {
 import { IMAGE_GEOMETRY } from "../image-geometry";
 
 export function PortfolioBlock() {
-  const layout = [
-    { aspect: IMAGE_GEOMETRY.portfolioSquareAspect, span: "lg:col-span-3" },
-    { aspect: IMAGE_GEOMETRY.portfolioSquareAspect, span: "lg:col-span-3" },
-    { aspect: IMAGE_GEOMETRY.portfolioWideAspect, span: "lg:col-span-6" },
-    { aspect: IMAGE_GEOMETRY.portfolioWideAspect, span: "lg:col-span-6" },
-    { aspect: IMAGE_GEOMETRY.portfolioSquareAspect, span: "lg:col-span-3" },
-    { aspect: IMAGE_GEOMETRY.portfolioSquareAspect, span: "lg:col-span-3" },
-  ] as const;
+  const [tile1, tile2, tile3, tile4, tile5, tile6] = portfolio;
 
   return (
     <section className="overflow-visible" style={{ background: "var(--tpl-bg)" }}>
@@ -34,29 +27,99 @@ export function PortfolioBlock() {
             Our past projects of landscaping work
           </h2>
         </div>
-        <ul className="mt-10 grid grid-cols-2 items-start gap-4 lg:grid-cols-12 lg:gap-4">
-          {portfolio.map((p, index) => (
-            <li
-              key={p.title}
-              className={`min-h-0 min-w-0 col-span-1 ${layout[index]?.span ?? "lg:col-span-3"}`}
-            >
+        <ul className="mt-10 grid items-start gap-4 lg:grid-cols-12 lg:gap-4">
+          <li className="min-h-0 min-w-0 lg:col-span-6">
+            <div className="grid grid-cols-2 gap-4">
               <figure
                 className="group relative m-0 w-full overflow-hidden"
                 style={{
                   borderRadius: 20,
-                  aspectRatio: layout[index]?.aspect ?? IMAGE_GEOMETRY.portfolioSquareAspect,
+                  aspectRatio: IMAGE_GEOMETRY.portfolioSquareAspect,
                 }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={p.image}
-                  alt={p.title}
+                  src={tile1.image}
+                  alt={tile1.title}
                   className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-                  style={{ objectPosition: index === 3 ? "center 38%" : "center" }}
                 />
               </figure>
-            </li>
-          ))}
+              <figure
+                className="group relative m-0 w-full overflow-hidden"
+                style={{
+                  borderRadius: 20,
+                  aspectRatio: IMAGE_GEOMETRY.portfolioSquareAspect,
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={tile2.image}
+                  alt={tile2.title}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                />
+              </figure>
+            </div>
+            <figure
+              className="group relative mt-4 m-0 w-full overflow-hidden"
+              style={{
+                borderRadius: 20,
+                aspectRatio: IMAGE_GEOMETRY.portfolioWideAspect,
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={tile4.image}
+                alt={tile4.title}
+                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              />
+            </figure>
+          </li>
+          <li className="min-h-0 min-w-0 lg:col-span-6">
+            <figure
+              className="group relative m-0 w-full overflow-hidden"
+              style={{
+                borderRadius: 20,
+                aspectRatio: IMAGE_GEOMETRY.portfolioWideAspect,
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={tile3.image}
+                alt={tile3.title}
+                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              />
+            </figure>
+            <div className="mt-4 grid grid-cols-2 gap-4">
+              <figure
+                className="group relative m-0 w-full overflow-hidden"
+                style={{
+                  borderRadius: 20,
+                  aspectRatio: IMAGE_GEOMETRY.portfolioSquareAspect,
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={tile5.image}
+                  alt={tile5.title}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                />
+              </figure>
+              <figure
+                className="group relative m-0 w-full overflow-hidden"
+                style={{
+                  borderRadius: 20,
+                  aspectRatio: IMAGE_GEOMETRY.portfolioSquareAspect,
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={tile6.image}
+                  alt={tile6.title}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                />
+              </figure>
+            </div>
+          </li>
         </ul>
         <div className="mt-10 flex justify-center">
           <Link
