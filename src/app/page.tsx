@@ -78,6 +78,65 @@ export default function GalleryPage() {
         </section>
         <section className="border-t border-neutral-200">
           <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-600">Fonts</p>
+            <h2
+              className="mt-3 text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"
+              style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
+            >
+              16 typeface options
+            </h2>
+            <p className="mt-2 text-sm text-neutral-500">Same headline, sixteen fonts. Pick a letter.</p>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {[
+                { letter: "a", name: "Newsreader",            cat: "Editorial serif",  weight: 500, var: "--font-newsreader" },
+                { letter: "b", name: "Cormorant Garamond",    cat: "Editorial serif",  weight: 500, var: "--font-cormorant-garamond" },
+                { letter: "c", name: "DM Serif Display",      cat: "Editorial serif",  weight: 400, var: "--font-dm-serif-display" },
+                { letter: "d", name: "Playfair Display",      cat: "Editorial serif",  weight: 600, var: "--font-playfair-display" },
+                { letter: "e", name: "Lora",                  cat: "Editorial serif",  weight: 600, var: "--font-lora" },
+                { letter: "f", name: "Spectral",              cat: "Editorial serif",  weight: 500, var: "--font-spectral" },
+                { letter: "g", name: "Manrope",               cat: "Modern sans",      weight: 700, var: "--font-manrope" },
+                { letter: "h", name: "Plus Jakarta Sans",     cat: "Modern sans",      weight: 700, var: "--font-plus-jakarta-sans" },
+                { letter: "i", name: "DM Sans",               cat: "Modern sans",      weight: 700, var: "--font-dm-sans" },
+                { letter: "j", name: "Outfit",                cat: "Modern sans",      weight: 700, var: "--font-outfit" },
+                { letter: "k", name: "Bricolage Grotesque",   cat: "Modern sans",      weight: 700, var: "--font-bricolage-grotesque" },
+                { letter: "l", name: "Familjen Grotesk",      cat: "Modern sans",      weight: 700, var: "--font-familjen-grotesk" },
+                { letter: "m", name: "Instrument Serif",      cat: "Previously tried", weight: 400, var: "--font-instrument-serif" },
+                { letter: "n", name: "Fraunces",              cat: "Previously tried", weight: 500, var: "--font-fraunces" },
+                { letter: "o", name: "Geist",                 cat: "Previously tried (current)", weight: 700, var: "--font-geist-sans" },
+                { letter: "p", name: "Inter Black 900",       cat: "Previously tried", weight: 900, var: "--font-inter" },
+              ].map(({ letter, name, cat, weight, var: fontVar }) => (
+                <div
+                  key={letter}
+                  className="flex flex-col gap-3 rounded-xl border border-neutral-200 bg-white p-5"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 text-[11px] font-bold text-white">{letter}</span>
+                    <span
+                      className="rounded-full px-2 py-0.5 text-[10px] font-medium"
+                      style={{
+                        background: cat === "Editorial serif" ? "#EFF6FF" : cat === "Modern sans" ? "#F0FDF4" : "#FEF9C3",
+                        color: cat === "Editorial serif" ? "#1D4ED8" : cat === "Modern sans" ? "#15803D" : "#92400E",
+                      }}
+                    >
+                      {cat}
+                    </span>
+                  </div>
+                  <p className="text-xs text-neutral-500">{name} · {weight}</p>
+                  <p
+                    className="text-xl leading-[1.1] text-neutral-900"
+                    style={{ fontFamily: `var(${fontVar}), system-ui, sans-serif`, fontWeight: weight }}
+                  >
+                    A handcrafted website for $998. Delivered in 5–7 days.
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-neutral-200">
+          <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-600">Google Maps</p>
             <h2
               className="mt-3 text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"

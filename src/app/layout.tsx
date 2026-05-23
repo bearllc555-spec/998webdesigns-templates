@@ -10,6 +10,16 @@ import {
   Cardo,
   Playfair_Display,
   IBM_Plex_Sans,
+  Newsreader,
+  DM_Serif_Display,
+  Lora,
+  Spectral,
+  Plus_Jakarta_Sans,
+  DM_Sans,
+  Outfit,
+  Bricolage_Grotesque,
+  Instrument_Serif,
+  Familjen_Grotesk,
 } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
@@ -84,6 +94,76 @@ const ibmPlex = IBM_Plex_Sans({
   display: "swap",
 });
 
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-newsreader",
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ["latin"],
+  variable: "--font-dm-serif-display",
+  weight: ["400"],
+  display: "swap",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const spectral = Spectral({
+  subsets: ["latin"],
+  variable: "--font-spectral",
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta-sans",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage-grotesque",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-instrument-serif",
+  weight: ["400"],
+  display: "swap",
+});
+
+const familjenGrotesk = Familjen_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-familjen-grotesk",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
 const fontVariables = [
   GeistSans.variable,
   cormorant.variable,
@@ -96,6 +176,16 @@ const fontVariables = [
   cardo.variable,
   playfair.variable,
   ibmPlex.variable,
+  newsreader.variable,
+  dmSerifDisplay.variable,
+  lora.variable,
+  spectral.variable,
+  plusJakarta.variable,
+  dmSans.variable,
+  outfit.variable,
+  bricolage.variable,
+  instrumentSerif.variable,
+  familjenGrotesk.variable,
 ].join(" ");
 
 export const metadata: Metadata = {
