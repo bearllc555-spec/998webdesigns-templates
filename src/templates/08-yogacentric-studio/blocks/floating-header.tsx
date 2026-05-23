@@ -29,7 +29,6 @@ export function YogaCentricHeader() {
   const [ctaHovered, setCtaHovered] = useState(false);
   const mobileNav = [
     { label: "Home", href: homePath },
-    { label: "About", href: `${homePath}#about` },
     { label: "Services", href: `/templates/${slug}/services` },
     ...theme.nav.filter((n) => n.label !== "Services"),
   ];
