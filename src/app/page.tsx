@@ -150,7 +150,7 @@ export default function GalleryPage() {
 
               {/* Layout A — Full-width banner */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout A · Full-width banner</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout A · Full-width banner</p>
                 <div className="overflow-hidden rounded-xl border border-neutral-200">
                   <iframe
                     title="Map Layout A"
@@ -167,7 +167,7 @@ export default function GalleryPage() {
 
               {/* Layout B — Map left, info card right */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout B · Map + info card</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout B · Map + info card</p>
                 <div className="overflow-hidden rounded-xl border border-neutral-200">
                   <div className="grid md:grid-cols-[1fr_320px]">
                     <iframe
@@ -205,7 +205,7 @@ export default function GalleryPage() {
 
               {/* Layout C — Location strip above full map */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout C · Strip + full map</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout C · Strip + full map</p>
                 <div className="overflow-hidden rounded-xl border border-neutral-200">
                   <div className="flex flex-wrap items-center justify-between gap-4 border-b border-neutral-200 bg-white px-6 py-4">
                     <div className="flex items-center gap-3">
@@ -241,7 +241,7 @@ export default function GalleryPage() {
 
               {/* Layout D — Dark card with inset map */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout D · Dark card</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout D · Dark card</p>
                 <div className="overflow-hidden rounded-xl bg-neutral-900 p-6 md:p-8">
                   <div className="mb-5 flex items-start justify-between gap-4">
                     <div>
@@ -275,7 +275,7 @@ export default function GalleryPage() {
 
               {/* Layout E — Silver: full-width with gradient header bar */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout E · Silver — banner + header</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout E · Silver — banner + header</p>
                 <div className="overflow-hidden rounded-xl border border-neutral-200">
                   <div
                     className="flex flex-wrap items-center justify-between gap-3 px-6 py-4"
@@ -318,7 +318,7 @@ export default function GalleryPage() {
 
               {/* Layout F — Silver: map right, frosted info panel left */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout F · Silver — frosted panel</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout F · Silver — frosted panel</p>
                 <div
                   className="overflow-hidden rounded-xl"
                   style={{ border: "1px solid #c9cdd4" }}
@@ -363,7 +363,7 @@ export default function GalleryPage() {
 
               {/* Layout G — Night: deep navy wrap, full-width map below */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout G · Night — navy wrap</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout G · Night — navy wrap</p>
                 <div className="overflow-hidden rounded-xl" style={{ background: "#0d1117", border: "1px solid #1f2937" }}>
                   <div className="flex flex-wrap items-center justify-between gap-4 px-6 py-5" style={{ borderBottom: "1px solid #1f2937" }}>
                     <div className="flex items-center gap-3">
@@ -402,7 +402,7 @@ export default function GalleryPage() {
 
               {/* Layout H — Night: midnight split with glowing accent */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout H · Night — midnight split</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout H · Night — midnight split</p>
                 <div className="overflow-hidden rounded-xl" style={{ background: "#060810", border: "1px solid #1a1f2e" }}>
                   <div className="grid md:grid-cols-[1fr_280px]">
                     <iframe
@@ -444,7 +444,7 @@ export default function GalleryPage() {
 
               {/* Layout I — Silver bare */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout I · Silver — bare</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout I · Silver — bare</p>
                 <div className="overflow-hidden rounded-xl border border-neutral-200">
                   <iframe
                     title="Map Layout I"
@@ -461,7 +461,7 @@ export default function GalleryPage() {
 
               {/* Layout J — Night bare */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout J · Night — bare</p>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout J · Night — bare</p>
                 <div className="overflow-hidden rounded-xl" style={{ border: "1px solid #1f2937" }}>
                   <iframe
                     title="Map Layout J"
