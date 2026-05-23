@@ -97,6 +97,7 @@ export type TemplateContent = {
     quote: string;
     name: string;
     role: string;
+    avatar?: string;
   }[];
   ctaBanner: {
     headline: string;
