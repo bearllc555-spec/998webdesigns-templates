@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { GalleryGrid } from "@/components/gallery/gallery-grid";
+import { CompactMapStrip } from "@/components/maps/compact-map-strip";
 import { MapExpandOnClick } from "@/components/maps/map-expand-on-click";
 import { MapModalTrigger } from "@/components/maps/map-modal-trigger";
 import { StaticMapThumbnail } from "@/components/maps/static-map-thumbnail";
 import { StyledGoogleMap } from "@/components/maps/styled-google-map";
 import { MARKETING_SITE_URL } from "@/lib/marketing-site";
-import { DEMO_LOCATION, getDirectionsUrl, getEmbedUrl } from "@/lib/maps";
 import { SITE_VERSION } from "@/lib/version";
 import { ALL_TEMPLATES } from "@/templates/registry";
 
@@ -147,11 +147,17 @@ export default function GalleryPage() {
               className="mt-3 text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"
               style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
             >
-              Fourteen layout options
+              Fifteen layout options
             </h2>
             <p className="mt-2 text-sm text-neutral-500">24 Newark Pompton Turnpike, Little Falls Township, NJ 07424</p>
 
             <div className="mt-10 flex flex-col gap-12">
+
+              {/* Layout M — Compact strip */}
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout M · Compact strip</p>
+                <CompactMapStrip />
+              </div>
 
               {/* Layout A — Full-width banner */}
               <div>
@@ -242,6 +248,12 @@ export default function GalleryPage() {
                     referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
+              </div>
+
+              {/* Layout P — Silver: compact strip */}
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout P · Silver — compact strip</p>
+                <CompactMapStrip variant="silver" mapTitle="Map Layout P" />
               </div>
 
               {/* Layout E — Silver: full-width with gradient header bar */}
@@ -457,42 +469,6 @@ export default function GalleryPage() {
               <div>
                 <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout L · Text-first, expand on click</p>
                 <MapExpandOnClick />
-              </div>
-
-              {/* Layout M — Compact strip */}
-              <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout M · Compact strip</p>
-                <div className="overflow-hidden rounded-xl border border-neutral-200">
-                  <div className="flex flex-wrap items-center justify-between gap-3 border-b border-neutral-200 bg-neutral-50 px-5 py-3">
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-neutral-900">{DEMO_LOCATION.street}</p>
-                        <p className="text-xs text-neutral-500">{DEMO_LOCATION.city}</p>
-                      </div>
-                    </div>
-                    <a
-                      href={getDirectionsUrl()}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-medium text-blue-600 hover:underline"
-                    >
-                      Directions ↗
-                    </a>
-                  </div>
-                  <iframe
-                    title="Map Layout M"
-                    src={getEmbedUrl(14)}
-                    width="100%"
-                    height="180"
-                    style={{ border: 0, display: "block" }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
               </div>
 
               {/* Layout N — Modal map */}
