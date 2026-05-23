@@ -327,6 +327,23 @@ export default function GalleryPage() {
                 </div>
               </div>
 
+              {/* Layout I — Silver bare */}
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout I · Silver — bare</p>
+                <div className="overflow-hidden rounded-xl border border-neutral-200">
+                  <iframe
+                    title="Map Layout I"
+                    src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
+                    width="100%"
+                    height="360"
+                    style={{ border: 0, display: "block", filter: "grayscale(100%) contrast(1.05)" }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </div>
+
               {/* Layout G — Night: deep navy wrap, full-width map below */}
               <div>
                 <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout G · Night — navy wrap</p>
@@ -405,23 +422,6 @@ export default function GalleryPage() {
                       </a>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Layout I — Silver bare */}
-              <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout I · Silver — bare</p>
-                <div className="overflow-hidden rounded-xl border border-neutral-200">
-                  <iframe
-                    title="Map Layout I"
-                    src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
-                    width="100%"
-                    height="360"
-                    style={{ border: 0, display: "block", filter: "grayscale(100%) contrast(1.05)" }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
                 </div>
               </div>
 
