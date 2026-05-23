@@ -137,6 +137,18 @@ export function YogaCentricHeader() {
               boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
             }}
           >
+            <Link
+              href={homePath}
+              className="mb-3 block border-b border-white/10 px-4 pb-3 text-base font-bold tracking-tight transition hover:opacity-80"
+              style={{
+                color: "#FFFFFF",
+                fontFamily: "var(--tpl-font-display)",
+                letterSpacing: theme.type.displayTracking,
+              }}
+              onClick={() => setMenuOpen(false)}
+            >
+              {theme.meta.name}
+            </Link>
             <ul className="space-y-1">
               {theme.nav.map((n) => (
                 <li key={n.href}>
