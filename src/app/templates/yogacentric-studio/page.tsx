@@ -7,7 +7,6 @@ import { PricingBlock } from "@/templates/08-yogacentric-studio/blocks/pricing";
 import { TestimonialsBlock } from "@/templates/08-yogacentric-studio/blocks/testimonials";
 import { FaqBlock } from "@/templates/08-yogacentric-studio/blocks/faq";
 import { ContactBlock } from "@/templates/08-yogacentric-studio/blocks/contact";
-import { MapBlock } from "@/templates/08-yogacentric-studio/blocks/map";
 
 export default function YogaCentricHome() {
   return (
@@ -21,7 +20,6 @@ export default function YogaCentricHome() {
       <TestimonialsBlock />
       <FaqBlock />
       <ContactBlock />
-      <MapBlock />
     </>
   );
 }

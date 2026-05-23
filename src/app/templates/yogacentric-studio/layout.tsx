@@ -4,6 +4,7 @@ import { ThemeStyle } from "@/lib/theme-style";
 import { YogaCentricHeader } from "@/templates/08-yogacentric-studio/blocks/floating-header";
 import { YogaCentricMain } from "@/templates/08-yogacentric-studio/blocks/main-shell";
 import { YogaCentricFooter } from "@/templates/08-yogacentric-studio/blocks/footer";
+import { MapBlock } from "@/templates/08-yogacentric-studio/blocks/map";
 import { VersionLabel } from "@/templates/08-yogacentric-studio/blocks/version-label";
 
 const { theme } = templateModule;
@@ -31,6 +32,7 @@ export default function YogaCentricLayout({ children }: { children: React.ReactN
       <VersionLabel />
       <YogaCentricHeader />
       <YogaCentricMain>{children}</YogaCentricMain>
+      <MapBlock />
       <YogaCentricFooter />
     </div>
   );
