@@ -308,7 +308,7 @@ export default function GalleryPage() {
                     src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
                     width="100%"
                     height="300"
-                    style={{ border: 0, display: "block" }}
+                    style={{ border: 0, display: "block", filter: "grayscale(100%) contrast(1.05)" }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
@@ -352,7 +352,7 @@ export default function GalleryPage() {
                       src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
                       width="100%"
                       height="360"
-                      style={{ border: 0, display: "block" }}
+                      style={{ border: 0, display: "block", filter: "grayscale(100%) contrast(1.05)" }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
@@ -391,7 +391,7 @@ export default function GalleryPage() {
                       src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
                       width="100%"
                       height="300"
-                      style={{ border: 0, display: "block", opacity: 0.92 }}
+                      style={{ border: 0, display: "block", filter: "invert(93%) hue-rotate(180deg) brightness(0.85) saturate(0.9)" }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
@@ -410,7 +410,7 @@ export default function GalleryPage() {
                       src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
                       width="100%"
                       height="340"
-                      style={{ border: 0, display: "block", opacity: 0.9 }}
+                      style={{ border: 0, display: "block", filter: "invert(93%) hue-rotate(180deg) brightness(0.85) saturate(0.9)" }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
