@@ -142,7 +142,7 @@ export default function GalleryPage() {
               className="mt-3 text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"
               style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
             >
-              Eight layout options
+              Ten layout options
             </h2>
             <p className="mt-2 text-sm text-neutral-500">24 Newark Pompton Turnpike, Little Falls Township, NJ 07424</p>
 
@@ -439,6 +439,40 @@ export default function GalleryPage() {
                       </a>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              {/* Layout I — Silver bare */}
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout I · Silver — bare</p>
+                <div className="overflow-hidden rounded-xl border border-neutral-200">
+                  <iframe
+                    title="Map Layout I"
+                    src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
+                    width="100%"
+                    height="360"
+                    style={{ border: 0, display: "block", filter: "grayscale(100%) contrast(1.05)" }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </div>
+
+              {/* Layout J — Night bare */}
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout J · Night — bare</p>
+                <div className="overflow-hidden rounded-xl" style={{ border: "1px solid #1f2937" }}>
+                  <iframe
+                    title="Map Layout J"
+                    src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
+                    width="100%"
+                    height="360"
+                    style={{ border: 0, display: "block", filter: "invert(93%) hue-rotate(180deg) brightness(0.85) saturate(0.9)" }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
               </div>
 
