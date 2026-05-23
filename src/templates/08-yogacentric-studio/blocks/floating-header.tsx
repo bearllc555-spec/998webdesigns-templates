@@ -18,7 +18,12 @@ export function YogaCentricHeader() {
 
   const [show, setShow] = useState(!isHomeWithHero);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [ctaHovered, setCtaHovered] = useState(false);
+  const mobileNav = [
+    { label: "Home", href: homePath },
+    { label: "About", href: `${homePath}#about` },
+    { label: "Services", href: `/templates/${slug}/services` },
+    ...theme.nav.filter((n) => n.label !== "Services"),
+  ];
 
   useEffect(() => {
     if (!isHomeWithHero) {
@@ -157,7 +162,7 @@ export function YogaCentricHeader() {
               {theme.meta.name}
             </Link>
             <ul className="space-y-1">
-              {theme.nav.map((n) => (
+              {mobileNav.map((n) => (
                 <li key={n.href}>
                   <Link
                     href={n.href}

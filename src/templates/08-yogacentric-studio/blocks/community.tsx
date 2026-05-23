@@ -6,7 +6,7 @@ import { YcBtn } from "./yc-btn";
 
 export function CommunityBlock() {
   return (
-    <section className="py-20 md:py-28" style={{ background: extendedPalette.sectionAlt }}>
+    <section id="about" className="py-20 md:py-28" style={{ background: extendedPalette.sectionAlt }}>
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
           <div className="overflow-hidden" style={{ borderRadius: "var(--tpl-radius)" }}>
