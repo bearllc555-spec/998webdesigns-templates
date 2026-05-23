@@ -153,7 +153,6 @@ export function YogaCentricHeader() {
                 alt=""
                 aria-hidden="true"
                 className="h-5 w-5 shrink-0"
-                style={{ filter: "brightness(0) invert(1)" }}
               />
               {theme.meta.name}
             </Link>
