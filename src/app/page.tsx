@@ -87,7 +87,7 @@ export default function GalleryPage() {
             </h2>
             <p className="mt-2 text-sm text-neutral-500">Same headline, sixteen fonts. Pick a letter.</p>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 { letter: "a", name: "Newsreader",            cat: "Editorial serif",  weight: 500, var: "--font-newsreader" },
                 { letter: "b", name: "Cormorant Garamond",    cat: "Editorial serif",  weight: 500, var: "--font-cormorant-garamond" },
@@ -108,7 +108,7 @@ export default function GalleryPage() {
               ].map(({ letter, name, cat, weight, var: fontVar }) => (
                 <div
                   key={letter}
-                  className="flex flex-col gap-3 rounded-xl border border-neutral-200 bg-white p-5"
+                  className="flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6"
                 >
                   <div className="flex items-center justify-between gap-2">
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 text-[11px] font-bold text-white">{letter}</span>
@@ -124,7 +124,7 @@ export default function GalleryPage() {
                   </div>
                   <p className="text-xs text-neutral-500">{name} · {weight}</p>
                   <p
-                    className="text-xl leading-[1.1] text-neutral-900"
+                    className="text-[1.65rem] leading-[1.1] text-neutral-900"
                     style={{ fontFamily: `var(${fontVar}), system-ui, sans-serif`, fontWeight: weight }}
                   >
                     A handcrafted website for $998. Delivered in 5–7 days.
