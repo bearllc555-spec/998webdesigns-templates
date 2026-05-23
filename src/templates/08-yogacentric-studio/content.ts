@@ -67,12 +67,14 @@ export const content: TemplateContent = {
         "Always a great class at YogaCentric. All the instructors are so kind and generous with their time and their patience.",
       name: "Michelle Malone",
       role: "Yoga enthusiast",
+      avatar: "/templates/yogacentric-studio/reviewer-michelle.jpg",
     },
     {
       quote:
         "These classes have brought so much peace into my life. I'm more balanced and calm.",
       name: "Teresa Van Maerssen",
       role: "Wellness seeker",
+      avatar: "/templates/yogacentric-studio/reviewer-teresa.jpg",
     },
     {
       quote:
@@ -91,12 +93,14 @@ export const content: TemplateContent = {
         "The community here is real. You walk in stressed and leave feeling like yourself again.",
       name: "James Ortiz",
       role: "Power flow regular",
+      avatar: "/templates/yogacentric-studio/reviewer-james.jpg",
     },
     {
       quote:
         "Best decision I made this year was trying a beginner class. Welcoming from the first minute.",
       name: "Sarah Mitchell",
       role: "New member",
+      avatar: "/templates/yogacentric-studio/reviewer-sarah.jpg",
     },
   ],
   ctaBanner: {
@@ -144,7 +148,7 @@ export type TrainerProfile = {
   servicesIntro: string;
   offeredServices: { title: string; description: string }[];
   galleryImages: string[];
-  testimonials: { quote: string; name: string; role: string }[];
+  testimonials: { quote: string; name: string; role: string; avatar?: string }[];
 };
 
 export const trainers: TrainerListItem[] = [

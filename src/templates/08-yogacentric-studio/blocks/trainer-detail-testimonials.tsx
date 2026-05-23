@@ -46,6 +46,7 @@ function TestimonialCard({
   quote,
   name,
   role,
+  avatar,
 }: TrainerProfile["testimonials"][number]) {
   const initial = name.charAt(0).toUpperCase();
   const bg = avatarColor(name);
@@ -60,13 +61,20 @@ function TestimonialCard({
       }}
     >
       <div className="flex items-center gap-3">
-        <div
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
-          style={{ background: bg }}
-          aria-hidden="true"
-        >
-          {initial}
-        </div>
+        {avatar ? (
+          <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={avatar} alt={name} className="block h-full w-full object-cover" />
+          </div>
+        ) : (
+          <div
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+            style={{ background: bg }}
+            aria-hidden="true"
+          >
+            {initial}
+          </div>
+        )}
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold leading-tight" style={{ color: "var(--tpl-ink)" }}>
             {name}
