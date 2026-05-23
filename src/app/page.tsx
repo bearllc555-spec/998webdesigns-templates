@@ -250,10 +250,10 @@ export default function GalleryPage() {
                 </div>
               </div>
 
-              {/* Layout P — Silver: compact strip */}
+              {/* Layout P — Silver: compact bare */}
               <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout P · Silver — compact strip</p>
-                <CompactMapStrip variant="silver" mapTitle="Map Layout P" />
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout P · Silver — compact bare</p>
+                <CompactMapStrip variant="silver" bare mapTitle="Map Layout P" />
               </div>
 
               {/* Layout E — Silver: full-width with gradient header bar */}
