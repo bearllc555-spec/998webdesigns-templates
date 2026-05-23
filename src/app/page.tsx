@@ -142,7 +142,7 @@ export default function GalleryPage() {
               className="mt-3 text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"
               style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
             >
-              Four layout options
+              Eight layout options
             </h2>
             <p className="mt-2 text-sm text-neutral-500">24 Newark Pompton Turnpike, Little Falls Township, NJ 07424</p>
 
@@ -269,6 +269,175 @@ export default function GalleryPage() {
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                     />
+                  </div>
+                </div>
+              </div>
+
+              {/* Layout E — Silver: full-width with gradient header bar */}
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout E · Silver — banner + header</p>
+                <div className="overflow-hidden rounded-xl border border-neutral-200">
+                  <div
+                    className="flex flex-wrap items-center justify-between gap-3 px-6 py-4"
+                    style={{ background: "linear-gradient(135deg, #e8eaed 0%, #c9cdd4 50%, #d8dbe1 100%)" }}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full"
+                        style={{ background: "linear-gradient(135deg, #b0b8c4 0%, #8d97a5 100%)" }}
+                      >
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold" style={{ color: "#3a3f47" }}>24 Newark Pompton Turnpike</p>
+                        <p className="text-xs" style={{ color: "#6b7280" }}>Little Falls Township, NJ 07424</p>
+                      </div>
+                    </div>
+                    <a
+                      href="https://maps.google.com/?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full px-3 py-1.5 text-xs font-medium transition"
+                      style={{ background: "rgba(255,255,255,0.55)", color: "#3a3f47", border: "1px solid rgba(180,185,195,0.8)" }}
+                    >
+                      Get directions ↗
+                    </a>
+                  </div>
+                  <iframe
+                    title="Map Layout E"
+                    src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
+                    width="100%"
+                    height="300"
+                    style={{ border: 0, display: "block" }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </div>
+
+              {/* Layout F — Silver: map right, frosted info panel left */}
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout F · Silver — frosted panel</p>
+                <div
+                  className="overflow-hidden rounded-xl"
+                  style={{ border: "1px solid #c9cdd4" }}
+                >
+                  <div className="grid md:grid-cols-[300px_1fr]">
+                    <div
+                      className="flex flex-col justify-between gap-6 p-7"
+                      style={{ background: "linear-gradient(160deg, #f0f2f5 0%, #dde1e8 100%)", borderRight: "1px solid #c9cdd4" }}
+                    >
+                      <div>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.18em]" style={{ color: "#8d97a5" }}>Our location</p>
+                        <p className="mt-2 text-xl font-semibold leading-snug" style={{ color: "#2d3340" }}>24 Newark Pompton Turnpike</p>
+                        <p className="mt-0.5 text-sm" style={{ color: "#6b7280" }}>Little Falls Township, NJ 07424</p>
+                      </div>
+                      <div className="space-y-2 border-t pt-5" style={{ borderColor: "#c9cdd4" }}>
+                        <p className="text-xs" style={{ color: "#4b5563" }}><span className="font-semibold" style={{ color: "#2d3340" }}>Hours</span> &nbsp; Mon–Fri 9am–5pm</p>
+                        <p className="text-xs" style={{ color: "#4b5563" }}><span className="font-semibold" style={{ color: "#2d3340" }}>Phone</span> &nbsp; (973) 000-0000</p>
+                      </div>
+                      <a
+                        href="https://maps.google.com/?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 self-start rounded-full px-4 py-2 text-xs font-medium"
+                        style={{ background: "rgba(255,255,255,0.7)", color: "#3a3f47", border: "1px solid #b0b8c4" }}
+                      >
+                        Open in Maps ↗
+                      </a>
+                    </div>
+                    <iframe
+                      title="Map Layout F"
+                      src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
+                      width="100%"
+                      height="360"
+                      style={{ border: 0, display: "block" }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Layout G — Night: deep navy wrap, full-width map below */}
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout G · Night — navy wrap</p>
+                <div className="overflow-hidden rounded-xl" style={{ background: "#0d1117", border: "1px solid #1f2937" }}>
+                  <div className="flex flex-wrap items-center justify-between gap-4 px-6 py-5" style={{ borderBottom: "1px solid #1f2937" }}>
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full" style={{ background: "#1e3a5f" }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#60a5fa" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-white">24 Newark Pompton Turnpike</p>
+                        <p className="text-xs" style={{ color: "#6b7280" }}>Little Falls Township, NJ 07424</p>
+                      </div>
+                    </div>
+                    <a
+                      href="https://maps.google.com/?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full px-4 py-1.5 text-xs font-medium text-white transition"
+                      style={{ background: "#1d4ed8", border: "1px solid #2563eb" }}
+                    >
+                      Directions
+                    </a>
+                  </div>
+                  <div className="overflow-hidden">
+                    <iframe
+                      title="Map Layout G"
+                      src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
+                      width="100%"
+                      height="300"
+                      style={{ border: 0, display: "block", opacity: 0.92 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Layout H — Night: midnight split with glowing accent */}
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Layout H · Night — midnight split</p>
+                <div className="overflow-hidden rounded-xl" style={{ background: "#060810", border: "1px solid #1a1f2e" }}>
+                  <div className="grid md:grid-cols-[1fr_280px]">
+                    <iframe
+                      title="Map Layout H"
+                      src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
+                      width="100%"
+                      height="340"
+                      style={{ border: 0, display: "block", opacity: 0.9 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                    <div
+                      className="flex flex-col justify-between gap-6 p-7"
+                      style={{ borderLeft: "1px solid #1a1f2e" }}
+                    >
+                      <div>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.2em]" style={{ color: "#3b82f6" }}>Find us</p>
+                        <p className="mt-3 text-lg font-semibold leading-snug text-white">24 Newark Pompton Turnpike</p>
+                        <p className="mt-1 text-sm" style={{ color: "#6b7280" }}>Little Falls, NJ 07424</p>
+                      </div>
+                      <div className="space-y-3" style={{ borderTop: "1px solid #1a1f2e", paddingTop: "1.25rem" }}>
+                        <p className="text-xs" style={{ color: "#9ca3af" }}>Mon – Fri &nbsp;<span className="text-white">9am – 5pm</span></p>
+                        <p className="text-xs" style={{ color: "#9ca3af" }}>Phone &nbsp;<span className="text-white">(973) 000-0000</span></p>
+                      </div>
+                      <a
+                        href="https://maps.google.com/?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 self-start rounded-full px-4 py-2 text-xs font-medium text-white"
+                        style={{ background: "linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%)", boxShadow: "0 0 16px rgba(59,130,246,0.35)" }}
+                      >
+                        Open in Maps ↗
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
