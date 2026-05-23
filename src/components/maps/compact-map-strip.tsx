@@ -3,21 +3,26 @@ import { DEMO_LOCATION, getDirectionsUrl, getEmbedUrl } from "@/lib/maps";
 type CompactMapStripProps = {
   variant?: "default" | "silver";
   bare?: boolean;
+  fullBleed?: boolean;
   mapTitle?: string;
+  embedUrl?: string;
 };
 
 export function CompactMapStrip({
   variant = "default",
   bare = false,
+  fullBleed = false,
   mapTitle = "Map Layout M",
+  embedUrl,
 }: CompactMapStripProps) {
   const directionsUrl = getDirectionsUrl();
   const isSilver = variant === "silver";
   const showHeader = !bare;
+  const mapSrc = embedUrl ?? getEmbedUrl(14);
 
   return (
     <div
-      className={`overflow-hidden rounded-xl${isSilver ? "" : " border border-neutral-200"}`}
+      className={`overflow-hidden${fullBleed ? "" : " rounded-xl"}${isSilver ? "" : " border border-neutral-200"}`}
       style={isSilver ? { border: "1px solid #c9cdd4" } : undefined}
     >
       {showHeader ? (
@@ -90,7 +95,7 @@ export function CompactMapStrip({
       ) : null}
       <iframe
         title={mapTitle}
-        src={getEmbedUrl(14)}
+        src={mapSrc}
         width="100%"
         height="180"
         style={{

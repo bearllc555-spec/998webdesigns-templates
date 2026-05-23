@@ -11,12 +11,12 @@ export const DEMO_LOCATION = {
 export const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
 export const GOOGLE_MAPS_MAP_ID = process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID ?? "";
 
-export function getDirectionsUrl() {
-  return `https://maps.google.com/?q=${encodeURIComponent(DEMO_LOCATION.fullAddress)}`;
+export function getDirectionsUrl(address: string = DEMO_LOCATION.fullAddress) {
+  return `https://maps.google.com/?q=${encodeURIComponent(address)}`;
 }
 
-export function getEmbedUrl(zoom = 15) {
-  return `https://maps.google.com/maps?q=${encodeURIComponent(DEMO_LOCATION.fullAddress)}&output=embed&z=${zoom}`;
+export function getEmbedUrl(zoom = 15, address: string = DEMO_LOCATION.fullAddress) {
+  return `https://maps.google.com/maps?q=${encodeURIComponent(address)}&output=embed&z=${zoom}`;
 }
 
 type StaticMapOptions = {
