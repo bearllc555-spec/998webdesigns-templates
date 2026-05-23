@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { SITE_VERSION } from "@/lib/version";
 import { theme } from "../theme";
 import { YcBtn } from "./yc-btn";
 
@@ -85,7 +86,7 @@ export function YogaCentricHeader() {
         >
           <Link
             href={`/templates/${slug}`}
-            className="shrink-0 text-sm font-bold tracking-tight md:text-base"
+            className="inline-flex shrink-0 items-center gap-2 text-sm font-bold tracking-tight md:text-base"
             style={{
               color: "#FFFFFF",
               fontFamily: "var(--tpl-font-display)",
@@ -94,6 +95,17 @@ export function YogaCentricHeader() {
             aria-label={`${theme.meta.name} home`}
           >
             {theme.meta.name}
+            <span
+              aria-hidden="true"
+              className="rounded-full px-1.5 py-0.5 text-[10px] font-semibold tracking-wider"
+              style={{
+                background: "rgba(255,255,255,0.12)",
+                color: "rgba(255,255,255,0.72)",
+                border: "1px solid rgba(255,255,255,0.16)",
+              }}
+            >
+              {SITE_VERSION}
+            </span>
           </Link>
 
           <nav className="hidden items-center gap-5 md:flex">
