@@ -142,7 +142,7 @@ export default function GalleryPage() {
               className="mt-3 text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl"
               style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
             >
-              Ten layout options
+              Nine layout options
             </h2>
             <p className="mt-2 text-sm text-neutral-500">24 Newark Pompton Turnpike, Little Falls Township, NJ 07424</p>
 
@@ -236,40 +236,6 @@ export default function GalleryPage() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   />
-                </div>
-              </div>
-
-              {/* Layout D — Dark card with inset map */}
-              <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-neutral-400">Google Map Layout D · Dark card</p>
-                <div className="overflow-hidden rounded-xl bg-neutral-900 p-6 md:p-8">
-                  <div className="mb-5 flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-widest text-blue-400">Find us</p>
-                      <p className="mt-1 text-xl font-semibold text-white" style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}>24 Newark Pompton Turnpike</p>
-                      <p className="text-sm text-neutral-400">Little Falls Township, NJ 07424</p>
-                    </div>
-                    <a
-                      href="https://maps.google.com/?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="shrink-0 rounded-full border border-neutral-700 px-4 py-2 text-xs font-medium text-neutral-300 transition hover:border-neutral-400 hover:text-white"
-                    >
-                      Directions
-                    </a>
-                  </div>
-                  <div className="overflow-hidden rounded-lg">
-                    <iframe
-                      title="Map Layout D"
-                      src="https://maps.google.com/maps?q=24+Newark+Pompton+Turnpike,+Little+Falls+Township,+NJ+07424&output=embed&z=15"
-                      width="100%"
-                      height="280"
-                      style={{ border: 0, display: "block" }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
                 </div>
               </div>
 
