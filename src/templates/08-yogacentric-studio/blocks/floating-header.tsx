@@ -26,6 +26,7 @@ export function YogaCentricHeader() {
 
   const [show, setShow] = useState(!isHomeWithHero);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [ctaHovered, setCtaHovered] = useState(false);
   const mobileNav = [
     { label: "Home", href: homePath },
     { label: "About", href: `${homePath}#about` },
