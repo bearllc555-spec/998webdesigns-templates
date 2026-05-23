@@ -4,8 +4,6 @@ import { portfolio } from "../content";
 import {
   BORST_CONTAINER,
   BORST_SECTION_PY,
-  BorstArrow,
-  BorstEyebrow,
   borstPrimaryBtn,
 } from "../borst-ui";
 import { IMAGE_GEOMETRY } from "../image-geometry";
@@ -23,31 +21,20 @@ export function PortfolioBlock() {
   return (
     <section className="overflow-visible" style={{ background: "var(--tpl-bg)" }}>
       <div className={`${BORST_CONTAINER} ${BORST_SECTION_PY}`}>
-        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-2xl">
-            <BorstEyebrow>Portfolio</BorstEyebrow>
-            <h2
-              className="mt-4 text-4xl leading-tight md:text-5xl"
-              style={{
-                color: "var(--tpl-ink)",
-                fontFamily: "var(--tpl-font-display)",
-                fontWeight: theme.type.displayWeight,
-                letterSpacing: theme.type.displayTracking,
-              }}
-            >
-              Our past projects of landscaping work.
-            </h2>
-          </div>
-          <Link
-            href={theme.primaryCta.href}
-            className="inline-flex shrink-0 items-center gap-2 px-6 py-3 text-sm transition hover:opacity-90"
-            style={borstPrimaryBtn}
+        <div className="mx-auto max-w-3xl">
+          <h2
+            className="text-center text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.03]"
+            style={{
+              color: "var(--tpl-ink)",
+              fontFamily: "var(--tpl-font-display)",
+              fontWeight: theme.type.displayWeight,
+              letterSpacing: "-0.02em",
+            }}
           >
-            Get in touch
-            <BorstArrow />
-          </Link>
+            Our past projects of landscaping work
+          </h2>
         </div>
-        <ul className="mt-12 grid grid-cols-2 items-start gap-4 lg:grid-cols-12 lg:gap-6">
+        <ul className="mt-10 grid grid-cols-2 items-start gap-4 lg:grid-cols-12 lg:gap-4">
           {portfolio.map((p, index) => (
             <li
               key={p.title}
@@ -56,7 +43,7 @@ export function PortfolioBlock() {
               <figure
                 className="group relative m-0 w-full overflow-hidden"
                 style={{
-                  borderRadius: IMAGE_GEOMETRY.mediaRadius,
+                  borderRadius: 20,
                   aspectRatio: layout[index]?.aspect ?? IMAGE_GEOMETRY.portfolioSquareAspect,
                 }}
               >
@@ -70,6 +57,15 @@ export function PortfolioBlock() {
             </li>
           ))}
         </ul>
+        <div className="mt-10 flex justify-center">
+          <Link
+            href={theme.primaryCta.href}
+            className="inline-flex items-center justify-center px-8 py-3 text-sm transition hover:opacity-90"
+            style={borstPrimaryBtn}
+          >
+            Get in touch
+          </Link>
+        </div>
       </div>
     </section>
   );

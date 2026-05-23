@@ -6,7 +6,7 @@ export const IMAGE_GEOMETRY = {
   servicesAspect: "97 / 100", // ~0.966
   whyUsAspect: "19 / 20", // ~0.95 portrait rectangle
   portfolioSquareAspect: "1 / 1",
-  portfolioWideAspect: "302 / 273", // ~1.106
+  portfolioWideAspect: "3 / 2", // 1.5
   blogAspect: "89 / 60", // ~1.483
   processAspect: "37 / 20", // ~1.85
 } as const;
