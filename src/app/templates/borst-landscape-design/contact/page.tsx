@@ -103,8 +103,9 @@ export default function ContactPage() {
                 inputBackground="#FFFFFF"
                 reachTimeOptions={[
                   "Morning",
-                  "Early Afternoon - Afternoon",
-                  "Late Afternoon",
+                  "Early afternoon",
+                  "Afternoon",
+                  "Late afternoon",
                   "Evening",
                 ]}
               />
