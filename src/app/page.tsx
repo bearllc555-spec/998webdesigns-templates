@@ -14,9 +14,9 @@ const ctaButtonClass =
   "inline-flex items-center gap-2 rounded-full border border-neutral-300 bg-white px-6 py-3 text-sm font-medium text-neutral-900 transition hover:border-neutral-500";
 
 export const metadata = {
-  title: "Template library | 998 web designs",
+  title: "Design mockups | 998 web designs",
   description:
-    "A library of handcrafted templates. Pick a starting point. We hand customize every design and deliver to your business in 5 to 7 days.",
+    "A library of handcrafted design concepts. Pick a starting point. We hand customize every design and deliver to your business in 5 to 7 days.",
 };
 
 export default function GalleryPage() {
@@ -31,7 +31,7 @@ export default function GalleryPage() {
             >
               <span className="text-blue-600">998</span>
               <span className="text-neutral-900">webdesigns</span>
-              <span className="ml-2 text-neutral-500">/ templates</span>
+              <span className="ml-2 text-neutral-500">/ mockups</span>
             </span>
             <span
               aria-hidden="true"
@@ -55,11 +55,11 @@ export default function GalleryPage() {
             style={{ fontFamily: "var(--font-geist-sans), system-ui, sans-serif" }}
           >
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-600">
-              Template library
+              Design mockups
             </p>
             <h1 className="mt-3 text-3xl font-semibold leading-[1.08] tracking-[-0.02em] text-neutral-900 sm:text-4xl md:mt-4 md:text-5xl md:leading-[1.05] lg:text-6xl">
               <span className="block sm:whitespace-nowrap">
-                A library of handcrafted templates.
+                Handcrafted design concepts.
               </span>
               <span className="block sm:whitespace-nowrap">Pick a starting point.</span>
             </h1>
@@ -68,13 +68,13 @@ export default function GalleryPage() {
             </p>
           </div>
         </section>
-        <section id="templates">
+        <section id="mockups">
           <div className="mx-auto max-w-6xl px-5 pb-16 pt-8 md:px-8 md:pb-20 md:pt-10">
             <p
               className="text-xs font-medium uppercase tracking-[0.2em] text-neutral-500"
               aria-live="polite"
             >
-              {ALL_TEMPLATES.length} handcrafted {ALL_TEMPLATES.length === 1 ? "template" : "templates"}
+              {ALL_TEMPLATES.length} design {ALL_TEMPLATES.length === 1 ? "concept" : "concepts"}
             </p>
             <div className="mt-6">
               <GalleryGrid />
@@ -509,7 +509,7 @@ export default function GalleryPage() {
         <div className="mx-auto max-w-6xl px-5 py-8 text-sm text-neutral-500 md:px-8">
           <p>
             <span className="font-semibold text-blue-600">998</span>
-            <span className="font-semibold text-neutral-900">webdesigns</span> / templates &middot; a Bear LLC digital property
+            <span className="font-semibold text-neutral-900">webdesigns</span> / mockups &middot; a Bear LLC digital property
           </p>
         </div>
       </footer>

@@ -12,10 +12,10 @@ export function TemplateCard({
   const { theme } = template;
   const slug = theme.meta.slug;
   const previewSrc =
-    theme.meta.galleryPreview ?? `/templates/${slug}/hero.jpg`;
+    theme.meta.galleryPreview ?? `/mockups/${slug}/hero.jpg`;
   return (
     <Link
-      href={`/templates/${slug}`}
+      href={`/mockups/${slug}`}
       target="_blank"
       rel="noopener noreferrer"
       className="group relative block overflow-hidden border border-neutral-200 bg-white transition hover:-translate-y-0.5 hover:shadow-lg"
@@ -31,7 +31,7 @@ export function TemplateCard({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={previewSrc}
-          alt={`${theme.meta.name} template preview`}
+          alt={`${theme.meta.name} design concept preview`}
           loading="lazy"
           decoding="async"
           className="block h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"

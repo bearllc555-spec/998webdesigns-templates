@@ -68,7 +68,7 @@ export function ContactBlock() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/templates/yogacentric-studio/community.jpg"
+            src="/mockups/yogacentric-studio/community.jpg"
             alt="YogaCentric studio community"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />

@@ -24,7 +24,7 @@ export const content: TemplateContent = {
     sub: "Asphalt, metal, and standing-seam roofing for East Tennessee homes and shops. Same crew on your roof from tear-off to clean-up. No subs.",
     secondaryLink: {
       label: "See the work",
-      href: "/templates/ironclad-roofing/projects",
+      href: "/mockups/ironclad-roofing/projects",
     },
   },
   services: {
@@ -78,7 +78,7 @@ export const content: TemplateContent = {
     sub: "Most estimates done in 24 hours. We come out, we measure, we write the number. Take it or leave it.",
     cta: {
       label: "Request my estimate",
-      href: "/templates/ironclad-roofing/estimate",
+      href: "/mockups/ironclad-roofing/estimate",
     },
   },
   footer: {

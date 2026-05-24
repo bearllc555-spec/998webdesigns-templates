@@ -5,7 +5,7 @@
 import { chromium } from "playwright";
 
 const SLUG = process.env.SLUG || "beauty-salon";
-const URL = process.env.URL || `https://998webdesigns-templates.vercel.app/t/demo-${SLUG}.html`;
+const URL = process.env.URL || `https://998webdesigns-designs.vercel.app/t/demo-${SLUG}.html`;
 
 const browser = await chromium.launch();
 const ctx = await browser.newContext({ viewport: { width: 1400, height: 900 } });

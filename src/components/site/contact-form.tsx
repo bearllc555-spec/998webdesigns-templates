@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { formatPhoneInput } from "@/lib/format-phone";
 import type { TemplateTheme } from "@/templates/types";
 
 export function ContactForm({
@@ -18,6 +19,7 @@ export function ContactForm({
 }) {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [phone, setPhone] = useState("");
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -64,7 +66,14 @@ export function ContactForm({
         <Field theme={theme} label="Email" name="email" required type="email" inputBackground={inputBackground} />
       </div>
       <div className="grid gap-4 md:grid-cols-2">
-        <Field theme={theme} label="Phone" name="phone" type="tel" inputBackground={inputBackground} />
+        <PhoneField
+          theme={theme}
+          label="Phone"
+          name="phone"
+          value={phone}
+          onChange={setPhone}
+          inputBackground={inputBackground}
+        />
         {reachTimeOptions ? (
           <SelectField
             theme={theme}
@@ -93,6 +102,61 @@ export function ContactForm({
         {submitting ? "Sending..." : submitLabel}
       </button>
     </form>
+  );
+}
+
+function PhoneField({
+  theme,
+  label,
+  name,
+  value,
+  onChange,
+  required,
+  inputBackground,
+}: {
+  theme: TemplateTheme;
+  label: string;
+  name: string;
+  value: string;
+  onChange: (value: string) => void;
+  required?: boolean;
+  inputBackground: string;
+}) {
+  const fieldStyle = {
+    background: inputBackground,
+    color: "var(--tpl-ink)",
+    border: `1px solid var(--tpl-line)`,
+    borderRadius: `var(--tpl-radius)`,
+    fontFamily: "var(--tpl-font-body)",
+  };
+
+  return (
+    <label className="flex flex-col gap-1.5">
+      <span
+        className="text-xs uppercase"
+        style={{
+          color: "var(--tpl-muted)",
+          letterSpacing: "0.14em",
+          fontFamily: "var(--tpl-font-body)",
+        }}
+      >
+        {label}
+        {required && <span aria-hidden="true"> *</span>}
+      </span>
+      <input
+        name={name}
+        type="tel"
+        value={value}
+        onChange={(e) => onChange(formatPhoneInput(e.target.value))}
+        placeholder="(000) 000-0000"
+        autoComplete="tel"
+        inputMode="tel"
+        required={required}
+        className="px-3 py-2.5 text-sm transition focus:outline-none"
+        style={fieldStyle}
+        aria-required={required}
+      />
+    </label>
   );
 }
 

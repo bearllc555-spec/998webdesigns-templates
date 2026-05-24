@@ -59,7 +59,7 @@ export function AboutSnippet() {
               }
             `}</style>
             <Link
-              href="/templates/haldwell-law/attorneys"
+              href="/mockups/haldwell-law/attorneys"
               className="mt-10 inline-flex items-center gap-2 text-sm transition hover:opacity-70"
               style={{
                 color: "var(--tpl-ink)",
@@ -107,7 +107,7 @@ export function AboutSnippet() {
             <div className="mt-10 overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/templates/haldwell-law/library.jpg"
+                src="/mockups/haldwell-law/library.jpg"
                 alt="The Haldwell and Carr library"
                 loading="lazy"
                 decoding="async"

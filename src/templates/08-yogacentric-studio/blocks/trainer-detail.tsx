@@ -5,7 +5,7 @@ import type { TrainerProfile } from "../content";
 import { YcBtn } from "./yc-btn";
 import { TrainerDetailTestimonials } from "./trainer-detail-testimonials";
 
-const BASE = "/templates/yogacentric-studio";
+const BASE = "/mockups/yogacentric-studio";
 
 export function TrainerDetailBlock({ profile }: { profile: TrainerProfile }) {
   return (

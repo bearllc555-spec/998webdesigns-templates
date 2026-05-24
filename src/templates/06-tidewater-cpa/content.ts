@@ -22,7 +22,7 @@ export const content: TemplateContent = {
     sub: "Tidewater Partners is a four-partner regional accounting firm advising owner-led businesses, family offices, and the institutions that hold them.",
     secondaryLink: {
       label: "Read the latest insight",
-      href: "/templates/tidewater-cpa/insights",
+      href: "/mockups/tidewater-cpa/insights",
     },
   },
   services: {
@@ -78,7 +78,7 @@ export const content: TemplateContent = {
     sub: "We can tell you within an hour whether the engagement fits the firm. Most of these calls do not.",
     cta: {
       label: "Speak with a partner",
-      href: "/templates/tidewater-cpa/contact",
+      href: "/mockups/tidewater-cpa/contact",
     },
   },
   footer: {

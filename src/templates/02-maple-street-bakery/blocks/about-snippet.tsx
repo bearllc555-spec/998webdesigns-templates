@@ -14,7 +14,7 @@ export function AboutSnippet() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/templates/maple-street-bakery/baker-1.jpg"
+                src="/mockups/maple-street-bakery/baker-1.jpg"
                 alt="A baker shaping dough on the bench"
                 loading="lazy"
                 decoding="async"
@@ -89,7 +89,7 @@ export function AboutSnippet() {
               ))}
             </div>
             <Link
-              href="/templates/maple-street-bakery/our-bakers"
+              href="/mockups/maple-street-bakery/our-bakers"
               className="mt-10 inline-flex items-center gap-2 text-sm transition hover:opacity-70"
               style={{
                 color: "var(--tpl-ink)",

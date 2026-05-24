@@ -3,10 +3,10 @@ import { templateModule } from "@/templates/06-tidewater-cpa";
 import { partners } from "@/templates/06-tidewater-cpa/content";
 
 const PARTNER_PHOTOS = [
-  "/templates/tidewater-cpa/partner-3.jpg",
-  "/templates/tidewater-cpa/partner-1.jpg",
-  "/templates/tidewater-cpa/partner-2.jpg",
-  "/templates/tidewater-cpa/partner-4.jpg",
+  "/mockups/tidewater-cpa/partner-3.jpg",
+  "/mockups/tidewater-cpa/partner-1.jpg",
+  "/mockups/tidewater-cpa/partner-2.jpg",
+  "/mockups/tidewater-cpa/partner-4.jpg",
 ];
 
 export const metadata = {

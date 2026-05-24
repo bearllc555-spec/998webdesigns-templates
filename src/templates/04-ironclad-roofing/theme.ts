@@ -31,12 +31,12 @@ export const theme: TemplateTheme = {
   motion: "subtle",
   primaryCta: {
     label: "Get a free estimate",
-    href: "/templates/ironclad-roofing/estimate",
+    href: "/mockups/ironclad-roofing/estimate",
   },
   nav: [
-    { label: "Services", href: "/templates/ironclad-roofing/services" },
-    { label: "Projects", href: "/templates/ironclad-roofing/projects" },
-    { label: "Estimate", href: "/templates/ironclad-roofing/estimate" },
-    { label: "About", href: "/templates/ironclad-roofing/about" },
+    { label: "Services", href: "/mockups/ironclad-roofing/services" },
+    { label: "Projects", href: "/mockups/ironclad-roofing/projects" },
+    { label: "Estimate", href: "/mockups/ironclad-roofing/estimate" },
+    { label: "About", href: "/mockups/ironclad-roofing/about" },
   ],
 };

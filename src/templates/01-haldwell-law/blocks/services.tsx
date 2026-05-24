@@ -46,7 +46,7 @@ export function ServicesBlock({ compact = false }: { compact?: boolean }) {
             </p>
             {compact && (
               <Link
-                href="/templates/haldwell-law/practice-areas"
+                href="/mockups/haldwell-law/practice-areas"
                 className="mt-10 inline-flex items-center gap-2 text-sm transition hover:opacity-70"
                 style={{
                   color: "var(--tpl-ink)",

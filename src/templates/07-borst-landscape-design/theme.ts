@@ -6,7 +6,7 @@ export const theme: TemplateTheme = {
     name: "Borst Landscape & Design",
     industry: "Landscape design, build, and maintenance",
     tagline: "Let us bring life to your garden.",
-    galleryPreview: "/templates/borst-landscape-design/slot-001.jpg",
+    galleryPreview: "/mockups/borst-landscape-design/slot-001.jpg",
     publishedAt: "2026-05-22T13:00:00Z",
   },
   palette: {
@@ -32,14 +32,14 @@ export const theme: TemplateTheme = {
   motion: "subtle",
   primaryCta: {
     label: "Get in touch",
-    href: "/templates/borst-landscape-design/contact",
+    href: "/mockups/borst-landscape-design/contact",
   },
   nav: [
-    { label: "Home", href: "/templates/borst-landscape-design" },
-    { label: "About", href: "/templates/borst-landscape-design/about" },
-    { label: "Services", href: "/templates/borst-landscape-design/services" },
-    { label: "Portfolio", href: "/templates/borst-landscape-design/portfolio" },
-    { label: "Contact", href: "/templates/borst-landscape-design/contact" },
+    { label: "Home", href: "/mockups/borst-landscape-design" },
+    { label: "About", href: "/mockups/borst-landscape-design/about" },
+    { label: "Services", href: "/mockups/borst-landscape-design/services" },
+    { label: "Portfolio", href: "/mockups/borst-landscape-design/portfolio" },
+    { label: "Contact", href: "/mockups/borst-landscape-design/contact" },
   ],
 };
 

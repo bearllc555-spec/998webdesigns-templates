@@ -10,7 +10,7 @@ import { theme } from "../theme";
 export function BorstFloatingHeader() {
   const slug = theme.meta.slug;
   const pathname = usePathname();
-  const homePath = `/templates/${slug}`;
+  const homePath = `/mockups/${slug}`;
   const isHome = pathname === homePath || pathname === `${homePath}/`;
   const [menuOpen, setMenuOpen] = useState(false);
   const [pastHero, setPastHero] = useState(!isHome);

@@ -13,7 +13,7 @@ export function SiteHeader({ theme }: { theme: TemplateTheme }) {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-5 md:px-8">
         <Link
-          href={`/templates/${slug}`}
+          href={`/mockups/${slug}`}
           className="inline-flex items-baseline gap-2"
           aria-label={`${theme.meta.name} home`}
         >

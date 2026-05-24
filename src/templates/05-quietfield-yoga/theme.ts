@@ -31,12 +31,12 @@ export const theme: TemplateTheme = {
   motion: "still",
   primaryCta: {
     label: "See the schedule",
-    href: "/templates/quietfield-yoga/schedule",
+    href: "/mockups/quietfield-yoga/schedule",
   },
   nav: [
-    { label: "Classes", href: "/templates/quietfield-yoga/classes" },
-    { label: "Teachers", href: "/templates/quietfield-yoga/teachers" },
-    { label: "Schedule", href: "/templates/quietfield-yoga/schedule" },
-    { label: "Visit", href: "/templates/quietfield-yoga/visit" },
+    { label: "Classes", href: "/mockups/quietfield-yoga/classes" },
+    { label: "Teachers", href: "/mockups/quietfield-yoga/teachers" },
+    { label: "Schedule", href: "/mockups/quietfield-yoga/schedule" },
+    { label: "Visit", href: "/mockups/quietfield-yoga/visit" },
   ],
 };

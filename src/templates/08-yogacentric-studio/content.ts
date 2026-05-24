@@ -23,7 +23,7 @@ export const content: TemplateContent = {
     sub: "Join us in transforming your body and mind through yoga classes for every level - from first-time beginners to seasoned practitioners across Passaic County.",
     secondaryLink: {
       label: "Explore classes",
-      href: "/templates/yogacentric-studio/services",
+      href: "/mockups/yogacentric-studio/services",
     },
   },
   services: {
@@ -67,14 +67,14 @@ export const content: TemplateContent = {
         "Always a great class at YogaCentric. All the instructors are so kind and generous with their time and their patience.",
       name: "Michelle Malone",
       role: "Yoga enthusiast",
-      avatar: "/templates/yogacentric-studio/reviewer-michelle.jpg",
+      avatar: "/mockups/yogacentric-studio/reviewer-michelle.jpg",
     },
     {
       quote:
         "These classes have brought so much peace into my life. I'm more balanced and calm.",
       name: "Teresa Van Maerssen",
       role: "Wellness seeker",
-      avatar: "/templates/yogacentric-studio/reviewer-teresa.jpg",
+      avatar: "/mockups/yogacentric-studio/reviewer-teresa.jpg",
     },
     {
       quote:
@@ -93,14 +93,14 @@ export const content: TemplateContent = {
         "The community here is real. You walk in stressed and leave feeling like yourself again.",
       name: "James Ortiz",
       role: "Power flow regular",
-      avatar: "/templates/yogacentric-studio/reviewer-james.jpg",
+      avatar: "/mockups/yogacentric-studio/reviewer-james.jpg",
     },
     {
       quote:
         "Best decision I made this year was trying a beginner class. Welcoming from the first minute.",
       name: "Sarah Mitchell",
       role: "New member",
-      avatar: "/templates/yogacentric-studio/reviewer-sarah.jpg",
+      avatar: "/mockups/yogacentric-studio/reviewer-sarah.jpg",
     },
   ],
   ctaBanner: {
@@ -108,7 +108,7 @@ export const content: TemplateContent = {
     sub: "Whether you're looking to improve your health, reduce stress, or enhance your well-being, yoga offers benefits that carry into your everyday life.",
     cta: {
       label: "Book a class",
-      href: "/templates/yogacentric-studio/contact",
+      href: "/mockups/yogacentric-studio/contact",
     },
   },
   footer: {
@@ -124,9 +124,9 @@ export const heroStats = [
 ];
 
 export const serviceImages = [
-  "/templates/yogacentric-studio/svc-beginner.jpg",
-  "/templates/yogacentric-studio/svc-power.jpg",
-  "/templates/yogacentric-studio/svc-restorative.jpg",
+  "/mockups/yogacentric-studio/svc-beginner.jpg",
+  "/mockups/yogacentric-studio/svc-power.jpg",
+  "/mockups/yogacentric-studio/svc-restorative.jpg",
 ];
 
 export type TrainerListItem = {
@@ -155,37 +155,37 @@ export const trainers: TrainerListItem[] = [
   {
     name: "Robin",
     specialty: "Vinyasa & Power Yoga",
-    photo: "/templates/yogacentric-studio/trainer-robin.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-robin.jpg",
     slug: "robin",
   },
   {
     name: "Catherine",
     specialty: "Reiki & Restorative Yoga",
-    photo: "/templates/yogacentric-studio/trainer-catherine.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-catherine.jpg",
     slug: "catherine",
   },
   {
     name: "Brandi",
     specialty: "Restorative & Breathwork",
-    photo: "/templates/yogacentric-studio/trainer-brandi.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-brandi.jpg",
     slug: "brandi",
   },
   {
     name: "Angela",
     specialty: "Sound Healing & Meditation",
-    photo: "/templates/yogacentric-studio/trainer-angela.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-angela.jpg",
     slug: "angela",
   },
   {
     name: "Lisseth",
     specialty: "Studio Director & Hatha",
-    photo: "/templates/yogacentric-studio/trainer-lisseth.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-lisseth.jpg",
     slug: "lisseth",
   },
   {
     name: "Anastasia",
     specialty: "Gentle Flow & Beginners",
-    photo: "/templates/yogacentric-studio/trainer-robin-2.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-robin-2.jpg",
     slug: "anastasia",
   },
 ];
@@ -195,7 +195,7 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
     slug: "robin",
     name: "Robin",
     specialty: "Vinyasa & Power Yoga",
-    photo: "/templates/yogacentric-studio/trainer-robin.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-robin.jpg",
     bio: "A passionate instructor at YogaCentric for more than a decade, Robin specializes in Vinyasa and power-focused flows, offering dynamic sessions that build endurance, strength, and mental resilience.",
     coachingTitle: "Personalized coaching",
     coachingBody:
@@ -218,10 +218,10 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
       },
     ],
     galleryImages: [
-      "/templates/yogacentric-studio/community.jpg",
-      "/templates/yogacentric-studio/svc-power.jpg",
-      "/templates/yogacentric-studio/benefits.jpg",
-      "/templates/yogacentric-studio/svc-beginner.jpg",
+      "/mockups/yogacentric-studio/community.jpg",
+      "/mockups/yogacentric-studio/svc-power.jpg",
+      "/mockups/yogacentric-studio/benefits.jpg",
+      "/mockups/yogacentric-studio/svc-beginner.jpg",
     ],
     testimonials: [
       {
@@ -260,7 +260,7 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
     slug: "catherine",
     name: "Catherine",
     specialty: "Reiki & Restorative Yoga",
-    photo: "/templates/yogacentric-studio/trainer-catherine.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-catherine.jpg",
     bio: "Catherine blends Reiki energy work with restorative yoga to help students release tension and restore balance. Her calm, grounding classes are a favorite for anyone recovering from stress or returning to the mat after time away.",
     coachingTitle: "Personalized coaching",
     coachingBody:
@@ -283,10 +283,10 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
       },
     ],
     galleryImages: [
-      "/templates/yogacentric-studio/svc-restorative.jpg",
-      "/templates/yogacentric-studio/community.jpg",
-      "/templates/yogacentric-studio/benefits.jpg",
-      "/templates/yogacentric-studio/svc-beginner.jpg",
+      "/mockups/yogacentric-studio/svc-restorative.jpg",
+      "/mockups/yogacentric-studio/community.jpg",
+      "/mockups/yogacentric-studio/benefits.jpg",
+      "/mockups/yogacentric-studio/svc-beginner.jpg",
     ],
     testimonials: [
       {
@@ -325,7 +325,7 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
     slug: "brandi",
     name: "Brandi",
     specialty: "Restorative & Breathwork",
-    photo: "/templates/yogacentric-studio/trainer-brandi.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-brandi.jpg",
     bio: "Brandi guides restorative flows and conscious breathwork that quiet the mind and open the body. Her teaching emphasizes slow movement, intentional breathing, and the kind of deep rest busy people rarely make time for.",
     coachingTitle: "Personalized coaching",
     coachingBody:
@@ -348,10 +348,10 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
       },
     ],
     galleryImages: [
-      "/templates/yogacentric-studio/benefits.jpg",
-      "/templates/yogacentric-studio/svc-restorative.jpg",
-      "/templates/yogacentric-studio/svc-beginner.jpg",
-      "/templates/yogacentric-studio/community.jpg",
+      "/mockups/yogacentric-studio/benefits.jpg",
+      "/mockups/yogacentric-studio/svc-restorative.jpg",
+      "/mockups/yogacentric-studio/svc-beginner.jpg",
+      "/mockups/yogacentric-studio/community.jpg",
     ],
     testimonials: [
       {
@@ -390,7 +390,7 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
     slug: "angela",
     name: "Angela",
     specialty: "Sound Healing & Meditation",
-    photo: "/templates/yogacentric-studio/trainer-angela.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-angela.jpg",
     bio: "Angela leads sound healing and meditation experiences that invite deep stillness. From crystal bowls to guided silence, her sessions help students unplug, listen inward, and leave with a steadier mind.",
     coachingTitle: "Personalized coaching",
     coachingBody:
@@ -413,10 +413,10 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
       },
     ],
     galleryImages: [
-      "/templates/yogacentric-studio/community.jpg",
-      "/templates/yogacentric-studio/svc-restorative.jpg",
-      "/templates/yogacentric-studio/benefits.jpg",
-      "/templates/yogacentric-studio/svc-power.jpg",
+      "/mockups/yogacentric-studio/community.jpg",
+      "/mockups/yogacentric-studio/svc-restorative.jpg",
+      "/mockups/yogacentric-studio/benefits.jpg",
+      "/mockups/yogacentric-studio/svc-power.jpg",
     ],
     testimonials: [
       {
@@ -455,7 +455,7 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
     slug: "lisseth",
     name: "Lisseth",
     specialty: "Studio Director & Hatha",
-    photo: "/templates/yogacentric-studio/trainer-lisseth.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-lisseth.jpg",
     bio: "As studio director, Lisseth keeps YogaCentric's Clifton community running while teaching thoughtful Hatha classes rooted in alignment and breath. She knows every corner of the schedule and every student who walks through the door.",
     coachingTitle: "Personalized coaching",
     coachingBody:
@@ -478,10 +478,10 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
       },
     ],
     galleryImages: [
-      "/templates/yogacentric-studio/svc-beginner.jpg",
-      "/templates/yogacentric-studio/community.jpg",
-      "/templates/yogacentric-studio/svc-power.jpg",
-      "/templates/yogacentric-studio/benefits.jpg",
+      "/mockups/yogacentric-studio/svc-beginner.jpg",
+      "/mockups/yogacentric-studio/community.jpg",
+      "/mockups/yogacentric-studio/svc-power.jpg",
+      "/mockups/yogacentric-studio/benefits.jpg",
     ],
     testimonials: [
       {
@@ -520,7 +520,7 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
     slug: "anastasia",
     name: "Anastasia",
     specialty: "Gentle Flow & Beginners",
-    photo: "/templates/yogacentric-studio/trainer-robin-2.jpg",
+    photo: "/mockups/yogacentric-studio/trainer-robin-2.jpg",
     bio: "Anastasia specializes in gentle flow and true-beginner classes where no prior experience is required. She breaks poses into simple steps, celebrates small wins, and helps new students build confidence without intimidation.",
     coachingTitle: "Personalized coaching",
     coachingBody:
@@ -543,10 +543,10 @@ export const trainerProfiles: Record<string, TrainerProfile> = {
       },
     ],
     galleryImages: [
-      "/templates/yogacentric-studio/svc-beginner.jpg",
-      "/templates/yogacentric-studio/benefits.jpg",
-      "/templates/yogacentric-studio/community.jpg",
-      "/templates/yogacentric-studio/svc-restorative.jpg",
+      "/mockups/yogacentric-studio/svc-beginner.jpg",
+      "/mockups/yogacentric-studio/benefits.jpg",
+      "/mockups/yogacentric-studio/community.jpg",
+      "/mockups/yogacentric-studio/svc-restorative.jpg",
     ],
     testimonials: [
       {
@@ -610,7 +610,7 @@ export const pricingPlans = [
     description:
       "Ideal for unpredictable schedules or trying a class before committing to a membership.",
     cta: "View pricing",
-    href: "/templates/yogacentric-studio/pricing",
+    href: "/mockups/yogacentric-studio/pricing",
     featured: false,
   },
   {
@@ -620,7 +620,7 @@ export const pricingPlans = [
     description:
       "For those who value flexibility and want to experience our full class schedule before a monthly membership.",
     cta: "View pricing",
-    href: "/templates/yogacentric-studio/pricing",
+    href: "/mockups/yogacentric-studio/pricing",
     featured: false,
   },
   {
@@ -630,7 +630,7 @@ export const pricingPlans = [
     description:
       "Whether you're building a foundation or deepening your practice, custom plans help you reach your wellness goals.",
     cta: "Contact us",
-    href: "/templates/yogacentric-studio/contact",
+    href: "/mockups/yogacentric-studio/contact",
     featured: false,
   },
 ];
@@ -663,11 +663,11 @@ export const faqs = [
 ];
 
 export const footerLinks = [
-  { label: "Home", href: "/templates/yogacentric-studio" },
-  { label: "Services", href: "/templates/yogacentric-studio/services" },
-  { label: "Contact", href: "/templates/yogacentric-studio/contact" },
-  { label: "Pricing", href: "/templates/yogacentric-studio/pricing" },
-  { label: "Trainers", href: "/templates/yogacentric-studio/trainers" },
+  { label: "Home", href: "/mockups/yogacentric-studio" },
+  { label: "Services", href: "/mockups/yogacentric-studio/services" },
+  { label: "Contact", href: "/mockups/yogacentric-studio/contact" },
+  { label: "Pricing", href: "/mockups/yogacentric-studio/pricing" },
+  { label: "Trainers", href: "/mockups/yogacentric-studio/trainers" },
 ];
 
 export const contactNote =

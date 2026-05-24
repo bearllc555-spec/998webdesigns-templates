@@ -18,7 +18,7 @@ const TARGETS = [
   },
   {
     name: "borst-post-hero",
-    url: "https://998webdesigns-templates.vercel.app/templates/borst-landscape-design",
+    url: "https://998webdesigns-designs.vercel.app/mockups/borst-landscape-design",
   },
 ];
 

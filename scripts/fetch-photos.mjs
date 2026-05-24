@@ -1,4 +1,4 @@
-// Downloads the curated Unsplash photo set into public/templates/<slug>/<name>.jpg
+// Downloads the curated Unsplash photo set into public/mockups/<slug>/<name>.jpg
 // Each entry: { slug, name, photoId, w, h, descr }
 // Stable URLs of the form https://images.unsplash.com/photo-<id>?w=<w>&h=<h>&q=80&auto=format&fit=crop
 import { mkdir, writeFile, stat } from "node:fs/promises";

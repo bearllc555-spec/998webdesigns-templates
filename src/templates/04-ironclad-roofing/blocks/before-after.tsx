@@ -195,7 +195,7 @@ function Before({ seed }: { seed: number }) {
     <div className="relative h-full w-full" aria-hidden="true">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/templates/ironclad-roofing/before.jpg"
+        src="/mockups/ironclad-roofing/before.jpg"
         alt=""
         className="block h-full w-full object-cover"
         style={{ filter: "saturate(0.55) brightness(0.85)" }}
@@ -209,7 +209,7 @@ function After({ seed }: { seed: number }) {
     <div className="relative h-full w-full" aria-hidden="true">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/templates/ironclad-roofing/after.jpg"
+        src="/mockups/ironclad-roofing/after.jpg"
         alt=""
         className="block h-full w-full object-cover"
       />

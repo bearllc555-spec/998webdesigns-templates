@@ -5,19 +5,19 @@ const bakers = [
   {
     name: "Hannah Reilly",
     role: "Owner and head baker",
-    photo: "/templates/maple-street-bakery/baker-1.jpg",
+    photo: "/mockups/maple-street-bakery/baker-1.jpg",
     bio: "Started Maple Street out of a borrowed kitchen in 2014. Mixes the levain by 9pm most nights and has not regretted it.",
   },
   {
     name: "Marcus Diaz",
     role: "Pastry baker",
-    photo: "/templates/maple-street-bakery/baker-2.jpg",
+    photo: "/mockups/maple-street-bakery/baker-2.jpg",
     bio: "Came over from a bakery in Montreal in 2019. Responsible for the laminated dough most mornings, plus the morning bun cardamom level.",
   },
   {
     name: "Jess Sutton",
     role: "Counter and coffee",
-    photo: "/templates/maple-street-bakery/baker-3.jpg",
+    photo: "/mockups/maple-street-bakery/baker-3.jpg",
     bio: "Pulls espresso, plates pastry, remembers your usual after the second visit. The chair by the window is unofficially hers.",
   },
 ];

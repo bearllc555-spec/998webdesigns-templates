@@ -84,7 +84,7 @@ export function HeroBlock() {
             <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5", borderRadius: `var(--tpl-radius)` }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/templates/northwind-dental/hero.jpg"
+                src="/mockups/northwind-dental/hero.jpg"
                 alt="A calm, modern dental operatory at Northwind"
                 loading="eager"
                 decoding="async"

@@ -44,7 +44,7 @@ export function ServicesBlock() {
               <BorstArrow />
             </Link>
             <Link
-              href="/templates/borst-landscape-design/services"
+              href="/mockups/borst-landscape-design/services"
               className="inline-flex items-center gap-2 px-5 py-3 text-sm transition hover:opacity-80"
               style={{
                 ...borstOutlineBtn,

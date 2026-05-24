@@ -31,12 +31,12 @@ export const theme: TemplateTheme = {
   motion: "subtle",
   primaryCta: {
     label: "Schedule a consultation",
-    href: "/templates/haldwell-law/contact",
+    href: "/mockups/haldwell-law/contact",
   },
   nav: [
-    { label: "Practice areas", href: "/templates/haldwell-law/practice-areas" },
-    { label: "Attorneys", href: "/templates/haldwell-law/attorneys" },
-    { label: "Insights", href: "/templates/haldwell-law/insights" },
-    { label: "Contact", href: "/templates/haldwell-law/contact" },
+    { label: "Practice areas", href: "/mockups/haldwell-law/practice-areas" },
+    { label: "Attorneys", href: "/mockups/haldwell-law/attorneys" },
+    { label: "Insights", href: "/mockups/haldwell-law/insights" },
+    { label: "Contact", href: "/mockups/haldwell-law/contact" },
   ],
 };

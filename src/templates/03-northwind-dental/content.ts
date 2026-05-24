@@ -25,7 +25,7 @@ export const content: TemplateContent = {
     sub: "Same-day cleanings, gentle cosmetic work, and a practice that respects your time. Most visits run thirty minutes, start to finish.",
     secondaryLink: {
       label: "What to expect on your first visit",
-      href: "/templates/northwind-dental/new-patients",
+      href: "/mockups/northwind-dental/new-patients",
     },
   },
   services: {
@@ -80,7 +80,7 @@ export const content: TemplateContent = {
     sub: "Most slots open within the week. We will text the reminder twenty four hours ahead.",
     cta: {
       label: "Book a visit",
-      href: "/templates/northwind-dental/book-a-visit",
+      href: "/mockups/northwind-dental/book-a-visit",
     },
   },
   footer: {

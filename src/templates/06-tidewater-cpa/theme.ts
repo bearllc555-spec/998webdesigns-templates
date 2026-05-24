@@ -31,13 +31,13 @@ export const theme: TemplateTheme = {
   motion: "still",
   primaryCta: {
     label: "Contact the firm",
-    href: "/templates/tidewater-cpa/contact",
+    href: "/mockups/tidewater-cpa/contact",
   },
   nav: [
-    { label: "Services", href: "/templates/tidewater-cpa/services" },
-    { label: "Industries", href: "/templates/tidewater-cpa/industries" },
-    { label: "Insights", href: "/templates/tidewater-cpa/insights" },
-    { label: "Partners", href: "/templates/tidewater-cpa/partners" },
-    { label: "Contact", href: "/templates/tidewater-cpa/contact" },
+    { label: "Services", href: "/mockups/tidewater-cpa/services" },
+    { label: "Industries", href: "/mockups/tidewater-cpa/industries" },
+    { label: "Insights", href: "/mockups/tidewater-cpa/insights" },
+    { label: "Partners", href: "/mockups/tidewater-cpa/partners" },
+    { label: "Contact", href: "/mockups/tidewater-cpa/contact" },
   ],
 };

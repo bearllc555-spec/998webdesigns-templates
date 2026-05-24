@@ -85,7 +85,7 @@ export function HeroBlock() {
             <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/templates/haldwell-law/hero.jpg"
+                src="/mockups/haldwell-law/hero.jpg"
                 alt="The Haldwell and Carr conference room"
                 loading="eager"
                 decoding="async"

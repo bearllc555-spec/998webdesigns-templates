@@ -43,7 +43,7 @@ export function AboutSnippet() {
               ))}
             </div>
             <Link
-              href="/templates/northwind-dental/team"
+              href="/mockups/northwind-dental/team"
               className="mt-9 inline-flex items-center gap-2 text-sm"
               style={{
                 color: "var(--tpl-accent)",
@@ -92,7 +92,7 @@ export function AboutSnippet() {
             <div className="mt-6 relative overflow-hidden" style={{ borderRadius: `var(--tpl-radius)`, aspectRatio: "16 / 10" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/templates/northwind-dental/team.jpg"
+                src="/mockups/northwind-dental/team.jpg"
                 alt="The Northwind clinic team"
                 loading="lazy"
                 decoding="async"

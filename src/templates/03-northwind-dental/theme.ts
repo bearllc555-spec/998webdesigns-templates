@@ -31,12 +31,12 @@ export const theme: TemplateTheme = {
   motion: "subtle",
   primaryCta: {
     label: "Book a visit",
-    href: "/templates/northwind-dental/book-a-visit",
+    href: "/mockups/northwind-dental/book-a-visit",
   },
   nav: [
-    { label: "Services", href: "/templates/northwind-dental/services" },
-    { label: "New patients", href: "/templates/northwind-dental/new-patients" },
-    { label: "Our team", href: "/templates/northwind-dental/team" },
-    { label: "Book", href: "/templates/northwind-dental/book-a-visit" },
+    { label: "Services", href: "/mockups/northwind-dental/services" },
+    { label: "New patients", href: "/mockups/northwind-dental/new-patients" },
+    { label: "Our team", href: "/mockups/northwind-dental/team" },
+    { label: "Book", href: "/mockups/northwind-dental/book-a-visit" },
   ],
 };

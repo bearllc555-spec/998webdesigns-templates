@@ -13,7 +13,7 @@ export function AboutSnippet() {
             <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/templates/ironclad-roofing/worker.jpg"
+                src="/mockups/ironclad-roofing/worker.jpg"
                 alt="An Ironclad crew member on site"
                 loading="lazy"
                 decoding="async"

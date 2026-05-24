@@ -6,25 +6,25 @@ const people = [
     name: "Dr Anna Park",
     role: "Dentist, co-founder",
     bio: "DDS, OHSU 2014. Comfort dentistry and pediatric care. Has the calmest voice in the operatory.",
-    photo: "/templates/northwind-dental/dentist-1.jpg",
+    photo: "/mockups/northwind-dental/dentist-1.jpg",
   },
   {
     name: "Dr Marcus Webb",
     role: "Dentist, co-founder",
     bio: "DMD, Tufts 2012. Same-day crowns, Invisalign, cosmetic restoration. Won the office coffee taste test in 2024.",
-    photo: "/templates/northwind-dental/dentist-2.jpg",
+    photo: "/mockups/northwind-dental/dentist-2.jpg",
   },
   {
     name: "Renee Calderon, RDH",
     role: "Hygienist",
     bio: "Six years at Northwind. Has cleaned more teeth than she can count and still gets thank-you notes every week.",
-    photo: "/templates/northwind-dental/hygienist.jpg",
+    photo: "/mockups/northwind-dental/hygienist.jpg",
   },
   {
     name: "Sam Iwata",
     role: "Practice manager",
     bio: "Runs the schedule. Answers the phone. Will probably remember your kid's name before you remember his.",
-    photo: "/templates/northwind-dental/smile.jpg",
+    photo: "/mockups/northwind-dental/smile.jpg",
   },
 ];
 

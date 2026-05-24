@@ -76,9 +76,9 @@ export function HeroBlock() {
           loop
           playsInline
           preload="auto"
-          poster="/templates/yogacentric-studio/hero.webp"
+          poster="/mockups/yogacentric-studio/hero.webp"
         >
-          <source src="/templates/yogacentric-studio/hero.mp4" type="video/mp4" />
+          <source src="/mockups/yogacentric-studio/hero.mp4" type="video/mp4" />
         </video>
         <div
           className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 md:hidden"

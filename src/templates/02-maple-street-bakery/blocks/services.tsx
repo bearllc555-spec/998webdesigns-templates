@@ -2,12 +2,12 @@ import { theme } from "../theme";
 import { content } from "../content";
 
 const SERVICE_PHOTOS = [
-  "/templates/maple-street-bakery/hero.jpg",
-  "/templates/maple-street-bakery/hero.jpg",
-  "/templates/maple-street-bakery/croissant.jpg",
-  "/templates/maple-street-bakery/croissant.jpg",
-  "/templates/maple-street-bakery/interior.jpg",
-  "/templates/maple-street-bakery/coffee.jpg",
+  "/mockups/maple-street-bakery/hero.jpg",
+  "/mockups/maple-street-bakery/hero.jpg",
+  "/mockups/maple-street-bakery/croissant.jpg",
+  "/mockups/maple-street-bakery/croissant.jpg",
+  "/mockups/maple-street-bakery/interior.jpg",
+  "/mockups/maple-street-bakery/coffee.jpg",
 ];
 
 export function ServicesBlock() {

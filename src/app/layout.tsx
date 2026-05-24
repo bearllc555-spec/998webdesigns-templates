@@ -189,19 +189,19 @@ const fontVariables = [
 ].join(" ");
 
 export const metadata: Metadata = {
-  title: "Template library | 998 web designs",
+  title: "Design mockups | 998 web designs",
   description:
-    "A library of handcrafted templates. Pick a starting point. We customize it to your business in 5 to 7 days. $998, once.",
-  metadataBase: new URL("https://998webdesigns-templates.vercel.app"),
+    "A library of handcrafted design concepts. Pick a starting point. We customize every design and deliver to your business in 5 to 7 days.",
+  metadataBase: new URL("https://998webdesigns-designs.vercel.app"),
   openGraph: {
-    title: "Template library | 998 web designs",
+    title: "Design mockups | 998 web designs",
     description:
-      "Six handcrafted templates. Six visual languages. Pick one, we customize it to your business in 5 to 7 days.",
-    url: "https://998webdesigns-templates.vercel.app",
+      "Handcrafted design concepts for small businesses. Pick a starting point — we customize and deliver in 5 to 7 days.",
+    url: "https://998webdesigns-designs.vercel.app",
     siteName: "998 web designs",
     type: "website",
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

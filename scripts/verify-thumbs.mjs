@@ -5,7 +5,7 @@
  */
 import { chromium } from "playwright";
 
-const URL = process.env.URL || "https://998webdesigns-templates.vercel.app/";
+const URL = process.env.URL || "https://998webdesigns-designs.vercel.app/";
 const SCREENSHOT = process.env.OUT || "verify-thumbs.png";
 
 const browser = await chromium.launch();

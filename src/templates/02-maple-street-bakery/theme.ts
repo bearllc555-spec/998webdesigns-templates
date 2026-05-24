@@ -31,12 +31,12 @@ export const theme: TemplateTheme = {
   motion: "lively",
   primaryCta: {
     label: "Order for pickup",
-    href: "/templates/maple-street-bakery/order-ahead",
+    href: "/mockups/maple-street-bakery/order-ahead",
   },
   nav: [
-    { label: "Menu", href: "/templates/maple-street-bakery/menu" },
-    { label: "Our bakers", href: "/templates/maple-street-bakery/our-bakers" },
-    { label: "Visit", href: "/templates/maple-street-bakery/visit" },
-    { label: "Order ahead", href: "/templates/maple-street-bakery/order-ahead" },
+    { label: "Menu", href: "/mockups/maple-street-bakery/menu" },
+    { label: "Our bakers", href: "/mockups/maple-street-bakery/our-bakers" },
+    { label: "Visit", href: "/mockups/maple-street-bakery/visit" },
+    { label: "Order ahead", href: "/mockups/maple-street-bakery/order-ahead" },
   ],
 };

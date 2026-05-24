@@ -23,7 +23,7 @@ export const content: TemplateContent = {
     sub: "A small kitchen on Maple Street making real bread, slow pastries, and the kind of espresso that earns a chair. Two bakers, one oven, no shortcuts.",
     secondaryLink: {
       label: "Today's bake list",
-      href: "/templates/maple-street-bakery/menu",
+      href: "/mockups/maple-street-bakery/menu",
     },
   },
   services: {
@@ -78,7 +78,7 @@ export const content: TemplateContent = {
     sub: "We open the order list at 6am for same-day. Friday and Saturday tend to fill by 9.",
     cta: {
       label: "Place a pickup order",
-      href: "/templates/maple-street-bakery/order-ahead",
+      href: "/mockups/maple-street-bakery/order-ahead",
     },
   },
   footer: {

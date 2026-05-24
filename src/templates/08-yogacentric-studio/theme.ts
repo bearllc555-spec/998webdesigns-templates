@@ -7,7 +7,7 @@ export const theme: TemplateTheme = {
     industry: "Yoga studio",
     tagline: "Find your balance with YogaCentric.",
     publishedAt: "2026-05-21T18:00:00Z",
-    galleryPreview: "/templates/yogacentric-studio/hero.webp",
+    galleryPreview: "/mockups/yogacentric-studio/hero.webp",
   },
   palette: {
     bg: "#FFFFFF",
@@ -32,13 +32,13 @@ export const theme: TemplateTheme = {
   motion: "subtle",
   primaryCta: {
     label: "Book a class",
-    href: "/templates/yogacentric-studio/contact",
+    href: "/mockups/yogacentric-studio/contact",
   },
   nav: [
-    { label: "Services", href: "/templates/yogacentric-studio/services" },
-    { label: "Trainers", href: "/templates/yogacentric-studio/trainers" },
-    { label: "Plans", href: "/templates/yogacentric-studio/pricing" },
-    { label: "Contact", href: "/templates/yogacentric-studio/contact" },
+    { label: "Services", href: "/mockups/yogacentric-studio/services" },
+    { label: "Trainers", href: "/mockups/yogacentric-studio/trainers" },
+    { label: "Plans", href: "/mockups/yogacentric-studio/pricing" },
+    { label: "Contact", href: "/mockups/yogacentric-studio/contact" },
   ],
 };
 

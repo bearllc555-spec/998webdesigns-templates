@@ -22,7 +22,7 @@ function HomeIcon() {
 export function YogaCentricHeader() {
   const slug = theme.meta.slug;
   const pathname = usePathname();
-  const homePath = `/templates/${slug}`;
+  const homePath = `/mockups/${slug}`;
   const isHomeWithHero = pathname === homePath || pathname === `${homePath}/`;
 
   const [show, setShow] = useState(!isHomeWithHero);
@@ -30,7 +30,7 @@ export function YogaCentricHeader() {
   const [ctaHovered, setCtaHovered] = useState(false);
   const mobileNav = [
     { label: "Home", href: homePath },
-    { label: "Services", href: `/templates/${slug}/services` },
+    { label: "Services", href: `/mockups/${slug}/services` },
     ...theme.nav.filter((n) => n.label !== "Services"),
   ];
 
@@ -85,7 +85,7 @@ export function YogaCentricHeader() {
           }}
         >
           <Link
-            href={`/templates/${slug}`}
+            href={`/mockups/${slug}`}
             className="inline-flex shrink-0 items-center gap-2 text-sm font-bold tracking-tight md:text-base"
             style={{
               color: "#FFFFFF",

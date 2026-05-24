@@ -12,7 +12,7 @@ export function HeroBlock() {
       <div className="relative w-full overflow-hidden" style={{ aspectRatio: IMAGE_GEOMETRY.heroAspect }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/templates/borst-landscape-design/slot-001.jpg"
+            src="/mockups/borst-landscape-design/slot-001.jpg"
             alt="Modern home with landscaped garden"
             className="absolute inset-0 h-full w-full object-cover"
           />

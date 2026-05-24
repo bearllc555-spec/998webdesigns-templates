@@ -2,7 +2,7 @@ import { chromium } from "playwright";
 const browser = await chromium.launch();
 const ctx = await browser.newContext({ viewport: { width: 1400, height: 1200 }, deviceScaleFactor: 1 });
 const page = await ctx.newPage();
-await page.goto("https://998webdesigns-templates.vercel.app/", { waitUntil: "networkidle" });
+await page.goto("https://998webdesigns-designs.vercel.app/", { waitUntil: "networkidle" });
 await page.evaluate(async () => {
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   const max = document.documentElement.scrollHeight;

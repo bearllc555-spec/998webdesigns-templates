@@ -22,7 +22,7 @@ export const content: TemplateContent = {
     sub: "A small yoga studio in a converted river-side workshop. Hatha, Yin, and slow Vinyasa, taught by four teachers who teach the way they practice.",
     secondaryLink: {
       label: "Class descriptions",
-      href: "/templates/quietfield-yoga/classes",
+      href: "/mockups/quietfield-yoga/classes",
     },
   },
   services: {
@@ -75,7 +75,7 @@ export const content: TemplateContent = {
     sub: "Your first class is on the house. Sign up by the door, or book a mat in advance.",
     cta: {
       label: "Reserve a mat",
-      href: "/templates/quietfield-yoga/schedule",
+      href: "/mockups/quietfield-yoga/schedule",
     },
   },
   footer: {

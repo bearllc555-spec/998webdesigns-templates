@@ -87,7 +87,7 @@ export function HeroBlock() {
             <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/templates/ironclad-roofing/crew.jpg"
+                src="/mockups/ironclad-roofing/crew.jpg"
                 alt="Ironclad roofing crew on the job"
                 loading="eager"
                 decoding="async"

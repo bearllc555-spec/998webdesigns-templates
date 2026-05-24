@@ -78,7 +78,7 @@ export function HeroBlock() {
           <div className="relative overflow-hidden" style={{ aspectRatio: "16 / 10" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/templates/quietfield-yoga/hero.jpg"
+              src="/mockups/quietfield-yoga/hero.jpg"
               alt="A still moment from a Quietfield class"
               loading="lazy"
               decoding="async"

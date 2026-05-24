@@ -47,7 +47,7 @@ export function ProcessBlock() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/templates/borst-landscape-design/slot-012.jpg"
+              src="/mockups/borst-landscape-design/slot-012.jpg"
               alt="Landscape design consultation"
               className="block h-full w-full object-cover object-center"
             />

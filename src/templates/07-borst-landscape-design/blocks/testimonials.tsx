@@ -40,7 +40,7 @@ function TestimonialCard({ index }: { index: number }) {
             </p>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/templates/borst-landscape-design/icon-verified.svg"
+              src="/mockups/borst-landscape-design/icon-verified.svg"
               alt="Verified"
               className="h-3.5 w-3.5 shrink-0"
             />

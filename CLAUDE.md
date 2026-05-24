@@ -125,6 +125,35 @@ Rules:
 4. Set `theme.meta.publishedAt` to "now"; the gallery auto-sorts and the "New" badge moves to the new entry.
 5. Push directly to main.
 
+## Image fill bug note (2026-05-22)
+
+If section images look "half cut off" or show blank space inside rounded image boxes even when block code uses `h-full object-cover`, check global CSS first.
+
+Root cause discovered on template 07:
+- `src/app/globals.css` had a global rule forcing all images to `height: auto`.
+- That overrides section-level intent for images inside fixed/aspect-ratio containers and breaks true fill behavior.
+
+Problematic pattern:
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+```
+
+Fix:
+- Remove the global `height: auto` from `img` in `globals.css`.
+- Let block-level classes (`h-full object-cover object-center`) control image fitting inside template sections.
+
+## Screenshot tooling note (2026-05-22)
+
+`webpage-screenshot-mcp` is installed and should be the default path for webpage screenshots during QA/debug loops.
+
+Fallback:
+- Use Playwright scripts only if MCP screenshot capture is unavailable or fails.
+
 ## Quick links
 
 | Surface | URL |

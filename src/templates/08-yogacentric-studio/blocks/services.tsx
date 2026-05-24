@@ -23,7 +23,7 @@ export function ServicesBlock() {
             {content.services.sectionSub}
           </p>
           <Link
-            href="/templates/yogacentric-studio/services"
+            href="/mockups/yogacentric-studio/services"
             className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold underline-offset-4 hover:underline"
             style={{ color: "var(--tpl-ink)" }}
           >

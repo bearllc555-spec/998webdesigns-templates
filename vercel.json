@@ -1,5 +1,17 @@
 {
   "framework": "nextjs",
   "buildCommand": "pnpm build",
-  "installCommand": "pnpm install"
+  "installCommand": "pnpm install",
+  "redirects": [
+    {
+      "source": "/templates",
+      "destination": "/mockups",
+      "permanent": true
+    },
+    {
+      "source": "/templates/:path*",
+      "destination": "/mockups/:path*",
+      "permanent": true
+    }
+  ]
 }

@@ -74,7 +74,7 @@ export function HeroBlock() {
             <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 5" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/templates/tidewater-cpa/hero.jpg"
+                src="/mockups/tidewater-cpa/hero.jpg"
                 alt="The Tidewater Partners office"
                 loading="eager"
                 decoding="async"

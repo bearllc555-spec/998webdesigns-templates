@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-const URL = "https://998webdesigns-templates.vercel.app/";
+const URL = "https://998webdesigns-designs.vercel.app/";
 const browser = await chromium.launch();
 const ctx = await browser.newContext({ viewport: { width: 1400, height: 1000 } });
 const page = await ctx.newPage();

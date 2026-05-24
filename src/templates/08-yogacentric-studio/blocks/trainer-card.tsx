@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { TrainerListItem } from "../content";
 
-const BASE = "/templates/yogacentric-studio";
+const BASE = "/mockups/yogacentric-studio";
 
 export function TrainerCard({ trainer }: { trainer: TrainerListItem }) {
   const inner = (

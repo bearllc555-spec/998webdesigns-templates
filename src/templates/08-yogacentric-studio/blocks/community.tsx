@@ -12,7 +12,7 @@ export function CommunityBlock() {
           <div className="overflow-hidden" style={{ borderRadius: "var(--tpl-radius)" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/templates/yogacentric-studio/community.jpg"
+              src="/mockups/yogacentric-studio/community.jpg"
               alt="YogaCentric studio community"
               className="aspect-[4/5] w-full object-cover md:aspect-[3/4]"
             />

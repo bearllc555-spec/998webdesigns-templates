@@ -23,7 +23,7 @@ export const content: TemplateContent = {
     sub: "We are a boutique New England firm advising founders, families, and closely held companies on the questions that shape what they own and who they answer to.",
     secondaryLink: {
       label: "Read our latest insight",
-      href: "/templates/haldwell-law/insights",
+      href: "/mockups/haldwell-law/insights",
     },
   },
   services: {
@@ -102,7 +102,7 @@ export const content: TemplateContent = {
     sub: "Tell us what you are working on. We will tell you whether we are the right firm before either of us spends another hour.",
     cta: {
       label: "Schedule a consultation",
-      href: "/templates/haldwell-law/contact",
+      href: "/mockups/haldwell-law/contact",
     },
   },
   footer: {

@@ -6,25 +6,25 @@ const teachers = [
   {
     name: "Maya Holberg",
     role: "Senior teacher, Hatha",
-    photo: "/templates/quietfield-yoga/teacher-1.jpg",
+    photo: "/mockups/quietfield-yoga/teacher-1.jpg",
     bio: "E-RYT 500. Teaches the standing series with the kind of patience that earns the room. Has not changed her opening sequence in eight years.",
   },
   {
     name: "Jonas Tate",
     role: "Senior teacher, slow Vinyasa",
-    photo: "/templates/quietfield-yoga/teacher-2.jpg",
+    photo: "/mockups/quietfield-yoga/teacher-2.jpg",
     bio: "E-RYT 500. Comes to the mat from a long career in ceramics. Treats the breath the way a potter treats a wheel: never rushed.",
   },
   {
     name: "Petra Yu",
     role: "Senior teacher, Yin",
-    photo: "/templates/quietfield-yoga/teacher-3.jpg",
+    photo: "/mockups/quietfield-yoga/teacher-3.jpg",
     bio: "RYT 500, certified Yin under Bernie Clark. Holds the room in silence for hours and somehow makes it feel short.",
   },
   {
     name: "Anne Sigerson",
     role: "Senior teacher, Restorative",
-    photo: "/templates/quietfield-yoga/teacher-4.jpg",
+    photo: "/mockups/quietfield-yoga/teacher-4.jpg",
     bio: "RYT 500. A former hospice nurse. Quietest voice in the room. Brings extra bolsters and refuses to apologize for it.",
   },
 ];

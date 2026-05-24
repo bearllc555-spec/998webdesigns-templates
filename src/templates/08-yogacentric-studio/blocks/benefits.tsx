@@ -46,7 +46,7 @@ export function BenefitsBlock() {
           <div className="overflow-hidden lg:order-first" style={{ borderRadius: "var(--tpl-radius)" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/templates/yogacentric-studio/benefits.jpg"
+              src="/mockups/yogacentric-studio/benefits.jpg"
               alt="Yoga practice benefits"
               className="aspect-[4/5] w-full object-cover"
             />
