@@ -7,10 +7,12 @@ export function ContactForm({
   theme,
   submitLabel = "Send message",
   subject = "General inquiry",
+  inputBackground = "var(--tpl-card)",
 }: {
   theme: TemplateTheme;
   submitLabel?: string;
   subject?: string;
+  inputBackground?: string;
 }) {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -56,14 +58,14 @@ export function ContactForm({
     >
       <input type="hidden" name="subject" value={subject} />
       <div className="grid gap-4 md:grid-cols-2">
-        <Field theme={theme} label="Full name" name="name" required type="text" />
-        <Field theme={theme} label="Email" name="email" required type="email" />
+        <Field theme={theme} label="Full name" name="name" required type="text" inputBackground={inputBackground} />
+        <Field theme={theme} label="Email" name="email" required type="email" inputBackground={inputBackground} />
       </div>
       <div className="grid gap-4 md:grid-cols-2">
-        <Field theme={theme} label="Phone" name="phone" type="tel" />
-        <Field theme={theme} label="Best time to reach you" name="when" type="text" />
+        <Field theme={theme} label="Phone" name="phone" type="tel" inputBackground={inputBackground} />
+        <Field theme={theme} label="Best time to reach you" name="when" type="text" inputBackground={inputBackground} />
       </div>
-      <FieldArea theme={theme} label="What can we help with?" name="message" rows={5} required />
+      <FieldArea theme={theme} label="What can we help with?" name="message" rows={5} required inputBackground={inputBackground} />
       <button
         type="submit"
         disabled={submitting}
@@ -88,12 +90,14 @@ function Field({
   name,
   required,
   type,
+  inputBackground,
 }: {
   theme: TemplateTheme;
   label: string;
   name: string;
   required?: boolean;
   type: string;
+  inputBackground: string;
 }) {
   return (
     <label className="flex flex-col gap-1.5">
@@ -114,7 +118,7 @@ function Field({
         required={required}
         className="px-3 py-2.5 text-sm transition focus:outline-none"
         style={{
-          background: "var(--tpl-card)",
+          background: inputBackground,
           color: "var(--tpl-ink)",
           border: `1px solid var(--tpl-line)`,
           borderRadius: `var(--tpl-radius)`,
@@ -132,12 +136,14 @@ function FieldArea({
   name,
   rows,
   required,
+  inputBackground,
 }: {
   theme: TemplateTheme;
   label: string;
   name: string;
   rows: number;
   required?: boolean;
+  inputBackground: string;
 }) {
   return (
     <label className="flex flex-col gap-1.5">
@@ -158,7 +164,7 @@ function FieldArea({
         required={required}
         className="px-3 py-2.5 text-sm transition focus:outline-none"
         style={{
-          background: "var(--tpl-card)",
+          background: inputBackground,
           color: "var(--tpl-ink)",
           border: `1px solid var(--tpl-line)`,
           borderRadius: `var(--tpl-radius)`,

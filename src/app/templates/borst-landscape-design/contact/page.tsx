@@ -96,7 +96,12 @@ export default function ContactPage() {
                 borderRadius: `var(--tpl-radius)`,
               }}
             >
-              <ContactForm theme={theme} submitLabel="Request a free quote" subject="Borst Landscape quote request" />
+              <ContactForm
+                theme={theme}
+                submitLabel="Request a free quote"
+                subject="Borst Landscape quote request"
+                inputBackground="#FFFFFF"
+              />
             </div>
           </div>
         </div>
