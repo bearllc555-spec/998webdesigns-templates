@@ -17,8 +17,8 @@ export function BorstFooterMap() {
       style={{ borderColor: "rgba(255,255,255,0.12)", background: "#0E2A24" }}
       aria-label="Office location map"
     >
-      <div className="mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-12">
-        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+      <div className="mx-auto max-w-7xl px-5 py-8 md:px-8 md:py-10">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p
               className="text-xs uppercase tracking-[0.18em]"
@@ -48,25 +48,18 @@ export function BorstFooterMap() {
             Get directions
           </Link>
         </div>
+      </div>
 
-        <div
-          className="borst-map-shell relative overflow-hidden"
-          style={{
-            borderRadius: 16,
-            border: "1px solid rgba(255,255,255,0.14)",
-            boxShadow: "inset 0 0 0 1px rgba(0,129,81,0.12)",
-          }}
-        >
-          <div className="borst-map-tint pointer-events-none absolute inset-0 z-10" aria-hidden="true" />
-          <iframe
-            title={`Map showing ${content.business.name}`}
-            src={embedUrl}
-            className="borst-map-frame block h-[220px] w-full border-0 sm:h-[280px] md:h-[320px]"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
-        </div>
+      <div className="borst-map-shell relative w-full overflow-hidden">
+        <div className="borst-map-tint pointer-events-none absolute inset-0 z-10" aria-hidden="true" />
+        <iframe
+          title={`Map showing ${content.business.name}`}
+          src={embedUrl}
+          className="borst-map-frame block h-[220px] w-full border-0 sm:h-[280px] md:h-[320px]"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
       </div>
 
       <style>{`
