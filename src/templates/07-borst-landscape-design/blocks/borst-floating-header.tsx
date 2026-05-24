@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -13,19 +13,57 @@ export function BorstFloatingHeader() {
   const homePath = `/templates/${slug}`;
   const isHome = pathname === homePath || pathname === `${homePath}/`;
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pastHero, setPastHero] = useState(!isHome);
+
+  useEffect(() => {
+    if (!isHome) {
+      setPastHero(true);
+      return;
+    }
+
+    setPastHero(false);
+    setMenuOpen(false);
+
+    const hero = document.getElementById("hero");
+    if (!hero) {
+      setPastHero(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setPastHero(!entry.isIntersecting);
+      },
+      { threshold: 0, rootMargin: "0px 0px 0px 0px" }
+    );
+
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, [isHome, pathname]);
+
+  useEffect(() => {
+    if (!pastHero) setMenuOpen(false);
+  }, [pastHero]);
+
+  const showBar = pastHero;
+  const headerPosition = isHome ? "fixed" : "sticky";
 
   return (
     <header
-      className="sticky inset-x-0 top-0 z-50"
-      style={{ pointerEvents: "auto" }}
-      aria-hidden={false}
+      className={`${headerPosition} inset-x-0 top-0 z-50 transition-[transform,opacity] duration-300 ease-out`}
+      style={{
+        pointerEvents: showBar ? "auto" : "none",
+        transform: showBar ? "translateY(0)" : "translateY(-100%)",
+        opacity: showBar ? 1 : 0,
+      }}
+      aria-hidden={!showBar}
     >
       <div
         className="border-b"
         style={{
           background: "var(--tpl-bg)",
           borderColor: "var(--tpl-line)",
-          boxShadow: "0 4px 18px rgba(5,31,25,0.06)",
+          boxShadow: showBar ? "0 4px 18px rgba(5,31,25,0.06)" : "none",
         }}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
@@ -33,6 +71,7 @@ export function BorstFloatingHeader() {
             href={homePath}
             className="inline-flex shrink-0 items-center gap-2"
             aria-label={`${theme.meta.name} home`}
+            tabIndex={showBar ? 0 : -1}
           >
             <span
               className="text-base font-bold tracking-tight md:text-lg"
@@ -56,7 +95,7 @@ export function BorstFloatingHeader() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-7 md:flex">
+          <nav className="hidden items-center gap-7 md:flex" aria-label="Main">
             {theme.nav.map((n) => (
               <Link
                 key={n.href}
@@ -67,6 +106,7 @@ export function BorstFloatingHeader() {
                   fontFamily: "var(--tpl-font-body)",
                   fontWeight: theme.type.bodyWeight,
                 }}
+                tabIndex={showBar ? 0 : -1}
               >
                 {n.label}
               </Link>
@@ -83,6 +123,7 @@ export function BorstFloatingHeader() {
                 borderRadius: 999,
                 fontFamily: "var(--tpl-font-body)",
               }}
+              tabIndex={showBar ? 0 : -1}
             >
               Get in touch
             </Link>
@@ -97,6 +138,7 @@ export function BorstFloatingHeader() {
               }}
               aria-expanded={menuOpen}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
+              tabIndex={showBar ? 0 : -1}
               onClick={() => setMenuOpen((o) => !o)}
             >
               {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
@@ -104,10 +146,11 @@ export function BorstFloatingHeader() {
           </div>
         </div>
 
-        {menuOpen && (
+        {menuOpen && showBar && (
           <nav
             className="border-t px-5 py-3 md:hidden"
             style={{ borderColor: "var(--tpl-line)", background: "var(--tpl-bg)" }}
+            aria-label="Mobile"
           >
             <ul className="space-y-1">
               {theme.nav.map((n) => (

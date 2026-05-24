@@ -6,11 +6,13 @@ import { MARKETING_SITE_URL } from "@/lib/marketing-site";
 import { theme } from "../theme";
 import { content, instagramTiles, footerLinks } from "../content";
 import { extendedPalette } from "../theme";
+import { BorstFooterMap } from "./borst-footer-map";
 
 export function BorstFooter() {
   const year = new Date().getFullYear();
   return (
     <footer style={{ background: extendedPalette.darkSection, color: "#FFFFFF" }}>
+      <BorstFooterMap />
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
