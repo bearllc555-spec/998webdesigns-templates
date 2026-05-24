@@ -2,11 +2,11 @@ import type { TemplateContent } from "../types";
 
 export const content: TemplateContent = {
   business: {
-    name: "GardenView",
-    legalName: "GardenView Landscaping, Inc.",
-    address: "325 Park Avenue\nNew York, NY 10010",
-    phone: "(212) 555-0149",
-    email: "hello@gardenview.com",
+    name: "Borst Landscape & Design",
+    legalName: "Borst Landscape & Design",
+    address: "260 W Crescent Ave, Suite 1\nAllendale, NJ 07401",
+    phone: "(201) 785-9400",
+    email: "info@borstlandscape.com",
     hours: [
       "Mon to Fri, 9am to 5pm",
       "Saturday by appointment",
@@ -19,7 +19,7 @@ export const content: TemplateContent = {
     ],
   },
   hero: {
-    eyebrow: "New York, NY - since 1992",
+    eyebrow: "Allendale, NJ — since 1989",
     headline: "Let us bring life to your garden.",
     sub: "Lorem ipsum dolor sit amet consectetur adipiscing elidolor mattis sit phasellus mollis sit aliquam sit nullam neques.",
     secondaryLink: {
