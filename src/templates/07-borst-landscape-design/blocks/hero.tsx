@@ -9,11 +9,7 @@ import { IMAGE_GEOMETRY } from "../image-geometry";
 export function HeroBlock() {
   return (
     <section id="hero" style={{ background: "var(--tpl-bg)" }} className="px-0 pb-10 pt-0 md:pb-14">
-      <div className="mx-auto max-w-[1440px] px-3 md:px-4">
-        <div
-          className="relative overflow-hidden"
-          style={{ borderRadius: IMAGE_GEOMETRY.heroRadius, aspectRatio: IMAGE_GEOMETRY.heroAspect }}
-        >
+      <div className="relative w-full overflow-hidden" style={{ aspectRatio: IMAGE_GEOMETRY.heroAspect }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/templates/borst-landscape-design/slot-001.jpg"
@@ -80,7 +76,6 @@ export function HeroBlock() {
               </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
   );
