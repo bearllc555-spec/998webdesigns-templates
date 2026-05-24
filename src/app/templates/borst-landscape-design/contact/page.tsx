@@ -102,6 +102,8 @@ export default function ContactPage() {
                 subject="Borst Landscape quote request"
                 inputBackground="#FFFFFF"
                 reachTimeOptions={[
+                  "Any time",
+                  "As soon as possible",
                   "Morning",
                   "Early afternoon",
                   "Afternoon",
