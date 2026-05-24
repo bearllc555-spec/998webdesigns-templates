@@ -92,7 +92,7 @@ export default function ContactPage() {
               className="p-6 md:p-8"
               style={{
                 background: "var(--tpl-card)",
-                border: `1px solid var(--tpl-line)`,
+                border: "1px solid #000000",
                 borderRadius: `var(--tpl-radius)`,
               }}
             >
