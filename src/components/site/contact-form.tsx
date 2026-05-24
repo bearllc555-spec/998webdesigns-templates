@@ -8,11 +8,13 @@ export function ContactForm({
   submitLabel = "Send message",
   subject = "General inquiry",
   inputBackground = "var(--tpl-card)",
+  reachTimeOptions,
 }: {
   theme: TemplateTheme;
   submitLabel?: string;
   subject?: string;
   inputBackground?: string;
+  reachTimeOptions?: string[];
 }) {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -63,7 +65,17 @@ export function ContactForm({
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         <Field theme={theme} label="Phone" name="phone" type="tel" inputBackground={inputBackground} />
-        <Field theme={theme} label="Best time to reach you" name="when" type="text" inputBackground={inputBackground} />
+        {reachTimeOptions ? (
+          <SelectField
+            theme={theme}
+            label="Best time to reach you"
+            name="when"
+            options={reachTimeOptions}
+            inputBackground={inputBackground}
+          />
+        ) : (
+          <Field theme={theme} label="Best time to reach you" name="when" type="text" inputBackground={inputBackground} />
+        )}
       </div>
       <FieldArea theme={theme} label="What can we help with?" name="message" rows={5} required inputBackground={inputBackground} />
       <button
@@ -126,6 +138,63 @@ function Field({
         }}
         aria-required={required}
       />
+    </label>
+  );
+}
+
+function SelectField({
+  theme,
+  label,
+  name,
+  options,
+  required,
+  inputBackground,
+}: {
+  theme: TemplateTheme;
+  label: string;
+  name: string;
+  options: string[];
+  required?: boolean;
+  inputBackground: string;
+}) {
+  const fieldStyle = {
+    background: inputBackground,
+    color: "var(--tpl-ink)",
+    border: `1px solid var(--tpl-line)`,
+    borderRadius: `var(--tpl-radius)`,
+    fontFamily: "var(--tpl-font-body)",
+  };
+
+  return (
+    <label className="flex flex-col gap-1.5">
+      <span
+        className="text-xs uppercase"
+        style={{
+          color: "var(--tpl-muted)",
+          letterSpacing: "0.14em",
+          fontFamily: "var(--tpl-font-body)",
+        }}
+      >
+        {label}
+        {required && <span aria-hidden="true"> *</span>}
+      </span>
+      <select
+        name={name}
+        required={required}
+        defaultValue=""
+        className="px-3 py-2.5 text-sm transition focus:outline-none"
+        style={fieldStyle}
+        aria-required={required}
+      >
+        <option value="" disabled>
+          Select a time
+        </option>
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
     </label>
   );
 }

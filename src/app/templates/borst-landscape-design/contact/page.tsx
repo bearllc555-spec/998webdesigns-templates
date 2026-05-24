@@ -101,6 +101,12 @@ export default function ContactPage() {
                 submitLabel="Request a free quote"
                 subject="Borst Landscape quote request"
                 inputBackground="#FFFFFF"
+                reachTimeOptions={[
+                  "Morning",
+                  "Early Afternoon - Afternoon",
+                  "Late Afternoon",
+                  "Evening",
+                ]}
               />
             </div>
           </div>
